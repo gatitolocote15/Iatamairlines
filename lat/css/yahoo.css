@@ -1,0 +1,656 @@
+body {
+    margin: 0;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0;
+}
+
+strong {
+    font-weight: 700;
+}
+
+p {
+    margin: 1em 0;
+}
+
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+form {
+    margin: 0;
+}
+
+button,
+input {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+    *vertical-align: middle;
+}
+
+button,
+input {
+    line-height: normal;
+}
+
+button {
+    text-transform: none;
+}
+
+button,
+input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    *overflow: visible;
+}
+
+.pure-button {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: baseline;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.pure-button {
+    font-size: 100%;
+    *font-size: 90%;
+    *overflow: visible;
+    padding: .5em 1em;
+    color: #444;
+    color: rgba(0, 0, 0, .8);
+    *color: #444;
+    border: 1px solid #999;
+    border: 0 transparent;
+    background-color: #e6e6e6;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.pure-button:hover,
+.pure-button:focus {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000', GradientType=0);
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, .05) 40%, rgba(0, 0, 0, .1));
+}
+
+.pure-button:focus {
+    outline: 0;
+}
+
+.pure-button:active {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .15) inset, 0 0 6px rgba(0, 0, 0, .2) inset;
+}
+
+body {
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #fff;
+}
+
+p {
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+    padding: .57em 1em;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: #198fff;
+}
+
+div,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media screen and (min-width: 48em) {
+    h1 {
+        text-transform: none;
+    }
+}
+
+.pure-button,
+input.pure-button {
+    padding: .75em 1.45em;
+    box-sizing: border-box;
+    font-size: 16px;
+    border-radius: 1.17647rem;
+    color: #42597a;
+    background-color: #eeeef5;
+    margin: 0;
+    width: 100%;
+    border: solid 1px #e4e7ef;
+    white-space: normal;
+}
+
+.puree-button-primary {
+    color: #fff;
+    background: #188fff;
+    border: 1px solid #188fff;
+}
+
+.puree-button-primary:hover {
+    background: #0f69ff;
+    border-color: #0f69ff;
+    color: #fff;
+}
+
+.puree-button-primary:active,
+.puree-button-primary:focus {
+    background: #003abc;
+    border-color: #003abc;
+    color: #fff;
+}
+
+a {
+    color: #188fff;
+}
+
+.puree-button-link,
+input.puree-button-link {
+    color: #188fff;
+    background: 0 0;
+    border-color: transparent;
+}
+
+input.puree-button-link:active,
+.puree-button-link:active,
+a:active,
+input.puree-button-link:hover,
+.puree-button-link:hover,
+a:hover,
+input.puree-button-link:focus,
+.puree-button-link:focus,
+a:focus {
+    color: #003abc;
+}
+
+.puree-button-link:active,
+input.puree-button-link:active {
+    color: #858585;
+    background-color: transparent;
+}
+
+.pure-button:active,
+.pure-button:focus,
+.pure-button:hover {
+    filter: none;
+    background-image: none;
+    box-shadow: none;
+}
+
+.puree-v2 input[type=text]:not(.validation),
+.puree-v2 input[type=password] {
+    height: 32px;
+    padding: 0 8px;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #d8dade;
+    background-color: transparent;
+}
+
+.puree-v2 input[type=text]:focus,
+.puree-v2 input[type=password]:focus {
+    border-bottom: 2px solid #188fff;
+}
+
+.puree-button-link:disabled {
+    color: #858585;
+}
+
+.puree-spinner-button:after {
+    display: none;
+    content: '';
+    background: url(https://s.yimg.com/wm/modern/images/fuji-spinner-1.0.1.svg) no-repeat 0 0;
+    background-size: 100%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.puree-spinner-button {
+    position: relative;
+}
+
+body,
+button,
+input {
+    font-family: 'Yahoo Sans', Arial;
+}
+
+body {
+    font-size: 16px;
+    font: -apple-system-body;
+    font-family: 'Yahoo Sans', Arial;
+}
+
+body {
+    direction: ltr;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body .hide {
+    display: none;
+}
+
+.txt-align-center {
+    text-align: center;
+}
+
+strong {
+    font-weight: 500;
+}
+
+body {
+    min-width: 0 !important;
+}
+
+body {
+    height: 100%;
+}
+
+@media only screen and (device-width: 414px) and (device-height:896px) and (min-height:759px) and (-webkit-min-device-pixel-ratio:2),
+only screen and (device-width:375px) and (device-height:812px) and (min-height:675px) and (-webkit-device-pixel-ratio:3) {
+    body {
+        position: relative;
+    }
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.challenge-header {
+    display: inline-block;
+    width: 100%;
+}
+
+.challenge-header .yid {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: .82353rem;
+    letter-spacing: .58px;
+    text-align: center;
+}
+
+.grid .challenge-header {
+    margin-top: .94118rem;
+    min-height: 1rem;
+}
+
+.challenge {
+    padding: 0 10px;
+    margin: 0 auto;
+    max-width: 18.82353rem;
+}
+
+.grid .challenge {
+    padding: 0 1.41176rem;
+}
+
+.challenge .challenge-heading {
+    display: block;
+    margin: 0;
+    margin-top: .82353rem;
+    font-size: 1.17647rem;
+    font-weight: 600;
+    letter-spacing: -.2px;
+    text-align: center;
+    line-height: 1.35294rem;
+}
+
+.challenge .challenge-desc {
+    display: block;
+    padding: 0;
+    margin-top: .35294rem;
+    font-size: .82353rem;
+    letter-spacing: -.3px;
+    line-height: 1rem;
+    text-align: center;
+}
+
+.challenge .challenge-form {
+    margin: 0;
+    margin-top: 2.35294rem;
+}
+
+.challenge .button-container {
+    font-size: .82353rem;
+    margin-top: 1.41176rem;
+    padding: 0;
+}
+
+.challenge .challenge-button {
+    font-size: .94118rem;
+    font-weight: 500;
+    min-height: 2.35294rem;
+    padding: .64706rem 0;
+    line-height: 1rem;
+}
+
+.challenge .challenge-button-link {
+    margin: 0;
+    padding: 0;
+    font-size: .82353rem;
+    line-height: 1rem;
+    white-space: normal;
+}
+
+.challenge .caps-indicator {
+    background-size: cover;
+    width: .70588rem;
+    height: .82353rem;
+    margin-left: .47059rem;
+    background-image: url(https://s.yimg.com/wm/mbr/images/capslock-v0.0.2.svg);
+}
+
+.challenge .password-container {
+    display: flex;
+    align-items: center;
+}
+
+.challenge .show-hide-toggle-button {
+    background-size: .94118rem;
+    background-color: transparent;
+    width: .94118rem;
+    height: .94118rem;
+    padding: 0;
+    margin-left: .70588rem;
+    border: 0;
+}
+
+.grid .input-group .caps-indicator,
+.grid .input-group .show-hide-toggle-button {
+    margin-top: .35294rem;
+}
+
+.challenge .password-container input[type=password] {
+    font-size: .82353rem;
+    line-height: 1.17647rem;
+    letter-spacing: .2px;
+    padding-left: 0;
+    flex: 1;
+}
+
+.challenge .password-label {
+    font-size: .70588rem;
+}
+
+.challenge .hide-pw {
+    background-image: url(https://s.yimg.com/wm/mbr/images/hide-v0.0.1.svg);
+}
+
+.challenge .show-pw {
+    background-image: url(https://s.yimg.com/wm/mbr/images/show-v0.0.1.svg);
+}
+
+.challenge .input-group {
+    position: relative;
+    margin-top: 1.29412rem;
+}
+
+.challenge .input-group input[type=password] {
+    padding-left: 0;
+    margin: 0;
+    margin-top: .41176rem;
+    height: 1.88235rem;
+    font-size: .82353rem;
+}
+
+.challenge .input-group.password-container input[type=password] {
+    font-weight: 800;
+    letter-spacing: .17647rem;
+}
+
+.challenge .input-group input[type=password]:focus {
+    outline: 0;
+}
+
+.challenge .input-group label {
+    color: #999;
+    font-size: .82353rem;
+    letter-spacing: -.1px;
+    font-weight: 400;
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    top: .70588rem;
+    transition: .2s ease all;
+    margin-top: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.challenge .input-group input[type=password]::placeholder {
+    opacity: 0;
+}
+
+.challenge .input-group input[type=password]:focus::placeholder {
+    opacity: 1;
+    letter-spacing: .47059rem;
+}
+
+.challenge .input-group input[type=password]:focus~label,
+.challenge .input-group input[type=password]:not(:placeholder-shown)~label,
+.challenge .input-group .used~label {
+    top: -.47059rem;
+    font-size: .70588rem;
+    letter-spacing: -.1px;
+    color: #262626;
+}
+
+.loginish {
+    min-height: 100%;
+    background-color: #fff;
+    color: #26282a;
+}
+
+.loginish input[type=password],
+.loginish input[type=text] {
+    color: #26282a;
+}
+
+.login-box-container {
+    margin: 0 auto;
+    max-width: 1030px;
+    min-width: 320px;
+    position: relative;
+}
+
+.login-box,
+.login-box-ad-fallback {
+    top: 11px;
+}
+
+.login-box {
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #26282a;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3);
+    width: 360px;
+    right: 0;
+    min-height: 550px;
+    z-index: 1;
+    padding: 28px 5px;
+    padding-bottom: 10px;
+    border: 1px solid transparent;
+    border-top: 1px solid #f1f1f5;
+}
+
+.grid .login-box {
+    padding-top: 0;
+}
+
+.login-box-ad-fallback {
+    display: none;
+    left: 0;
+    padding: 50px 380px 50px 50px;
+    font-size: 21px;
+}
+
+.login-box-ad-fallback h1 {
+    font-size: 21px;
+    font-weight: 700;
+    padding: 20px 0;
+    text-transform: none;
+}
+
+@media screen and (max-width: 1040px) {
+    .login-box {
+        right: 10px;
+    }
+
+    .login-box-ad-fallback {
+        padding: 50px 380px 50px 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .login-box {
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+
+    .login-box-ad-fallback {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 359px) {
+    .login-box {
+        width: 320px;
+        padding: 0;
+    }
+}
+
+#password-challenge .forgot-cont {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#password-challenge .puree-button-link {
+    margin: 0 auto;
+    padding: 0;
+    width: auto;
+}
+
+#password-challenge .hidden-username {
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+#password-challenge .forgot-cont.challenge-button-link {
+    margin-top: 2rem;
+}
+
+#password-challenge .input-group input[type=password]::placeholder {
+    letter-spacing: normal;
+    font-weight: 400;
+}
+
+.mbr-login-hd {
+    background-color: #fff;
+    color: #26282a;
+    margin-bottom: 1.41176rem;
+}
+
+.mbr-login-hd .logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 90vw;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.login-box .mbr-login-hd {
+    background-color: #fff;
+    color: #26282a;
+}
+
+.grid .mbr-login-hd .logo,
+.login-box .mbr-login-hd .logo {
+    padding: 0;
+}
+
+.grid .mbr-login-hd {
+    padding-top: 28px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.grid .login-box .mbr-login-hd {
+    padding-top: 28px;
+    padding-bottom: 0;
+}
+
+.mbr-desktop-hd {
+    position: relative;
+    background-color: #fff;
+    color: #26282a;
+    line-height: 84px;
+    padding-left: 50px;
+}
+
+.mbr-desktop-hd .column {
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle;
+    line-height: normal;
+    font-size: 0;
+}
+
+.dark-mode-logo,
+.mbr-login-hd .dark-mode-logo {
+    display: none;
+}
+
+
+@font-face {
+    font-family: "Yahoo Sans";
+    font-display: block;
+    src: url(https://s.yimg.com/cv/ae/sports/fonts/2017/Yahoo_Sans-Regular.eot);
+    src: url(https://s.yimg.com/cv/ae/sports/fonts/2017/Yahoo_Sans-Regular.eot?#iefix) format("embedded-opentype"), url(https://s.yimg.com/cv/ae/sports/fonts/2017/Yahoo_Sans-Regular.woff2) format("woff2"), url(https://s.yimg.com/cv/ae/sports/fonts/2017/Yahoo_Sans-Regular.woff) format("woff");
+}

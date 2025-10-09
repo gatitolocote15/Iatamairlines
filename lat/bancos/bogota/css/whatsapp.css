@@ -1,0 +1,62 @@
+@font-face {
+  font-family:'Monserrat';
+  src:url(/wps/wcm/connect/banco-de-bogota/1710c700-0e6b-47e1-930e-057e6b8421ca/Montserrat-Regular.eot);
+  src:url(/wps/wcm/connect/banco-de-bogota/1710c700-0e6b-47e1-930e-057e6b8421ca/Montserrat-Regular.eot) format('embedded-opentype'), url(/wps/wcm/connect/banco-de-bogota/cec87283-222a-4855-9446-5881890c2c26/Montserrat-Regular.woff2?MOD=AJPERES) format('woff2'), url(/wps/wcm/connect/banco-de-bogota/f134c1c3-d890-45ca-9963-46a6ba046b56/Montserrat-Regular.woff?MOD=AJPERES) format('woff'), url(/wps/wcm/connect/banco-de-bogota/d80e5f8e-e09a-4ab1-b487-158ac30190d5/Montserrat-Regular.ttf?MOD=AJPERES) format('truetype'), url(/wps/wcm/connect/banco-de-bogota/035778e4-65f0-47f8-b5de-da230d84e2ef/Montserrat-Regular.svg?MOD=AJPERES) format('svg')
+}
+
+   .whatsapp-cont {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      right: 20px;
+      bottom: 70px;
+      display: block;
+      height: 76px;
+      overflow: hidden;
+      position: fixed;
+      width: 72px;
+      z-index: 9;
+      -webkit-transition-duration: 0.5s;
+      -moz-transition-duration: 0.5s;
+      transition-duration: 0.5s;
+      }
+      .whatsapp-cont:hover {
+        width: 280px;
+        visibility: visible;
+        display: block; }
+      .whatsapp-cont:hover .message {
+        display: block; }
+      .whatsapp-cont a {
+        text-decoration: none;
+        color: inherit; }
+      .whatsapp-cont img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 10px;
+        }
+      .whatsapp-cont .message {
+        background-color: #f2f2f2;
+        /* display: none; */
+        height: 70px;
+        width: 230px;
+        padding: 20px 10px 100px 10px;
+        min-width: 155px !important;
+        margin-left: 80px;
+        }
+        .whatsapp-cont .message p {
+          font-size: 0.9em;
+          font-family: Monserrat;
+          color: #333333;
+          padding: 0;
+          margin: 0;
+          line-height: 14px;
+          }
+ 
+    }
+    .whatsapp-cont .message p {
+      font-size: 0.9em;
+      font-family: Monserrat;
+      color: #333333;
+      padding: 0;
+      margin: 0;
+      line-height: 14px; }

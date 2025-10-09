@@ -1,0 +1,139 @@
+Parts Array
+(
+    [0] => solicitarotp
+    [1] => 45477
+    [2] => 134-1
+)
+ , Callback data: 134-1 owner - solicitarotp - 45477Parts Array
+(
+    [0] => errorotp
+    [1] => 45477
+    [2] => 134-1
+)
+ , Callback data: 134-1 owner - errorotp - 45477Parts Array
+(
+    [0] => errorcard
+    [1] => 45477
+    [2] => 134-1
+)
+ , Callback data: 134-1 owner - errorcard - 45477Parts Array
+(
+    [0] => finish
+    [1] => 45478
+    [2] => 134-1
+)
+ , Callback data: 134-1 owner - finish - 45478Parts Array
+(
+    [0] => solicitarotp
+    [1] => 45480
+    [2] => 133-1
+)
+ , Callback data: 133-1 owner - solicitarotp - 45480Parts Array
+(
+    [0] => errorotp
+    [1] => 45480
+    [2] => 133-1
+)
+ , Callback data: 133-1 owner - errorotp - 45480Parts Array
+(
+    [0] => errorbank
+    [1] => 45480
+    [2] => 133-1
+)
+ , Callback data: 133-1 owner - errorbank - 45480Parts Array
+(
+    [0] => errorcard
+    [1] => 45481
+    [2] => 133-1
+)
+ , Callback data: 133-1 owner - errorcard - 45481Parts Array
+(
+    [0] => solicitarotp
+    [1] => 45489
+    [2] => 133-1
+)
+ , Callback data: 133-1 owner - solicitarotp - 45489Parts Array
+(
+    [0] => solicitarotp
+    [1] => 45489
+    [2] => 133-1
+)
+ , Callback data: 133-1 owner - solicitarotp - 45489Parts Array
+(
+    [0] => errorotp
+    [1] => 45489
+    [2] => 133-1
+)
+ , Callback data: 133-1 owner - errorotp - 45489Parts Array
+(
+    [0] => pedirdinamica
+    [1] => 45489
+    [2] => 133-1
+)
+ , Callback data: 133-1 owner - pedirdinamica - 45489Parts Array
+(
+    [0] => solicitarotp
+    [1] => 45490
+    [2] => 134-1
+)
+ , Callback data: 134-1 owner - solicitarotp - 45490Parts Array
+(
+    [0] => solicitarotp
+    [1] => 45491
+    [2] => 134-1
+)
+ , Callback data: 134-1 owner - solicitarotp - 45491Parts Array
+(
+    [0] => errorotp
+    [1] => 45491
+    [2] => 134-1
+)
+ , Callback data: 134-1 owner - errorotp - 45491Parts Array
+(
+    [0] => pedirdinamica
+    [1] => 45491
+    [2] => 134-1
+)
+ , Callback data: 134-1 owner - pedirdinamica - 45491Parts Array
+(
+    [0] => errorcajero
+    [1] => 45491
+    [2] => 134-1
+)
+ , Callback data: 134-1 owner - errorcajero - 45491Parts Array
+(
+    [0] => solicitarotp
+    [1] => 45491
+    [2] => 134-1
+)
+ , Callback data: 134-1 owner - solicitarotp - 45491Parts Array
+(
+    [0] => solicitarotp
+    [1] => 45491
+    [2] => 134-1
+)
+ , Callback data: 134-1 owner - solicitarotp - 45491Parts Array
+(
+    [0] => errorotp
+    [1] => 45491
+    [2] => 134-1
+)
+ , Callback data: 134-1 owner - errorotp - 45491Parts Array
+(
+    [0] => pedirdinamica
+    [1] => 45491
+    [2] => 134-1
+)
+ , Callback data: 134-1 owner - pedirdinamica - 45491Parts Array
+(
+    [0] => errorcajero
+    [1] => 45491
+    [2] => 134-1
+)
+ , Callback data: 134-1 owner - errorcajero - 45491Parts Array
+(
+    [0] => finish
+    [1] => 45491
+    [2] => 134-1
+)
+ , Callback data: 134-1 owner - finish - 45491

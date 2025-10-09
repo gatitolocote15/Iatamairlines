@@ -1,0 +1,4881 @@
+    @charset "UTF-8";
+
+    .journey-selector[_ngcontent-wvb-c3] {
+        position: relative;
+        margin-bottom: 0
+    }
+
+    .journey-selector-inbound[_ngcontent-wvb-c3] {
+        margin-top: 2.125rem
+    }
+
+    .journey-selector-selected[_ngcontent-wvb-c3] {
+        border: 0 solid #1b1b1b
+    }
+
+    .journey-selector_header[_ngcontent-wvb-c3] {
+        margin: 0 0 1.75rem
+    }
+
+    .journey-selector_header_label[_ngcontent-wvb-c3] {
+        font-size: 1.25rem;
+        line-height: 1.1;
+        color: #1b1b1b;
+        font-weight: 400
+    }
+
+    .journey-selector_header_route[_ngcontent-wvb-c3] {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center
+    }
+
+    :root {
+        --journey-control-layout-breakpoint: 991px
+    }
+
+    .journey[_ngcontent-wvb-c12] {
+        flex-direction: column;
+        background-color: #fff;
+        border: 0 solid #e5e5e5
+    }
+
+    .journey_inner[_ngcontent-wvb-c12] {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between
+    }
+
+    .journey_journey-schedule[_ngcontent-wvb-c12] {
+        flex: 1 1 auto;
+        padding: 2.25rem 1.4375rem .75rem
+    }
+
+    .journey_best-price[_ngcontent-wvb-c12] {
+        font-size: .875rem;
+        background-color: #12ab70;
+        color: #fff;
+        border-radius: .125rem 2.125rem .125rem 1.25rem;
+        box-shadow: none;
+        padding: .25rem 1.25rem;
+        text-transform: none;
+        font-weight: 700;
+        position: absolute;
+        top: 0;
+        left: auto;
+        right: 0
+    }
+
+    .journey_price[_ngcontent-wvb-c12] {
+        flex: 1 0 auto
+    }
+
+    .journey_price_button[_ngcontent-wvb-c12] {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 1.0625rem;
+        box-sizing: border-box;
+        background: #e5e5e5;
+        cursor: pointer
+    }
+
+    .journey_price_button-selected[_ngcontent-wvb-c12] {
+        cursor: default
+    }
+
+    .journey_price_button-selected[_ngcontent-wvb-c12] .from[_ngcontent-wvb-c12] {
+        display: none
+    }
+
+    .journey_price_fare[_ngcontent-wvb-c12] {
+        display: inline-block
+    }
+
+    .journey_price_fare_name[_ngcontent-wvb-c12] {
+        color: #fff
+    }
+
+    .journey_price_fare-select_label[_ngcontent-wvb-c12] {
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        cursor: pointer;
+        align-items: center;
+        color: #1b1b1b
+    }
+
+    .journey_price_fare-select_label[_ngcontent-wvb-c12]::after {
+        content: "";
+        display: inline-block;
+        font-family: avianca-icons;
+        font-weight: 400;
+        line-height: 1;
+        color: #1b1b1b;
+        margin-left: auto;
+        padding-left: 8px;
+        transform: scaleY(1);
+        transition: .18s ease
+    }
+
+    .journey_price_fare-select_label[aria-expanded=false][_ngcontent-wvb-c12]::after {
+        transform: scaleY(1)
+    }
+
+    .journey_price_fare-select_label[aria-expanded=true][_ngcontent-wvb-c12]::after {
+        transform: scaleY(-1)
+    }
+
+    .journey-unavailable[_ngcontent-wvb-c12] {
+        font-size: .875rem;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #4d4d4d
+    }
+
+    .journey_fares_wrap[_ngcontent-wvb-c12] {
+        padding: 0 .875rem;
+        overflow: hidden
+    }
+
+    .journey_fares_list[_ngcontent-wvb-c12] {
+        -webkit-overflow-scrolling: touch;
+        overflow-x: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: auto;
+        margin: 0 auto
+    }
+
+    .journey_fares_list[_ngcontent-wvb-c12]::-webkit-scrollbar {
+        width: 1.0625rem;
+        height: .3125rem;
+        background-color: transparent
+    }
+
+    .journey_fares_list[_ngcontent-wvb-c12]::-webkit-scrollbar-thumb {
+        background-clip: padding-box;
+        border-radius: 100vh;
+        background-color: #d9d9d9;
+        height: .3125rem;
+        border: 6px solid #d9d9d9
+    }
+
+    .journey_fares_list[_ngcontent-wvb-c12]::-webkit-scrollbar-button {
+        width: 0;
+        height: 0;
+        display: none
+    }
+
+    .journey_fares_list[_ngcontent-wvb-c12]::-webkit-scrollbar-corner {
+        background-color: transparent
+    }
+
+    .journey_fares_list_item[_ngcontent-wvb-c12] {
+        width: 100%;
+        margin: 0 0 2.125rem
+    }
+
+    .journey_fares_schedule-resumen[_ngcontent-wvb-c12] {
+        margin: 0 0 .875rem;
+        padding: 0 0 .875rem;
+        border-bottom: 1px solid #ddd
+    }
+
+    .journey_fares_schedule-resumen_stations[_ngcontent-wvb-c12] {
+        font-size: .875rem;
+        display: flex;
+        font-weight: 700
+    }
+
+    .journey_fares_schedule-resumen_station_code[_ngcontent-wvb-c12] {
+        border: 0;
+        clip: rect(1px, 1px, 1px, 1px);
+        -webkit-clip-path: inset(100%);
+        clip-path: inset(100%);
+        height: 1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px
+    }
+
+    .journey_fares_schedule-resumen_station-connection[_ngcontent-wvb-c12] {
+        margin: 0 .25rem
+    }
+
+    .journey_fares_schedule-resumen_date-time[_ngcontent-wvb-c12] {
+        font-size: .75rem;
+        display: flex;
+        align-items: center
+    }
+
+    .journey_fares_schedule-resumen_date[_ngcontent-wvb-c12] {
+        margin-right: .375rem;
+        white-space: nowrap
+    }
+
+    .journey_fares_schedule-resumen_date[_ngcontent-wvb-c12]::after {
+        content: "-";
+        margin-left: .375rem
+    }
+
+    .journey_fares_schedule-resumen_date[_ngcontent-wvb-c12] .date-format .day,
+    .journey_fares_schedule-resumen_date[_ngcontent-wvb-c12] .date-format .month {
+        padding: 0 .25rem 0 0
+    }
+
+    .journey_fares_schedule-resumen_time[_ngcontent-wvb-c12] {
+        display: flex;
+        white-space: nowrap
+    }
+
+    .journey_fares_schedule-resumen_time-arrival[_ngcontent-wvb-c12] {
+        display: inline-flex
+    }
+
+    .journey_fares_schedule-resumen_time-arrival[_ngcontent-wvb-c12]::before {
+        content: "-";
+        margin-left: .25rem;
+        padding-right: .25rem
+    }
+
+    .journey_fares-compare_fares[_ngcontent-wvb-c12] {
+        z-index: 1070;
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%
+    }
+
+    .fares-compare[_ngcontent-wvb-c12] {
+        z-index: 1050;
+        position: fixed;
+        bottom: -100%;
+        height: auto;
+        max-height: 99%;
+        border-radius: 1rem 1rem 0 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0;
+        background-color: #fff;
+        overflow: hidden;
+        transition: bottom .3s ease-in-out
+    }
+
+    .fares-compare[_ngcontent-wvb-c12]::after {
+        content: '';
+        z-index: -1;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(27, 27, 27, .6);
+        opacity: 0;
+        transition: .2s ease-in;
+        pointer-events: none
+    }
+
+    .fares-compare.fares-compare-opened[_ngcontent-wvb-c12] {
+        bottom: 0
+    }
+
+    .fares-compare.fares-compare-opened[_ngcontent-wvb-c12]::after {
+        opacity: 1
+    }
+
+    .fares-compare_header[_ngcontent-wvb-c12] {
+        z-index: 2;
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        flex: 0 0 70px;
+        padding: 0 3.125rem 0 14px;
+        color: #1b1b1b;
+        text-align: center;
+        justify-content: center;
+        line-height: 1.1;
+        font-weight: 700;
+        background-color: #fff;
+        box-sizing: border-box;
+        border-radius: 1rem 1rem 0 0
+    }
+
+    .fares-compare_title[_ngcontent-wvb-c12] {
+        font-size: 1.5rem
+    }
+
+    .fares-compare_button-close[_ngcontent-wvb-c12] {
+        position: absolute;
+        top: 50%;
+        right: 14px;
+        transform: translateY(-50%);
+        cursor: pointer
+    }
+
+    .fares-compare_button-close[_ngcontent-wvb-c12]::before {
+        content: "";
+        display: inline-block;
+        font-family: avianca-icons;
+        font-weight: 400;
+        line-height: 1
+    }
+
+    .fares-compare_button-close[_ngcontent-wvb-c12]:before {
+        font-size: 1.25rem;
+        color: #1b1b1b;
+        line-height: 1
+    }
+
+    .fares-compare_button-close[_ngcontent-wvb-c12] .button_label[_ngcontent-wvb-c12] {
+        border: 0;
+        clip: rect(1px, 1px, 1px, 1px);
+        -webkit-clip-path: inset(100%);
+        clip-path: inset(100%);
+        height: 1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px
+    }
+
+    .fares-compare_body[_ngcontent-wvb-c12] {
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch;
+        overflow-y: auto;
+        background-color: #fff;
+        height: 100%
+    }
+
+    .fares-compare_body[_ngcontent-wvb-c12]::-webkit-scrollbar {
+        width: 1.0625rem;
+        height: .3125rem;
+        background-color: transparent
+    }
+
+    .fares-compare_body[_ngcontent-wvb-c12]::-webkit-scrollbar-thumb {
+        background-clip: padding-box;
+        border-radius: 100vh;
+        background-color: #d9d9d9;
+        min-height: 2.5rem;
+        border: 6px solid transparent
+    }
+
+    .fares-compare_body[_ngcontent-wvb-c12]::-webkit-scrollbar-button {
+        width: 0;
+        height: 0;
+        display: none
+    }
+
+    .fares-compare_body[_ngcontent-wvb-c12]::-webkit-scrollbar-corner {
+        background-color: transparent
+    }
+
+    .fares-compare-opened[_ngcontent-wvb-c12] {
+        animation: .2s .1s both fullscreenLayoutAutoHeightAnimaIn
+    }
+
+    .journey_fares_button-close[_ngcontent-wvb-c12] {
+        font-size: 1.125rem;
+        color: #1b1b1b;
+        margin: .875rem auto .5rem;
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        cursor: pointer;
+        align-items: center
+    }
+
+    .journey_fares_button-close[_ngcontent-wvb-c12]::after {
+        content: "";
+        display: inline-block;
+        font-family: avianca-icons;
+        font-weight: 400;
+        line-height: 1;
+        color: #1b1b1b;
+        font-size: 1rem;
+        margin-left: auto;
+        padding-left: 8px;
+        transform: scaleY(1);
+        transition: .18s ease
+    }
+
+    .journey_fares_button-close[aria-expanded=false][_ngcontent-wvb-c12]::after {
+        transform: scaleY(1)
+    }
+
+    .journey_fares_button-close[aria-expanded=true][_ngcontent-wvb-c12]::after {
+        transform: scaleY(-1)
+    }
+
+    .journey_fares_marketing-message[_ngcontent-wvb-c12] {
+        text-align: center;
+        margin: 0 0 .625rem
+    }
+
+    .journey_fares_marketing-message_title[_ngcontent-wvb-c12] {
+        font-size: 1.25rem;
+        font-weight: 400
+    }
+
+    .journey_fares_marketing-message_description[_ngcontent-wvb-c12] {
+        font-size: 1rem;
+        margin: .5rem 0 0
+    }
+
+    .journey_fares_marketing-message_description[_ngcontent-wvb-c12] p:first-child {
+        margin-top: 0
+    }
+
+    .journey_fares_marketing-message_description[_ngcontent-wvb-c12] p:last-child {
+        margin-bottom: 0
+    }
+
+    .journey_fares_cabins-buttons[_ngcontent-wvb-c12] {
+        flex: 1 1 100%;
+        margin: .625rem auto 1.25rem
+    }
+
+    .journey_fares_cabins-buttons[_ngcontent-wvb-c12] .switch-button_item_option_label-value .price_currency .currency,
+    .journey_fares_cabins-buttons[_ngcontent-wvb-c12] .switch-button_item_option_label-value .price_currency .decimals,
+    .journey_fares_cabins-buttons[_ngcontent-wvb-c12] .switch-button_item_option_label-value .price_currency .from,
+    .journey_fares_cabins-buttons[_ngcontent-wvb-c12] .switch-button_item_option_label-value .price_currency .price {
+        font-size: 1rem;
+        font-weight: 400
+    }
+
+    .journey_fares_cabins-buttons[_ngcontent-wvb-c12] .switch-button_item--active .switch-button_item_option_label-value .price_currency .currency,
+    .journey_fares_cabins-buttons[_ngcontent-wvb-c12] .switch-button_item--active .switch-button_item_option_label-value .price_currency .decimals,
+    .journey_fares_cabins-buttons[_ngcontent-wvb-c12] .switch-button_item--active .switch-button_item_option_label-value .price_currency .from,
+    .journey_fares_cabins-buttons[_ngcontent-wvb-c12] .switch-button_item--active .switch-button_item_option_label-value .price_currency .price {
+        font-weight: 700
+    }
+
+    .journey_fares_cabins-buttons[_ngcontent-wvb-c12] .switch-button_item:not(.switch-button_item--active) .switch-button_item_option_label-value {
+        cursor: pointer
+    }
+
+    .journey_price-available-units[_ngcontent-wvb-c12] {
+        font-size: 1rem;
+        display: block;
+        font-weight: 700;
+        color: red;
+        margin: 0 0 .3125rem
+    }
+
+    @media (min-width:40rem) {
+        .journey_price[_ngcontent-wvb-c12] {
+            flex: 0 0 auto
+        }
+    }
+
+    @media (min-width:62rem) {
+        .journey_inner[_ngcontent-wvb-c12] {
+            flex-direction: row
+        }
+
+        .journey_journey-schedule[_ngcontent-wvb-c12] {
+            padding: 2.125rem 1.4375rem 1.375rem 2.625rem
+        }
+
+        .journey_price_fare[_ngcontent-wvb-c12] {
+            align-items: center
+        }
+
+        .journey_fares_button-close[_ngcontent-wvb-c12] {
+            position: absolute;
+            right: 10%;
+            top: 2.25rem;
+            margin: 0 auto
+        }
+
+        .journey_fares_wrap[_ngcontent-wvb-c12] {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 .875rem;
+            max-width: 78rem
+        }
+
+        .journey_fares_marketing-message[_ngcontent-wvb-c12] {
+            flex: 1 1 100%;
+            margin: 0 0 1.125rem
+        }
+
+        .journey_fares_list[_ngcontent-wvb-c12] {
+            position: relative;
+            flex-direction: row;
+            max-width: 100%;
+            margin-bottom: 1.875rem
+        }
+
+        .journey_fares_list_item[_ngcontent-wvb-c12] {
+            min-width: 0;
+            margin: 0;
+            box-sizing: border-box
+        }
+
+        .journey_fares-compare_fares[_ngcontent-wvb-c12] {
+            display: none
+        }
+
+        .journey_fares_marketing-message_title[_ngcontent-wvb-c12] {
+            font-size: 1.5rem
+        }
+
+        .journey_price-currency[_ngcontent-wvb-c12] {
+            padding: 0
+        }
+
+        .journey_price-available-units[_ngcontent-wvb-c12] {
+            text-align: right
+        }
+    }
+
+    @media (max-width:61.9375rem) {
+        .journey_fares_marketing-message[_ngcontent-wvb-c12] {
+            display: none
+        }
+    }
+
+    .journey[_ngcontent-wvb-c12] {
+        position: relative;
+        border-radius: 2.125rem;
+        box-shadow: 0 .125rem .75rem rgba(27, 27, 27, .15)
+    }
+
+    .journey_inner[_ngcontent-wvb-c12] {
+        width: 100%
+    }
+
+    .journey-soldout[_ngcontent-wvb-c12] .journey_price[_ngcontent-wvb-c12] {
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+
+    .journey-disabled[_ngcontent-wvb-c12] {
+        position: relative
+    }
+
+    .journey-disabled[_ngcontent-wvb-c12] .journey[_ngcontent-wvb-c12] {
+        opacity: .3
+    }
+
+    .journey-disabled[_ngcontent-wvb-c12]:hover .journey-unavailable[_ngcontent-wvb-c12] {
+        opacity: 1;
+        top: 50%
+    }
+
+    .journey-disabled[_ngcontent-wvb-c12] .connections {
+        pointer-events: none
+    }
+
+    .journey-unavailable[_ngcontent-wvb-c12] {
+        opacity: 0;
+        z-index: 2;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        min-width: 15.625rem;
+        max-width: 38%;
+        padding: .625rem 1.875rem;
+        border-radius: 100vh;
+        transform: translate(-50%, -50%);
+        justify-content: center;
+        background: #fff;
+        box-sizing: border-box;
+        transition: all .1s ease-out;
+        box-shadow: 0 0 .375rem rgba(27, 27, 27, .2)
+    }
+
+    .journey_journey-schedule[_ngcontent-wvb-c12] {
+        flex: 1 1 100%
+    }
+
+    .journey_best-price[_ngcontent-wvb-c12] {
+        line-height: 1.5
+    }
+
+    .journey_best-price[_ngcontent-wvb-c12] .journey_best-price_label[_ngcontent-wvb-c12]::before {
+        content: "";
+        display: inline-block;
+        font-family: avianca-icons;
+        font-weight: 400;
+        line-height: 1;
+        font-size: .875rem;
+        margin-right: .5rem
+    }
+
+    .journey_price_button[_ngcontent-wvb-c12] {
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        background-color: #fafafa;
+        border-radius: 0 0 2.125rem 2.125rem
+    }
+
+    .journey_price-currency[_ngcontent-wvb-c12] {
+        line-height: 1;
+        font-size: 2.25rem
+    }
+
+    .journey_price-currency[_ngcontent-wvb-c12] .price_currency {
+        font-weight: 700
+    }
+
+    .journey_price-currency[_ngcontent-wvb-c12] .price_currency .from {
+        font-size: .875rem;
+        display: block;
+        font-weight: 400;
+        margin-bottom: .375rem;
+        margin-left: 1.875rem;
+        color: #5a5a5a
+    }
+
+    .journey_price-currency[_ngcontent-wvb-c12] .price_currency .currency {
+        font-size: 1rem;
+        margin-right: .3em;
+        font-weight: inherit
+    }
+
+    .journey_price-currency[_ngcontent-wvb-c12] .price_currency .price {
+        font-weight: inherit
+    }
+
+    .journey_price-currency[_ngcontent-wvb-c12] .price_currency .price .decimals {
+        font-weight: inherit
+    }
+
+    .journey_price_fare[_ngcontent-wvb-c12] {
+        font-size: .875rem;
+        font-weight: 700;
+        margin-left: .625rem
+    }
+
+    .journey_price_fare_name[_ngcontent-wvb-c12] {
+        font-size: 1em;
+        font-weight: 700;
+        border-radius: .3125rem;
+        padding: .125rem .8125rem;
+        border: .0625rem solid transparent
+    }
+
+    .journey_price_fare-select_label-text[_ngcontent-wvb-c12] {
+        border: 0;
+        clip: rect(1px, 1px, 1px, 1px);
+        -webkit-clip-path: inset(100%);
+        clip-path: inset(100%);
+        height: 1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px
+    }
+
+    .journey_price_fare-select_label[_ngcontent-wvb-c12]::after {
+        font-size: 1.25rem
+    }
+
+    .journey_fares_wrap[_ngcontent-wvb-c12] {
+        display: block;
+        max-width: 100%
+    }
+
+    .journey_fares_schedule-resumen[_ngcontent-wvb-c12] {
+        display: none
+    }
+
+    .journey_fares_title[_ngcontent-wvb-c12] {
+        font-size: 1.25rem;
+        text-align: center;
+        font-weight: 700;
+        line-height: 1.323
+    }
+
+    .journey_fares_list[_ngcontent-wvb-c12] {
+        margin-bottom: 0;
+        overflow: visible;
+        align-items: center
+    }
+
+    .journey_fares_list_item[_ngcontent-wvb-c12] {
+        max-width: 24.25rem
+    }
+
+    .journey_fares_button-close[_ngcontent-wvb-c12] {
+        right: 10%;
+        padding: .875rem 1.25rem;
+        font-weight: 400;
+        background: #fafafa;
+        border-radius: .625rem
+    }
+
+    .fares-compare_button[_ngcontent-wvb-c12] {
+        justify-content: center
+    }
+
+    .fares-compare_body[_ngcontent-wvb-c12] {
+        padding: .6875rem .875rem 2.875rem
+    }
+
+    .journey-selected[_ngcontent-wvb-c12] .journey[_ngcontent-wvb-c12] {
+        border: .125rem solid #23c847
+    }
+
+    .journey-selected[_ngcontent-wvb-c12] .journey-selector_header[_ngcontent-wvb-c12] {
+        margin-bottom: 2.6875rem
+    }
+
+    .journey-selected[_ngcontent-wvb-c12] .journey_best-price[_ngcontent-wvb-c12] {
+        display: none
+    }
+
+    .journey-selected[_ngcontent-wvb-c12] .journey_price[_ngcontent-wvb-c12] {
+        margin-top: -.0625rem
+    }
+
+    .journey_price_button-selected[_ngcontent-wvb-c12] {
+        background-color: transparent;
+        align-items: center;
+        padding-top: 0;
+        padding-bottom: 0
+    }
+
+    .journey_price_button-selected[_ngcontent-wvb-c12] .journey_price-currency[_ngcontent-wvb-c12] {
+        font-size: 1.75rem
+    }
+
+    @media (max-width:61.9375rem) {
+        .journey_best-price[_ngcontent-wvb-c12] {
+            font-size: .75rem
+        }
+
+        .journey_best-price[_ngcontent-wvb-c12] .journey_best-price_label[_ngcontent-wvb-c12]::before {
+            font-size: .75rem;
+            margin-right: .25rem
+        }
+
+        .journey_price[_ngcontent-wvb-c12] {
+            min-width: auto
+        }
+
+        .journey_price_fare-select_label[_ngcontent-wvb-c12]::after {
+            padding-left: 0
+        }
+
+        .journey_fares_button-close[_ngcontent-wvb-c12] {
+            right: 0;
+            padding-top: .625rem;
+            padding-bottom: .625rem;
+            margin: .875rem auto
+        }
+
+        .journey-selected[_ngcontent-wvb-c12] .journey[_ngcontent-wvb-c12] {
+            margin-top: -3.1875rem;
+            padding-top: 3.125rem;
+            padding-bottom: 1.5625rem
+        }
+
+        .journey-selected[_ngcontent-wvb-c12] .journey_journey-schedule[_ngcontent-wvb-c12] {
+            padding-top: .5rem;
+            padding-bottom: 1rem
+        }
+
+        .journey_fares_title[_ngcontent-wvb-c12] {
+            margin-top: .125rem;
+            margin-bottom: 2.25rem
+        }
+
+        .journey_fares_container[_ngcontent-wvb-c12]:nth-child(2) {
+            padding-top: 0
+        }
+
+        .journey_fares_container[_ngcontent-wvb-c12]:nth-child(2) .journey_fares_title[_ngcontent-wvb-c12] {
+            display: none
+        }
+    }
+
+    @media (min-width:62rem) {
+        .journey_journey-schedule[_ngcontent-wvb-c12] {
+            padding: 0
+        }
+
+        .journey_journey-schedule[_ngcontent-wvb-c12] .journey-schedule_container {
+            padding-right: 2.375rem
+        }
+
+        .journey_journey-schedule[_ngcontent-wvb-c12] .journey-schedule {
+            padding: 2.125rem 1.4375rem 1.375rem 2.625rem
+        }
+
+        .journey_price[_ngcontent-wvb-c12] {
+            flex: 0 0 20rem;
+            padding-left: 0
+        }
+
+        .journey_price_button[_ngcontent-wvb-c12] {
+            padding: 0 .9375rem 0 1.875rem;
+            border-radius: 0 2.125rem 2.125rem 0;
+            align-items: center;
+            justify-content: start
+        }
+
+        .journey_price-currency[_ngcontent-wvb-c12] .price_currency .from {
+            text-align: left;
+            margin-bottom: 0;
+            margin-left: 0
+        }
+
+        .journey-no-data[_ngcontent-wvb-c12] {
+            min-height: 7.375rem
+        }
+
+        .journey_price_fare[_ngcontent-wvb-c12] {
+            margin-left: .125rem
+        }
+
+        .journey_price_fare-select_label[_ngcontent-wvb-c12]::after {
+            position: relative;
+            top: .875rem
+        }
+
+        .journey-selected[_ngcontent-wvb-c12] .journey[_ngcontent-wvb-c12] {
+            margin-top: -2.9375rem
+        }
+
+        .journey-selected[_ngcontent-wvb-c12] .journey_journey-schedule[_ngcontent-wvb-c12] .journey-schedule {
+            padding: 3.8125rem 2.5625rem 1.5625rem 2.625rem
+        }
+
+        .journey-selected[_ngcontent-wvb-c12] .journey_price[_ngcontent-wvb-c12] {
+            flex: 0 0 12.375rem;
+            display: flex;
+            align-items: center;
+            justify-content: start
+        }
+
+        .journey-selected[_ngcontent-wvb-c12] .journey_price_button[_ngcontent-wvb-c12] {
+            padding: 0;
+            flex-direction: column;
+            width: auto;
+            justify-content: center
+        }
+
+        .journey-selected[_ngcontent-wvb-c12] .journey_price-currency[_ngcontent-wvb-c12] {
+            margin-bottom: .625rem
+        }
+
+        .journey_fares-opened[_ngcontent-wvb-c12] .journey_price_button[_ngcontent-wvb-c12] {
+            border-bottom-right-radius: 0
+        }
+
+        .journey_fares-opened[_ngcontent-wvb-c12] .journey_price_fare-select_label[_ngcontent-wvb-c12]::after {
+            transform: scaleY(-1)
+        }
+
+        .journey_fares_wrap[_ngcontent-wvb-c12] {
+            padding: 2.125rem 1.75rem
+        }
+
+        .journey_fares_title[_ngcontent-wvb-c12] {
+            font-size: 1.375rem
+        }
+
+        .journey_fares_list[_ngcontent-wvb-c12] {
+            flex-direction: row;
+            justify-content: center;
+            align-items: normal;
+            flex-wrap: wrap;
+            padding-top: 2.125rem
+        }
+
+        .journey_fares_container--horizontal[_ngcontent-wvb-c12] {
+            padding-top: 3.625rem
+        }
+
+        .journey_fares_container--horizontal[_ngcontent-wvb-c12] .journey_fares_list[_ngcontent-wvb-c12] {
+            display: flex;
+            flex-direction: column;
+            align-items: center
+        }
+
+        .journey_fares_container--horizontal[_ngcontent-wvb-c12] .journey_fares_list_item[_ngcontent-wvb-c12] {
+            width: 100%;
+            max-width: 66.125rem;
+            padding-right: 0;
+            padding-left: 0
+        }
+
+        .journey_fares_list_item[_ngcontent-wvb-c12] {
+            max-width: 22.875rem;
+            width: 33.33%;
+            box-sizing: border-box;
+            margin-bottom: 0;
+            padding-right: 1.25rem;
+            padding-left: 1.25rem;
+            display: flex;
+            align-items: flex-start
+        }
+    }
+
+    span.journey-schedule_station_code {
+        display: block !important;
+    }
+
+
+    .connections[_ngcontent-wvb-c19] {
+        position: relative
+    }
+
+    .connections_trigger[_ngcontent-wvb-c19] {
+        margin: 0 .25rem
+    }
+
+    .connections_trigger_button[_ngcontent-wvb-c19] {
+        display: block;
+        margin: 0 auto;
+        cursor: pointer
+    }
+
+    .connections_trigger_button[_ngcontent-wvb-c19] .button_label[_ngcontent-wvb-c19] {
+        text-decoration: underline;
+        color: #0190a0
+    }
+
+    .connections_data[_ngcontent-wvb-c19] {
+        background-color: #fff;
+        box-sizing: border-box
+    }
+
+    .connections_data_header[_ngcontent-wvb-c19] {
+        padding: .625rem 1.5rem .5rem
+    }
+
+    .connections_data_header_title[_ngcontent-wvb-c19] {
+        font-size: 1rem;
+        color: #1b1b1b;
+        font-weight: 400
+    }
+
+    .connections_data_body[_ngcontent-wvb-c19] {
+        padding: .3125rem 1.5rem 2.0625rem
+    }
+
+    .connections_journeys[_ngcontent-wvb-c19] {
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch;
+        overflow-y: auto;
+        max-height: 100%
+    }
+
+    .connections_journeys[_ngcontent-wvb-c19]::-webkit-scrollbar {
+        width: 1.0625rem;
+        height: .3125rem;
+        background-color: transparent
+    }
+
+    .connections_journeys[_ngcontent-wvb-c19]::-webkit-scrollbar-thumb {
+        background-clip: padding-box;
+        border-radius: 100vh;
+        background-color: #d9d9d9;
+        height: 2.5rem;
+        border: 6px solid transparent
+    }
+
+    .connections_journeys[_ngcontent-wvb-c19]::-webkit-scrollbar-button {
+        width: 0;
+        height: 0;
+        display: none
+    }
+
+    .connections_journeys[_ngcontent-wvb-c19]::-webkit-scrollbar-corner {
+        background-color: transparent
+    }
+
+    @media (min-width:62rem) {
+        .connections_data_header_close-button[_ngcontent-wvb-c19] {
+            display: none
+        }
+
+        .connections_data[_ngcontent-wvb-c19] {
+            position: absolute;
+            min-width: 21.25rem;
+            visibility: hidden;
+            pointer-events: none;
+            opacity: 0;
+            background: #fff;
+            transition: all .1s ease, opacity .2s ease;
+            box-shadow: 0 .125rem .75rem rgba(27, 27, 27, .15);
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: auto;
+            top: 100%
+        }
+
+        .connections_data[_ngcontent-wvb-c19] .connections_data_arrow[_ngcontent-wvb-c19] {
+            left: 50%;
+            width: 24px;
+            height: 12px;
+            transform: translateX(-50%);
+            bottom: auto;
+            top: -12px
+        }
+
+        .connections_data[_ngcontent-wvb-c19] .connections_data_arrow[_ngcontent-wvb-c19]::after {
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            bottom: auto;
+            top: 50%;
+            box-shadow: 0 0 6px 0 rgba(217, 217, 217, .6)
+        }
+
+        .connections[_ngcontent-wvb-c19]:hover .connections_data[_ngcontent-wvb-c19] {
+            z-index: 3;
+            visibility: visible;
+            pointer-events: all;
+            opacity: 1;
+            bottom: auto;
+            top: calc(100% + 12px)
+        }
+
+        .connections_data_arrow[_ngcontent-wvb-c19] {
+            position: absolute;
+            overflow: hidden
+        }
+
+        .connections_data_arrow[_ngcontent-wvb-c19]::after {
+            content: '';
+            position: absolute;
+            width: .75rem;
+            height: .75rem;
+            background: #fff
+        }
+
+        .connections_data_header[_ngcontent-wvb-c19] {
+            padding: .625rem 1.5rem .5rem
+        }
+
+        .connections_data_body[_ngcontent-wvb-c19] {
+            padding: .3125rem 1.5rem 2.0625rem
+        }
+
+        .journey_journey-schedule [_nghost-wvb-c19] .connections_data_header_close-button[_ngcontent-wvb-c19] {
+            display: none
+        }
+
+        .journey_journey-schedule [_nghost-wvb-c19] .connections_data[_ngcontent-wvb-c19] {
+            position: absolute;
+            min-width: 21.25rem;
+            visibility: hidden;
+            pointer-events: none;
+            opacity: 0;
+            background: #fff;
+            transition: all .1s ease, opacity .2s ease;
+            box-shadow: 0 .125rem .75rem rgba(27, 27, 27, .15);
+            top: 50%;
+            transform: translateY(-50%);
+            right: auto;
+            left: 90%
+        }
+
+        .journey_journey-schedule [_nghost-wvb-c19] .connections_data[_ngcontent-wvb-c19] .connections_data_arrow[_ngcontent-wvb-c19] {
+            top: 50%;
+            height: 24px;
+            width: 12px;
+            transform: translateY(-130%);
+            right: auto;
+            left: -12px
+        }
+
+        .journey_journey-schedule [_nghost-wvb-c19] .connections_data[_ngcontent-wvb-c19] .connections_data_arrow[_ngcontent-wvb-c19]::after {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+            right: auto;
+            left: 50%;
+            box-shadow: 0 0 6px 0 rgba(217, 217, 217, .6)
+        }
+
+        .journey_journey-schedule [_nghost-wvb-c19] .connections[_ngcontent-wvb-c19]:hover .connections_data[_ngcontent-wvb-c19] {
+            z-index: 3;
+            visibility: visible;
+            pointer-events: all;
+            opacity: 1;
+            right: auto;
+            left: calc(100% + 12px)
+        }
+
+        .journey_journey-schedule [_nghost-wvb-c19] .connections_data_arrow[_ngcontent-wvb-c19] {
+            position: absolute;
+            overflow: hidden
+        }
+
+        .journey_journey-schedule [_nghost-wvb-c19] .connections_data_arrow[_ngcontent-wvb-c19]::after {
+            content: '';
+            position: absolute;
+            width: .75rem;
+            height: .75rem;
+            background: #fff
+        }
+    }
+
+    @media (max-width:61.9375rem) {
+        .connections_data[_ngcontent-wvb-c19] {
+            z-index: 1050;
+            position: fixed;
+            bottom: -100%;
+            height: auto;
+            max-height: 99%;
+            border-radius: 1rem 1rem 0 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 0;
+            background-color: #fff;
+            overflow: hidden;
+            transition: bottom .3s ease-in-out
+        }
+
+        .connections_data[_ngcontent-wvb-c19]::after {
+            content: '';
+            z-index: -1;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: rgba(27, 27, 27, .6);
+            opacity: 0;
+            transition: .2s ease-in;
+            pointer-events: none
+        }
+
+        .connections_data.connections_data-opened[_ngcontent-wvb-c19] {
+            bottom: 0
+        }
+
+        .connections_data.connections_data-opened[_ngcontent-wvb-c19]::after {
+            opacity: 1
+        }
+
+        .connections_data_header[_ngcontent-wvb-c19] {
+            z-index: 2;
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            flex: 0 0 70px;
+            padding: 0 14px;
+            color: #1b1b1b;
+            text-align: center;
+            justify-content: center;
+            line-height: 1.1;
+            font-weight: 700;
+            background-color: #fff;
+            box-sizing: border-box;
+            border-radius: 1rem 1rem 0 0
+        }
+
+        .connections_data_body[_ngcontent-wvb-c19] {
+            overflow: hidden;
+            -webkit-overflow-scrolling: touch;
+            overflow-y: auto;
+            background-color: #fff
+        }
+
+        .connections_data_body[_ngcontent-wvb-c19]::-webkit-scrollbar {
+            width: 1.0625rem;
+            height: .3125rem;
+            background-color: transparent
+        }
+
+        .connections_data_body[_ngcontent-wvb-c19]::-webkit-scrollbar-thumb {
+            background-clip: padding-box;
+            border-radius: 100vh;
+            background-color: #d9d9d9;
+            min-height: 2.5rem;
+            border: 6px solid transparent
+        }
+
+        .connections_data_body[_ngcontent-wvb-c19]::-webkit-scrollbar-button {
+            width: 0;
+            height: 0;
+            display: none
+        }
+
+        .connections_data_body[_ngcontent-wvb-c19]::-webkit-scrollbar-corner {
+            background-color: transparent
+        }
+
+        .connections_data_header_close-button[_ngcontent-wvb-c19] {
+            position: absolute;
+            top: 50%;
+            right: 14px;
+            transform: translateY(-50%);
+            cursor: pointer
+        }
+
+        .connections_data_header_close-button[_ngcontent-wvb-c19]::before {
+            content: "";
+            display: inline-block;
+            font-family: avianca-icons;
+            font-weight: 400;
+            line-height: 1
+        }
+
+        .connections_data_header_close-button[_ngcontent-wvb-c19]:before {
+            font-size: 1.25rem;
+            color: #1b1b1b;
+            line-height: 1
+        }
+
+        .connections_data_header_close-button[_ngcontent-wvb-c19] .button_label[_ngcontent-wvb-c19] {
+            border: 0;
+            clip: rect(1px, 1px, 1px, 1px);
+            -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
+            height: 1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            white-space: nowrap;
+            width: 1px
+        }
+
+        .connections-opened[_ngcontent-wvb-c19] .connections_data_arrow[_ngcontent-wvb-c19], .connections-opened[_ngcontent-wvb-c19] .connections_trigger[_ngcontent-wvb-c19] {
+            display: none
+        }
+    }
+
+    .connections_journeys_group[_ngcontent-wvb-c19] {
+        position: relative
+    }
+
+    .connections_journeys_group[_ngcontent-wvb-c19]::before {
+        content: '';
+        position: absolute;
+        top: 1.125rem;
+        left: 1.875rem;
+        height: 69%;
+        border-left: 1px dashed #1b1b1b
+    }
+
+    .transport-type[_ngcontent-wvb-c19] {
+        margin: 0 .5rem 0 .0625rem
+    }
+
+    .transport-type[_ngcontent-wvb-c19]::after {
+        content: "";
+        display: inline-block;
+        font-family: avianca-icons;
+        font-weight: 400;
+        line-height: 1;
+        color: #1b1b1b
+    }
+
+    .transport-type--train[_ngcontent-wvb-c19]::after {
+        content: ""
+    }
+
+    .transport-type--bus[_ngcontent-wvb-c19]::after {
+        content: ""
+    }
+
+    .transport-type--boat[_ngcontent-wvb-c19]::after {
+        content: ""
+    }
+
+    .transport-type--shuttle[_ngcontent-wvb-c19]::after {
+        content: ""
+    }
+
+    .connections_journeys_group_item[_ngcontent-wvb-c19] {
+        font-size: .875rem;
+        position: relative;
+        color: #5a5a5a;
+        padding: .5625rem 0 .5625rem 3.1875rem
+    }
+
+    .connections_journeys_group_item[_ngcontent-wvb-c19] .time[_ngcontent-wvb-c19] {
+        color: inherit;
+        font-weight: 700;
+        margin: 0 .375rem 0 0
+    }
+
+    .connections_journeys_group_item[_ngcontent-wvb-c19] .transport-airplane-code[_ngcontent-wvb-c19] {
+        margin: 0 0 0 .5rem
+    }
+
+    .connections_journeys_group_item[_ngcontent-wvb-c19] .station[_ngcontent-wvb-c19] {
+        color: #1b1b1b;
+        font-weight: 700;
+        margin: 0
+    }
+
+    .connections_transit[_ngcontent-wvb-c19] {
+        font-size: .75rem;
+        color: #5a5a5a
+    }
+
+    .connections_transit[_ngcontent-wvb-c19]::before {
+        border-color: #5a5a5a
+    }
+
+    .connections_transit[_ngcontent-wvb-c19]::after {
+        content: none
+    }
+
+    .connections_transit[_ngcontent-wvb-c19] .time[_ngcontent-wvb-c19] {
+        font-weight: 400
+    }
+
+    .transport-carrier[_ngcontent-wvb-c19] {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%)
+    }
+
+    .transport-carrier[_ngcontent-wvb-c19] .carrier .carrier_img img {
+        max-width: 3.6875rem;
+        max-height: .875rem
+    }
+
+    .connections_journey[_ngcontent-wvb-c19]::after {
+        content: '';
+        position: absolute;
+        left: 1.6875rem;
+        top: 50%;
+        width: .5rem;
+        height: .5rem;
+        border-radius: 50%;
+        background-color: #0190a0;
+        transform: translateY(-50%)
+    }
+
+    .connections_stop[_ngcontent-wvb-c19] {
+        font-size: .875rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        color: #5a5a5a;
+        line-height: 1;
+        padding: .875rem 1.5rem .875rem 2.25rem;
+        margin: .375rem 0 .375rem 1.625rem;
+        border-radius: .25rem;
+        background-color: #fafafa
+    }
+
+    .connections_stop_station[_ngcontent-wvb-c19], .connections_stop_station-time[_ngcontent-wvb-c19] {
+        display: flex;
+        flex-wrap: nowrap;
+        white-space: nowrap
+    }
+
+    .connections_total[_ngcontent-wvb-c19] {
+        font-size: .875rem;
+        color: #1b1b1b;
+        font-weight: 400;
+        margin: .875rem .375rem 0 3.25rem
+    }
+
+    .connections_total_time[_ngcontent-wvb-c19] {
+        font-weight: 700;
+        color: #5a5a5a
+    }
+
+    .connections_data_body--has-available-carrier[_ngcontent-wvb-c19] .connections_journey[_ngcontent-wvb-c19]::after {
+        left: 3.8125rem
+    }
+
+    .connections_data_body--has-available-carrier[_ngcontent-wvb-c19] .connections_journeys_group[_ngcontent-wvb-c19]::before {
+        left: 4rem
+    }
+
+    .connections_data_body--has-available-carrier[_ngcontent-wvb-c19] .connections_journeys_group_item[_ngcontent-wvb-c19] {
+        padding-left: 4.625rem
+    }
+
+    .connections_data_body--has-available-carrier[_ngcontent-wvb-c19] .connections_stop[_ngcontent-wvb-c19] {
+        margin: .375rem 0 .375rem 3.75rem
+    }
+
+    .connections_data_body--has-available-carrier[_ngcontent-wvb-c19] .connections_total[_ngcontent-wvb-c19] {
+        margin: .875rem .375rem 0 5.1875rem
+    }
+
+    .connections_trigger[_ngcontent-wvb-c19] {
+        font-size: .875rem
+    }
+
+    .connections_trigger_button[_ngcontent-wvb-c19]:hover {
+        text-decoration: none
+    }
+
+    .connections_data_header_title[_ngcontent-wvb-c19] {
+        line-height: 1.323
+    }
+
+    .connections_journeys_group[_ngcontent-wvb-c19]::after {
+        content: "";
+        display: inline-block;
+        font-family: avianca-icons;
+        font-weight: 400;
+        line-height: 1;
+        color: #1b1b1b;
+        font-size: 1.25rem;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%)
+    }
+
+    .connections_journeys_group_item[_ngcontent-wvb-c19] {
+        line-height: 1.323
+    }
+
+    .connections_journeys_group_item[_ngcontent-wvb-c19] .station-code[_ngcontent-wvb-c19] {
+        font-weight: 400;
+        color: #5a5a5a;
+        margin-left: .1875rem
+    }
+
+    .connections_transit[_ngcontent-wvb-c19] {
+        display: flex;
+        flex-wrap: wrap
+    }
+
+    .connections_transit[_ngcontent-wvb-c19] .transport-code[_ngcontent-wvb-c19] {
+        margin-right: .375rem
+    }
+
+    .connections_transit[_ngcontent-wvb-c19] .transport-cabin[_ngcontent-wvb-c19] {
+        margin-right: .875rem
+    }
+
+    .connections_transit[_ngcontent-wvb-c19] .transport-cabin[_ngcontent-wvb-c19]::before {
+        content: "· "
+    }
+
+    .connections_transit[_ngcontent-wvb-c19] .transport-type[_ngcontent-wvb-c19] {
+        border: 0;
+        clip: rect(1px, 1px, 1px, 1px);
+        -webkit-clip-path: inset(100%);
+        clip-path: inset(100%);
+        height: 1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px
+    }
+
+    .connections_transit[_ngcontent-wvb-c19] .transport-carrier[_ngcontent-wvb-c19] {
+        position: relative;
+        width: 4.25rem;
+        height: 1.2em
+    }
+
+    .connections_transit[_ngcontent-wvb-c19] .transport-carrier[_ngcontent-wvb-c19] .carrier {
+        position: absolute;
+        left: 0;
+        top: .125rem
+    }
+
+    .connections_transit[_ngcontent-wvb-c19] .transport-carrier[_ngcontent-wvb-c19] .carrier img {
+        transform: none;
+        height: 1.3375rem;
+        max-width: 4.25rem
+    }
+
+    .connections_total_label[_ngcontent-wvb-c19] {
+        margin-right: .375rem
+    }
+
+    .connections_stop_label[_ngcontent-wvb-c19] {
+        font-weight: 700;
+        margin-right: .25rem
+    }
+
+    .connections_stop_station-time[_ngcontent-wvb-c19]::before {
+        content: '-';
+        padding: 0 .375rem
+    }
+
+    .connections_goverment-policy[_ngcontent-wvb-c19] {
+        margin-top: 1.25rem
+    }
+
+    .connections_goverment-policy_label[_ngcontent-wvb-c19] {
+        font-size: .875rem;
+        font-weight: 400
+    }
+
+    .connections_goverment-policy_label[_ngcontent-wvb-c19]::before {
+        content: "";
+        display: inline-block;
+        font-family: avianca-icons;
+        font-weight: 400;
+        line-height: 1;
+        font-size: 1rem
+    }
+
+    @media (min-width:62rem) {
+        .connections[_ngcontent-wvb-c19]:hover {
+            z-index: 4
+        }
+
+        .connections[_ngcontent-wvb-c19]:hover .connections_data[_ngcontent-wvb-c19] {
+            top: calc(100% - .5rem)
+        }
+
+        .connections[_ngcontent-wvb-c19]:hover .connections_data[_ngcontent-wvb-c19] .connections_data_arrow[_ngcontent-wvb-c19] {
+            transform: translateY(-50%)
+        }
+
+        .connections_transit[_ngcontent-wvb-c19] {
+            flex-wrap: nowrap;
+            white-space: nowrap
+        }
+
+        .connections_data[_ngcontent-wvb-c19] {
+            min-width: 20.375rem;
+            width: auto;
+            transition: all .1s ease, opacity .1s ease;
+            border-radius: .5rem;
+            box-shadow: 0 0 20px rgba(217, 217, 217, .6)
+        }
+
+        .summary_connection [_nghost-wvb-c19] .connections_journeys_group_item[_ngcontent-wvb-c19], .summary_connection [_nghost-wvb-c19] .connections_transit[_ngcontent-wvb-c19] {
+            font-size: .75rem
+        }
+
+        .summary_connection [_nghost-wvb-c19] .connections_journeys_group[_ngcontent-wvb-c19]::after {
+            font-size: 1.125rem
+        }
+
+        .summary_connection [_nghost-wvb-c19] .connections_data_header[_ngcontent-wvb-c19] {
+            padding: 1.25rem .875rem .875rem
+        }
+
+        .summary_connection [_nghost-wvb-c19] .connections_data_body[_ngcontent-wvb-c19] {
+            padding: 0 .875rem 1.25rem
+        }
+    }
+
+    @media (max-width:61.9375rem) {
+        .connections-opened[_ngcontent-wvb-c19] .connections_data_arrow[_ngcontent-wvb-c19], .connections-opened[_ngcontent-wvb-c19] .connections_trigger[_ngcontent-wvb-c19] {
+            display: block
+        }
+
+        .connections_data_header_title[_ngcontent-wvb-c19] {
+            font-size: 1.5rem;
+            font-weight: 700
+        }
+
+        .connections_trigger[_ngcontent-wvb-c19] {
+            margin: 0 .5rem 0 0
+        }
+    }
+
+    @media (max-width:22.5rem) {
+        .connections_transit[_ngcontent-wvb-c19]::before {
+            content: "";
+            display: block;
+            flex-basis: 100%
+        }
+
+        .connections_transit[_ngcontent-wvb-c19] .time[_ngcontent-wvb-c19], .connections_transit[_ngcontent-wvb-c19] .transport-code[_ngcontent-wvb-c19] {
+            order: -2
+        }
+    }
+
+    .summary_connection [_nghost-wvb-c19] .connections[_ngcontent-wvb-c19] {
+        top: -.1875rem
+    }
+
+    .summary_connection [_nghost-wvb-c19] .connections_trigger[_ngcontent-wvb-c19] {
+        font-size: .75rem
+    }
+
+    @media screen and (min-width: 840px) {
+
+        div.page_buttons {
+            position: relative;
+        }
+
+        .FB219.swat-container {
+            width: 110px;
+            position: absolute;
+            right: 20%;
+            top: 0%;
+            transform: translate(0%, 0%)
+        }
+
+        .FB219.swat-container .swat-title {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            display: flex;
+            align-items: center;
+            text-align: right;
+            color: #1B1B1B;
+            /* font-family: 'Lato regular'; */
+            width: max-content;
+        }
+
+        .FB219.swat-container .swat-footer,
+        .FB219.swat-container .swat-currency,
+        .FB219.swat-container .swat-price {
+            width: max-content;
+            display: inline-flex;
+
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: #1B1B1B;
+            width: max-content;
+        }
+
+        /* html[cro-pag="availability-ns-conf"] .journey-select_list_item--selected div.journey_price-currency {
+            display: none !important;
+        } */
+
+        html[cro-pag="availability-ns-ib"] .journey-select_list_item--selected div.journey_price-currency {
+            display: block !important;
+        }
+
+        .journey-control.journey-selected .journey {
+            position: relative !important;
+        }
+
+        html[cro-pag="availability-ns-conf"][lang='es'] .journey-control.journey-selected .journey:after,
+        html[cro-pag="availability-ns-ib"][lang='es'] .journey-control.journey-selected .journey:after {
+            content: '\00a0\00a0\00a0Vuelo\00a0seleccionado';
+            position: absolute;
+            width: 184px;
+            height: 28px;
+            right: 0px;
+            top: 0px;
+            background: #23C847;
+            border-radius: 2px 34px 2px 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        html[cro-pag="availability-ns-conf"][lang='es'] .journey-control.journey-selected .journey:before,
+        html[cro-pag="availability-ns-ib"][lang='es'] .journey-control.journey-selected .journey:before {
+            content: '\e876';
+            position: absolute;
+            width: 175px;
+            height: 30px;
+            right: 0px;
+            top: 0px;
+            background: transparent;
+            /* border-radius: 2px 34px 2px 20px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: 'Material Symbols Outlined', sans-serif;
+            justify-content: left;
+            color: white;
+            z-index: 1000;
+            padding-left: 10px;
+        }
+
+        html[cro-pag="availability-ns-conf"][lang='en'] .journey-control.journey-selected .journey:after,
+        html[cro-pag="availability-ns-ib"][lang='en'] .journey-control.journey-selected .journey:after {
+            content: '\00a0\00a0Selected flight';
+            position: absolute;
+            width: 184px;
+            height: 28px;
+            right: 0px;
+            top: 0px;
+            background: #23C847;
+            border-radius: 2px 34px 2px 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        html[cro-pag="availability-ns-conf"][lang='en'] .journey-control.journey-selected .journey:before,
+        html[cro-pag="availability-ns-ib"][lang='en'] .journey-control.journey-selected .journey:before {
+            content: '\e876';
+            position: absolute;
+            width: 160px;
+            height: 30px;
+            right: 0px;
+            top: 0px;
+            background: transparent;
+            /* border-radius: 2px 34px 2px 20px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: 'Material Symbols Outlined', sans-serif;
+            justify-content: left;
+            color: white;
+            z-index: 1000;
+            padding-left: 10px;
+        }
+
+
+        html[cro-pag="availability-ns-conf"][lang='pt'] .journey-control.journey-selected .journey:after,
+        html[cro-pag="availability-ns-ib"][lang='pt'] .journey-control.journey-selected .journey:after {
+            content: '\00a0\00a0\00a0\00a0\00a0Voo selecionado';
+            position: absolute;
+            width: 184px;
+            height: 28px;
+            right: 0px;
+            top: 0px;
+            background: #23C847;
+            border-radius: 2px 34px 2px 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        html[cro-pag="availability-ns-conf"][lang='pt'] .journey-control.journey-selected .journey:before,
+        html[cro-pag="availability-ns-ib"][lang='pt'] .journey-control.journey-selected .journey:before {
+            content: '\e876';
+            position: absolute;
+            width: 160px;
+            height: 30px;
+            right: 0px;
+            top: 0px;
+            background: transparent;
+            /* border-radius: 2px 34px 2px 20px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: 'Material Symbols Outlined', sans-serif;
+            justify-content: left;
+            color: white;
+            z-index: 1000;
+            padding-left: 10px;
+        }
+
+    }
+
+    @media screen and (max-width: 839px) {
+        /* html[cro-pag="availability-ns-conf"] .journey-select_list_item--selected div.journey_price-currency {
+            display: none !important;
+        } */
+
+        html[cro-pag="availability-ns-ib"] .journey-select_list_item--selected div.journey_price-currency {
+            display: block !important;
+        }
+
+        html[cro-pag="availability-ns-conf"] .journey-control.journey-selected .journey,
+        html[cro-pag="availability-ns-ib"] .journey-control.journey-selected .journey {
+            position: relative !important;
+        }
+
+        html[cro-pag="availability-ns-conf"][lang='es'] .journey-control.journey-selected .journey:after,
+        html[cro-pag="availability-ns-ib"][lang='es'] .journey-control.journey-selected .journey:after {
+            content: '\00a0\00a0Vuelo\00a0seleccionado';
+            position: absolute;
+            width: 184px;
+            height: 28px;
+            right: 0px;
+            top: 0px;
+            background: #23C847;
+            border-radius: 2px 34px 2px 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        html[cro-pag="availability-ns-conf"][lang='es'] .journey-control.journey-selected .journey:before,
+        html[cro-pag="availability-ns-ib"][lang='es'] .journey-control.journey-selected .journey:before {
+            content: '\e876';
+            position: absolute;
+            width: 175px;
+            height: 30px;
+            right: 0px;
+            top: 0px;
+            background: transparent;
+            /* border-radius: 2px 34px 2px 20px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: 'Material Symbols Outlined', sans-serif;
+            justify-content: left;
+            color: white;
+            z-index: 1000;
+            padding-left: 10px;
+        }
+
+        html[cro-pag="availability-ns-conf"][lang='en'] .journey-control.journey-selected .journey:after,
+        html[cro-pag="availability-ns-ib"][lang='en'] .journey-control.journey-selected .journey:after {
+            /*content: '\00a0\00a0Selected\00a0flight';*/
+            content: '\00a0\00a0Selected flight';
+            position: absolute;
+            width: 184px;
+            height: 28px;
+            right: 0px;
+            top: 0px;
+            background: #23C847;
+            border-radius: 2px 34px 2px 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        html[cro-pag="availability-ns-conf"][lang='en'] .journey-control.journey-selected .journey:before,
+        html[cro-pag="availability-ns-ib"][lang='en'] .journey-control.journey-selected .journey:before {
+            content: '\e876';
+            position: absolute;
+            width: 160px;
+            height: 30px;
+            right: 0px;
+            top: 0px;
+            background: transparent;
+            /* border-radius: 2px 34px 2px 20px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: 'Material Symbols Outlined', sans-serif;
+            justify-content: left;
+            color: white;
+            z-index: 1000;
+            padding-left: 10px;
+        }
+
+        html[cro-pag="availability-ns-conf"][lang='pt'] .journey-control.journey-selected .journey:after,
+        html[cro-pag="availability-ns-ib"][lang='pt'] .journey-control.journey-selected .journey:after {
+            /*content: '\00a0\00a0Selected\00a0flight';*/
+            content: '\00a0\00a0\00a0\00a0Voo selecionado';
+            position: absolute;
+            width: 184px;
+            height: 28px;
+            right: 0px;
+            top: 0px;
+            background: #23C847;
+            border-radius: 2px 34px 2px 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        html[cro-pag="availability-ns-conf"][lang='pt'] .journey-control.journey-selected .journey:before,
+        html[cro-pag="availability-ns-ib"][lang='pt'] .journey-control.journey-selected .journey:before {
+            content: '\e876';
+            position: absolute;
+            width: 160px;
+            height: 30px;
+            right: 0px;
+            top: 0px;
+            background: transparent;
+            /* border-radius: 2px 34px 2px 20px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: 'Material Symbols Outlined', sans-serif;
+            justify-content: left;
+            color: white;
+            z-index: 1000;
+            padding-left: 10px;
+        }
+
+
+        html[cro-pag="availability-ns-conf"] .journey-selector-selected .journey-selector_header,
+        html[cro-pag="availability-ns-ib"] .journey-selector-selected .journey-selector_header {
+            margin-bottom: 3.375rem !important;
+        }
+
+        html[cro-pag="availability-ns-conf"] .journey-selected .journey,
+        html[cro-pag="availability-ns-ib"] .journey-selected .journey {
+            margin-top: -4.1875rem !important;
+            padding-top: 4.125rem !important;
+            padding-bottom: 1.5625rem !important;
+        }
+    }
+
+    @media screen and (max-width: 767px) {}
+
+    @media screen and (max-width: 500px) {}
+
+    .journey-selector_header_route[_ngcontent-wvb-c3]>.route_text[_ngcontent-wvb-c3] {
+        margin-right: .4375rem
+    }
+
+    .route_text[_ngcontent-wvb-c3] {
+        font-size: 1.375rem;
+        color: #1b1b1b
+    }
+
+    .journey-select_dayselector_buttons[_ngcontent-wvb-c3] {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1.875rem 0 1.625rem
+    }
+
+    [_nghost-wvb-c3] .journey-selector-selected[_ngcontent-wvb-c3] .journey-selector_header[_ngcontent-wvb-c3] {
+        margin-top: 0;
+        margin-bottom: 2.375rem
+    }
+
+    [_nghost-wvb-c3] .journey-selector-selected[_ngcontent-wvb-c3] .journey-control {
+        display: none
+    }
+
+    [_nghost-wvb-c3] .journey-selector-selected[_ngcontent-wvb-c3] .journey-selected {
+        display: block
+    }
+
+    [_nghost-wvb-c3] .journey-selector-selected[_ngcontent-wvb-c3] .journey-select_dayselector {
+        display: none
+    }
+
+    [_nghost-wvb-c3] .journey-selector-selected[_ngcontent-wvb-c3] .journey-select_list_item {
+        margin: 0
+    }
+
+    [_nghost-wvb-c3] .journey-no-data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #5a5a5a;
+        padding: 1.25rem;
+        background: #fff;
+        border: 0 solid #e5e5e5
+    }
+
+    @media (min-width:40rem) {
+        .journey-selector-selected[_ngcontent-wvb-c3] {
+            padding: 0
+        }
+    }
+
+    .journey-select_dayselector--pricebar {
+        margin: 2rem 0 2.375rem
+    }
+
+    .journey-selector.has-fare1[_ngcontent-wvb-c3] .journey_price_fare_name {
+        color: #fff;
+        background: #f57b00
+    }
+
+    .journey-selector.has-fare2[_ngcontent-wvb-c3] .journey_price_fare_name {
+        color: #fff;
+        background: #f52900
+    }
+
+    .journey-selector.has-fare3[_ngcontent-wvb-c3] .journey_price_fare_name {
+        color: #fff;
+        background: #e91e62
+    }
+
+    .journey-selector.has-fare5[_ngcontent-wvb-c3] .journey_price_fare_name {
+        color: #5a5a5a;
+        border: .0625rem solid #dedddd
+    }
+
+    .journey-selector.has-fare6[_ngcontent-wvb-c3] .journey_price_fare_name {
+        color: #fff;
+        background: #1b1b1b
+    }
+
+    .journey-selector.has-fare7[_ngcontent-wvb-c3] .journey_price_fare_name {
+        color: #fff;
+        background: red
+    }
+
+    .journey-selector.has-fare8[_ngcontent-wvb-c3] .journey_price_fare_name {
+        color: #fff;
+        background: #b50080
+    }
+
+    .journey-selector.has-fare9[_ngcontent-wvb-c3] .journey_price_fare_name {
+        color: #fff;
+        background: #ff5c00
+    }
+
+    .journey-selector_header[_ngcontent-wvb-c3] {
+        line-height: 1.323
+    }
+
+    .journey-selector_header_label[_ngcontent-wvb-c3] {
+        margin-bottom: .25rem
+    }
+
+    .journey-selector_header_route[_ngcontent-wvb-c3]::before {
+        content: "";
+        display: inline-block;
+        font-family: avianca-icons;
+        font-weight: 400;
+        line-height: 1;
+        color: #1b1b1b;
+        line-height: inherit;
+        font-size: 1.5rem;
+        margin-right: .5rem
+    }
+
+    .route_connector[_ngcontent-wvb-c3],
+    .route_text[_ngcontent-wvb-c3] {
+        font-weight: 700
+    }
+
+    .route_connector[_ngcontent-wvb-c3] {
+        font-size: 1.375rem;
+        margin-right: .4375rem
+    }
+
+    .route_connector[_ngcontent-wvb-c3]::before {
+        content: attr(aria-label)
+    }
+
+    .journey-selector-inbound[_ngcontent-wvb-c3] .journey-selector_header_route[_ngcontent-wvb-c3]::before {
+        transform: scaleX(-1)
+    }
+
+    [_nghost-wvb-c3] .journey-selector-selected[_ngcontent-wvb-c3] .journey-select_list {
+        margin-top: 0
+    }
+
+    [_nghost-wvb-c3] .journey-select_list {
+        display: flex;
+        flex-direction: column;
+        margin-top: .875rem
+    }
+
+    .journey-selector_selected-date[_ngcontent-wvb-c3] {
+        font-size: 1rem;
+        z-index: 1;
+        position: relative;
+        padding-left: 1.5rem;
+        margin-bottom: .5rem;
+        line-height: 1.5
+    }
+
+    .journey-selector_selected-date[_ngcontent-wvb-c3] .day,
+    .journey-selector_selected-date[_ngcontent-wvb-c3] .month,
+    .journey-selector_selected-date[_ngcontent-wvb-c3] .week,
+    .journey-selector_selected-date[_ngcontent-wvb-c3] .year {
+        margin: 0 .125rem
+    }
+
+    .journey-selector_selected-date[_ngcontent-wvb-c3] .week {
+        text-transform: capitalize
+    }
+
+    .journey-selector_selected-date[_ngcontent-wvb-c3] .week::after {
+        content: ','
+    }
+
+    [_nghost-wvb-c3] .journey-no-data {
+        font-size: 1rem;
+        font-weight: 700;
+        text-align: center;
+        box-shadow: 0 .125rem .75rem rgba(27, 27, 27, .15);
+        border-radius: 2.125rem;
+        flex-direction: column;
+        line-height: 1.323;
+        min-height: 7.375rem;
+        box-sizing: border-box
+    }
+
+    [_nghost-wvb-c3] .journey-no-data::before {
+        content: "";
+        font-family: avianca-icons;
+        font-weight: 400;
+        line-height: 1;
+        display: block;
+        font-size: 1.25rem;
+        text-align: center;
+        margin-bottom: .125rem
+    }
+
+    body.page-mmb-change-flight [_nghost-wvb-c3] .journey-selector_header_label[_ngcontent-wvb-c3] {
+        font-weight: 400
+    }
+
+    body.page-mmb-change-flight [_nghost-wvb-c3] .journey-selector-inbound[_ngcontent-wvb-c3] {
+        margin-top: 1.5625rem
+    }
+
+    body.page-irop-move [_nghost-wvb-c3] .journey-selector_header_label[_ngcontent-wvb-c3] {
+        display: none
+    }
+
+    @media (min-width:62rem) {
+        .journey-selector-inbound[_ngcontent-wvb-c3] {
+            margin-top: 6.1875rem
+        }
+
+        .journey-selector-selected[_ngcontent-wvb-c3] .journey-selector_header {
+            margin-bottom: 2.875rem
+        }
+
+        .journey-selector-selected.journey-selector-inbound[_ngcontent-wvb-c3] {
+            margin-top: 3.0625rem
+        }
+
+        .journey-selector_header[_ngcontent-wvb-c3] {
+            margin-bottom: 1.875rem
+        }
+
+        .journey-selector_header_content[_ngcontent-wvb-c3] {
+            display: flex;
+            align-items: center;
+            padding-left: 1.875rem
+        }
+
+        .journey-selector_header_label[_ngcontent-wvb-c3] {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0
+        }
+
+        .journey-selector_header_label[_ngcontent-wvb-c3] .label_text[_ngcontent-wvb-c3] {
+            display: inline-block
+        }
+
+        .journey-selector_header_label[_ngcontent-wvb-c3]::after {
+            content: ":";
+            padding-right: .5rem
+        }
+
+        .journey-selector_header_route[_ngcontent-wvb-c3]::before {
+            font-size: 1.375rem;
+            position: absolute;
+            left: 0
+        }
+
+        .journey-select_dayselector_buttons[_ngcontent-wvb-c3] {
+            margin: 0;
+            justify-content: flex-end;
+            top: 1.25rem
+        }
+
+        .journey-selector_selected-date[_ngcontent-wvb-c3] {
+            padding-left: 2.75rem;
+            display: block;
+            clear: left
+        }
+
+        .route_connector[_ngcontent-wvb-c3],
+        .route_text[_ngcontent-wvb-c3] {
+            font-size: 1.5rem
+        }
+
+        [_nghost-wvb-c3] .journey-select_list {
+            margin-top: 1.75rem
+        }
+
+        [_nghost-wvb-c3] .journey-select_dayselector--pricebar {
+            margin-top: 2.0625rem;
+            margin-bottom: 3.375rem
+        }
+    }
+
+    @media (min-width:78rem) {
+        .journey-selector_selected-date[_ngcontent-wvb-c3] {
+            position: relative;
+            top: .5625rem
+        }
+    }
+
+    .journey-schedule[_ngcontent-wvb-c17] {
+        display: flex;
+        flex-direction: column
+    }
+
+    .journey-schedule-row[_ngcontent-wvb-c17] {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: space-between
+    }
+
+    .journey-schedule-row[_ngcontent-wvb-c17]:first-child {
+        align-items: center;
+        margin-bottom: 0
+    }
+
+    .journey-schedule_duration_time-connections[_ngcontent-wvb-c17],
+    .journey-schedule_station[_ngcontent-wvb-c17] {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center
+    }
+
+    .journey-schedule_station[_ngcontent-wvb-c17] {
+        flex: 1 1 50%;
+        line-height: 1.323
+    }
+
+    .journey-schedule_duration_time-connections[_ngcontent-wvb-c17] {
+        flex: 0 0 auto;
+        flex-direction: column
+    }
+
+    .journey-schedule__duration_icon[_ngcontent-wvb-c17] {
+        position: relative;
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        margin: 0
+    }
+
+    .journey-schedule__duration_icon[_ngcontent-wvb-c17]::after {
+        content: "";
+        display: inline-block;
+        font-family: avianca-icons;
+        font-weight: 400;
+        line-height: 1;
+        color: #1b1b1b
+    }
+
+    .journey-schedule__duration_icon[_ngcontent-wvb-c17]::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+        transform: translateX(-50%)
+    }
+
+    .journey-schedule__duration_icon[_ngcontent-wvb-c17]::after {
+        font-size: 1.875rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 1.875rem;
+        min-width: 30px;
+        background-color: #fff;
+        transform: translate(-50%, -50%)
+    }
+
+    .journey-schedule-has-connection[_ngcontent-wvb-c17] .journey-schedule__duration_icon[_ngcontent-wvb-c17]::after {
+        content: "";
+        color: #1b1b1b
+    }
+
+    .journey-schedule_station_city[_ngcontent-wvb-c17],
+    .journey-schedule_station_code[_ngcontent-wvb-c17] {
+        font-size: 1.125rem;
+        color: #1b1b1b;
+        font-weight: 700
+    }
+
+    .journey-schedule_time[_ngcontent-wvb-c17] {
+        font-size: 2.125rem;
+        position: relative;
+        color: #1b1b1b;
+        font-weight: 700;
+        min-width: 7.875rem;
+        line-height: 1.323
+    }
+
+    .journey-schedule_extra-day[_ngcontent-wvb-c17] {
+        font-size: .875rem;
+        position: absolute;
+        top: -.75rem;
+        right: 0;
+        color: #1b1b1b;
+        white-space: nowrap
+    }
+
+    .journey-schedule_extra-day_value[_ngcontent-wvb-c17]::before {
+        font-size: .875rem;
+        content: "+";
+        color: #1b1b1b;
+        font-weight: 400;
+        margin: 0 0 .25rem
+    }
+
+    .journey-schedule_station-departure[_ngcontent-wvb-c17] {
+        padding-right: 4%
+    }
+
+    .journey-schedule_station-return[_ngcontent-wvb-c17] {
+        justify-content: flex-end;
+        padding-left: 4%
+    }
+
+    .journey-schedule_station-return[_ngcontent-wvb-c17] .journey-schedule_station_city[_ngcontent-wvb-c17] {
+        text-align: right
+    }
+
+    .journey-schedule_carriers[_ngcontent-wvb-c17],
+    .journey-schedule_carriers_items[_ngcontent-wvb-c17] {
+        display: flex;
+        flex-wrap: wrap
+    }
+
+    .journey-schedule_carriers_title[_ngcontent-wvb-c17] {
+        font-size: .75rem/16pxrem;
+        color: #5a5a5a;
+        margin: 0 .4375rem 0 0
+    }
+
+    .journey-schedule_carriers[_ngcontent-wvb-c17] {
+        align-items: center;
+        justify-content: center;
+        margin: .3125rem 0 .25rem
+    }
+
+    .journey-schedule_carriers_item[_ngcontent-wvb-c17] {
+        margin: 0 .3125rem 0 0
+    }
+
+    @media (min-width:40rem) {
+        .journey-schedule_duration_time-connections[_ngcontent-wvb-c17] {
+            flex-direction: row
+        }
+    }
+
+    @media (min-width:62rem) {
+        .journey-schedule__duration_icon[_ngcontent-wvb-c17] {
+            height: 20px
+        }
+
+        .journey-schedule__duration_icon[_ngcontent-wvb-c17]::after {
+            font-size: 1.25rem;
+            width: 2.125rem;
+            min-width: 20px
+        }
+
+        .journey-schedule_container.has-available-carriers[_ngcontent-wvb-c17] {
+            display: flex
+        }
+
+        .journey-schedule_container.has-available-carriers[_ngcontent-wvb-c17] .journey-schedule[_ngcontent-wvb-c17] {
+            flex: 1;
+            padding-right: 1.375rem
+        }
+
+        .journey-schedule_carriers_title[_ngcontent-wvb-c17] {
+            margin: 0
+        }
+
+        .journey-schedule_carriers[_ngcontent-wvb-c17] {
+            flex-direction: column;
+            margin: -.125rem 0 .25rem
+        }
+
+        .journey-schedule_carriers_items[_ngcontent-wvb-c17] {
+            flex-direction: column
+        }
+
+        .journey-schedule_carriers_item[_ngcontent-wvb-c17] {
+            margin: 0 0 .125rem
+        }
+    }
+
+    @media (max-width:29.9375rem) {
+        .journey-schedule_duration_time-connections[_ngcontent-wvb-c17] {
+            font-size: 76%
+        }
+    }
+
+    .journey-schedule[_ngcontent-wvb-c17] {
+        position: relative
+    }
+
+    .journey-schedule_time-departure[_ngcontent-wvb-c17]::after,
+    .journey-schedule_time-return[_ngcontent-wvb-c17]::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        display: inline-block;
+        width: .5rem;
+        height: .5rem;
+        border-radius: 50%;
+        margin-top: .1875rem;
+        background-color: #0190a0;
+        transform: translateY(-50%)
+    }
+
+    .journey-schedule_time-departure[_ngcontent-wvb-c17] {
+        text-align: left
+    }
+
+    .journey-schedule_time-departure[_ngcontent-wvb-c17]::after {
+        right: 0
+    }
+
+    .journey-schedule_time-return[_ngcontent-wvb-c17] {
+        text-align: right
+    }
+
+    .journey-schedule_time-return[_ngcontent-wvb-c17]::before {
+        left: 0
+    }
+
+    .journey-schedule__duration_icon[_ngcontent-wvb-c17]::before {
+        box-sizing: border-box;
+        background-color: #fff;
+        border-bottom: .0625rem dashed #1b1b1b
+    }
+
+    .journey-schedule_duration_time[_ngcontent-wvb-c17] {
+        font-size: .875rem;
+        order: 2;
+        font-weight: 700;
+        color: #5a5a5a;
+        line-height: 1.323
+    }
+
+    .journey-schedule_station_city[_ngcontent-wvb-c17] {
+        display: none
+    }
+
+    .journey-schedule_station_code[_ngcontent-wvb-c17] {
+        line-height: 1.323
+    }
+
+    .journey-schedule_container.has-available-carriers[_ngcontent-wvb-c17] .journey-schedule_carriers[_ngcontent-wvb-c17] {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row
+    }
+
+    .journey-schedule_container.has-available-carriers[_ngcontent-wvb-c17] .journey-schedule_carriers_title[_ngcontent-wvb-c17] {
+        font-size: .75rem
+    }
+
+    @media (min-width:62rem) {
+        .journey-schedule_container.has-available-carriers[_ngcontent-wvb-c17] .journey-schedule[_ngcontent-wvb-c17] {
+            padding-bottom: 1.375rem
+        }
+
+        .journey-schedule_container.has-available-carriers[_ngcontent-wvb-c17] .journey-schedule_carriers[_ngcontent-wvb-c17] {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 4.375rem;
+            margin: .3125rem 0 .25rem .25rem
+        }
+
+        .journey-schedule_container.has-available-carriers[_ngcontent-wvb-c17] .journey-schedule_carriers_items[_ngcontent-wvb-c17] {
+            align-items: center
+        }
+
+        .journey-schedule_container.has-available-carriers[_ngcontent-wvb-c17] .journey-schedule_carriers_title[_ngcontent-wvb-c17] {
+            line-height: 1.8
+        }
+
+        .journey-schedule_container.has-available-carriers[_ngcontent-wvb-c17] .carrier_img {
+            position: relative;
+            height: 1.375rem
+        }
+
+        .journey-schedule_container.has-available-carriers[_ngcontent-wvb-c17] .carrier_img img {
+            vertical-align: baseline;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%)
+        }
+
+        .journey-schedule_station-departure[_ngcontent-wvb-c17] .journey-schedule_station_city[_ngcontent-wvb-c17] {
+            margin-right: .75rem
+        }
+
+        .journey-schedule_station-return[_ngcontent-wvb-c17] .journey-schedule_station_code[_ngcontent-wvb-c17] {
+            margin-left: .75rem
+        }
+
+        .journey-schedule_duration_time-connections[_ngcontent-wvb-c17] {
+            line-height: 1.323;
+            flex-direction: column
+        }
+
+        .journey-schedule__duration_icon[_ngcontent-wvb-c17] {
+            margin-top: .25rem
+        }
+
+        .journey-schedule_connection[_ngcontent-wvb-c17] {
+            margin-top: -3.375rem;
+            margin-bottom: 2.375rem
+        }
+    }
+
+    @media (max-width:61.9375rem) {
+        .journey-schedule_time[_ngcontent-wvb-c17] {
+            font-size: 1.375rem;
+            min-width: 5.9375rem
+        }
+
+        .journey-schedule_time-departure[_ngcontent-wvb-c17]::after,
+        .journey-schedule_time-return[_ngcontent-wvb-c17]::before {
+            top: auto;
+            bottom: 0
+        }
+
+        .journey-schedule_station_city[_ngcontent-wvb-c17] {
+            border: 0;
+            clip: rect(1px, 1px, 1px, 1px);
+            -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
+            height: 1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
+            font-size: .9375rem
+        }
+
+        .journey-schedule_extra-day[_ngcontent-wvb-c17] {
+            font-size: .75rem
+        }
+
+        .journey-schedule__duration_icon[_ngcontent-wvb-c17]::before {
+            top: auto;
+            bottom: .5rem
+        }
+
+        .journey-schedule_duration_time-connections[_ngcontent-wvb-c17] {
+            flex-direction: row;
+            margin-top: -2.3125rem
+        }
+
+        .journey-schedule-has-connection[_ngcontent-wvb-c17] .journey-schedule__duration_icon[_ngcontent-wvb-c17]::after,
+        .journey-schedule__duration_icon[_ngcontent-wvb-c17]::after {
+            display: none
+        }
+
+        .journey-schedule_station[_ngcontent-wvb-c17] {
+            flex-direction: column
+        }
+
+        .journey-schedule_station-departure[_ngcontent-wvb-c17] {
+            align-items: flex-start
+        }
+
+        .journey-schedule_station-departure[_ngcontent-wvb-c17] .journey-schedule_station_city[_ngcontent-wvb-c17] {
+            margin-right: 0
+        }
+
+        .journey-schedule_station-return[_ngcontent-wvb-c17] {
+            align-items: flex-end
+        }
+
+        .journey-schedule_station-return[_ngcontent-wvb-c17] .journey-schedule_station_code[_ngcontent-wvb-c17] {
+            margin-left: 0
+        }
+
+        .journey-schedule_station_code[_ngcontent-wvb-c17] {
+            display: none;
+            margin-top: .25rem
+        }
+    }
+
+    span.journey-schedule_station_code {
+        display: block !important;
+    }
+
+    
+    @media screen and (min-width: 840px) {
+
+        div.page_buttons {
+            position: relative;
+        }
+
+        .FB219.swat-container {
+            width: 110px;
+            position: absolute;
+            right: 20%;
+            top: 0%;
+            transform: translate(0%, 0%)
+        }
+
+        .FB219.swat-container .swat-title {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            display: flex;
+            align-items: center;
+            text-align: right;
+            color: #1B1B1B;
+            /* font-family: 'Lato regular'; */
+            width: max-content;
+        }
+
+        .FB219.swat-container .swat-footer,
+        .FB219.swat-container .swat-currency,
+        .FB219.swat-container .swat-price {
+            width: max-content;
+            display: inline-flex;
+
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: #1B1B1B;
+            width: max-content;
+        }
+
+        /* html[cro-pag="availability-ns-conf"] .journey-select_list_item--selected div.journey_price-currency {
+            display: none !important;
+        } */
+
+        html[cro-pag="availability-ns-ib"] .journey-select_list_item--selected div.journey_price-currency {
+            display: block !important;
+        }
+
+        .journey-control.journey-selected .journey {
+            position: relative !important;
+        }
+
+        html[cro-pag="availability-ns-conf"][lang='es'] .journey-control.journey-selected .journey:after,
+        html[cro-pag="availability-ns-ib"][lang='es'] .journey-control.journey-selected .journey:after {
+            content: '\00a0\00a0\00a0Vuelo\00a0seleccionado';
+            position: absolute;
+            width: 184px;
+            height: 28px;
+            right: 0px;
+            top: 0px;
+            background: #23C847;
+            border-radius: 2px 34px 2px 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        html[cro-pag="availability-ns-conf"][lang='es'] .journey-control.journey-selected .journey:before,
+        html[cro-pag="availability-ns-ib"][lang='es'] .journey-control.journey-selected .journey:before {
+            content: '\e876';
+            position: absolute;
+            width: 175px;
+            height: 30px;
+            right: 0px;
+            top: 0px;
+            background: transparent;
+            /* border-radius: 2px 34px 2px 20px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: 'Material Symbols Outlined', sans-serif;
+            justify-content: left;
+            color: white;
+            z-index: 1000;
+            padding-left: 10px;
+        }
+
+        html[cro-pag="availability-ns-conf"][lang='en'] .journey-control.journey-selected .journey:after,
+        html[cro-pag="availability-ns-ib"][lang='en'] .journey-control.journey-selected .journey:after {
+            content: '\00a0\00a0Selected flight';
+            position: absolute;
+            width: 184px;
+            height: 28px;
+            right: 0px;
+            top: 0px;
+            background: #23C847;
+            border-radius: 2px 34px 2px 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        html[cro-pag="availability-ns-conf"][lang='en'] .journey-control.journey-selected .journey:before,
+        html[cro-pag="availability-ns-ib"][lang='en'] .journey-control.journey-selected .journey:before {
+            content: '\e876';
+            position: absolute;
+            width: 160px;
+            height: 30px;
+            right: 0px;
+            top: 0px;
+            background: transparent;
+            /* border-radius: 2px 34px 2px 20px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: 'Material Symbols Outlined', sans-serif;
+            justify-content: left;
+            color: white;
+            z-index: 1000;
+            padding-left: 10px;
+        }
+
+
+        html[cro-pag="availability-ns-conf"][lang='pt'] .journey-control.journey-selected .journey:after,
+        html[cro-pag="availability-ns-ib"][lang='pt'] .journey-control.journey-selected .journey:after {
+            content: '\00a0\00a0\00a0\00a0\00a0Voo selecionado';
+            position: absolute;
+            width: 184px;
+            height: 28px;
+            right: 0px;
+            top: 0px;
+            background: #23C847;
+            border-radius: 2px 34px 2px 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        html[cro-pag="availability-ns-conf"][lang='pt'] .journey-control.journey-selected .journey:before,
+        html[cro-pag="availability-ns-ib"][lang='pt'] .journey-control.journey-selected .journey:before {
+            content: '\e876';
+            position: absolute;
+            width: 160px;
+            height: 30px;
+            right: 0px;
+            top: 0px;
+            background: transparent;
+            /* border-radius: 2px 34px 2px 20px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: 'Material Symbols Outlined', sans-serif;
+            justify-content: left;
+            color: white;
+            z-index: 1000;
+            padding-left: 10px;
+        }
+
+    }
+
+    @media screen and (max-width: 839px) {
+        /* html[cro-pag="availability-ns-conf"] .journey-select_list_item--selected div.journey_price-currency {
+            display: none !important;
+        } */
+
+        html[cro-pag="availability-ns-ib"] .journey-select_list_item--selected div.journey_price-currency {
+            display: block !important;
+        }
+
+        html[cro-pag="availability-ns-conf"] .journey-control.journey-selected .journey,
+        html[cro-pag="availability-ns-ib"] .journey-control.journey-selected .journey {
+            position: relative !important;
+        }
+
+        html[cro-pag="availability-ns-conf"][lang='es'] .journey-control.journey-selected .journey:after,
+        html[cro-pag="availability-ns-ib"][lang='es'] .journey-control.journey-selected .journey:after {
+            content: '\00a0\00a0Vuelo\00a0seleccionado';
+            position: absolute;
+            width: 184px;
+            height: 28px;
+            right: 0px;
+            top: 0px;
+            background: #23C847;
+            border-radius: 2px 34px 2px 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        html[cro-pag="availability-ns-conf"][lang='es'] .journey-control.journey-selected .journey:before,
+        html[cro-pag="availability-ns-ib"][lang='es'] .journey-control.journey-selected .journey:before {
+            content: '\e876';
+            position: absolute;
+            width: 175px;
+            height: 30px;
+            right: 0px;
+            top: 0px;
+            background: transparent;
+            /* border-radius: 2px 34px 2px 20px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: 'Material Symbols Outlined', sans-serif;
+            justify-content: left;
+            color: white;
+            z-index: 1000;
+            padding-left: 10px;
+        }
+
+        html[cro-pag="availability-ns-conf"][lang='en'] .journey-control.journey-selected .journey:after,
+        html[cro-pag="availability-ns-ib"][lang='en'] .journey-control.journey-selected .journey:after {
+            /*content: '\00a0\00a0Selected\00a0flight';*/
+            content: '\00a0\00a0Selected flight';
+            position: absolute;
+            width: 184px;
+            height: 28px;
+            right: 0px;
+            top: 0px;
+            background: #23C847;
+            border-radius: 2px 34px 2px 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        html[cro-pag="availability-ns-conf"][lang='en'] .journey-control.journey-selected .journey:before,
+        html[cro-pag="availability-ns-ib"][lang='en'] .journey-control.journey-selected .journey:before {
+            content: '\e876';
+            position: absolute;
+            width: 160px;
+            height: 30px;
+            right: 0px;
+            top: 0px;
+            background: transparent;
+            /* border-radius: 2px 34px 2px 20px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: 'Material Symbols Outlined', sans-serif;
+            justify-content: left;
+            color: white;
+            z-index: 1000;
+            padding-left: 10px;
+        }
+
+        html[cro-pag="availability-ns-conf"][lang='pt'] .journey-control.journey-selected .journey:after,
+        html[cro-pag="availability-ns-ib"][lang='pt'] .journey-control.journey-selected .journey:after {
+            /*content: '\00a0\00a0Selected\00a0flight';*/
+            content: '\00a0\00a0\00a0\00a0Voo selecionado';
+            position: absolute;
+            width: 184px;
+            height: 28px;
+            right: 0px;
+            top: 0px;
+            background: #23C847;
+            border-radius: 2px 34px 2px 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        html[cro-pag="availability-ns-conf"][lang='pt'] .journey-control.journey-selected .journey:before,
+        html[cro-pag="availability-ns-ib"][lang='pt'] .journey-control.journey-selected .journey:before {
+            content: '\e876';
+            position: absolute;
+            width: 160px;
+            height: 30px;
+            right: 0px;
+            top: 0px;
+            background: transparent;
+            /* border-radius: 2px 34px 2px 20px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: 'Material Symbols Outlined', sans-serif;
+            justify-content: left;
+            color: white;
+            z-index: 1000;
+            padding-left: 10px;
+        }
+
+
+        html[cro-pag="availability-ns-conf"] .journey-selector-selected .journey-selector_header,
+        html[cro-pag="availability-ns-ib"] .journey-selector-selected .journey-selector_header {
+            margin-bottom: 3.375rem !important;
+        }
+
+        html[cro-pag="availability-ns-conf"] .journey-selected .journey,
+        html[cro-pag="availability-ns-ib"] .journey-selected .journey {
+            margin-top: -4.1875rem !important;
+            padding-top: 4.125rem !important;
+            padding-bottom: 1.5625rem !important;
+        }
+    }
+
+    @media screen and (max-width: 767px) {}
+
+    @media screen and (max-width: 500px) {}
+
+    .journey-selector[_ngcontent-wvb-c3] {
+        position: relative;
+        margin-bottom: 0
+    }
+
+    .journey-selector-inbound[_ngcontent-wvb-c3] {
+        margin-top: 2.125rem
+    }
+
+    .journey-selector-selected[_ngcontent-wvb-c3] {
+        border: 0 solid #1b1b1b
+    }
+
+    .journey-selector_header[_ngcontent-wvb-c3] {
+        margin: 0 0 1.75rem
+    }
+
+    .journey-selector_header_label[_ngcontent-wvb-c3] {
+        font-size: 1.25rem;
+        line-height: 1.1;
+        color: #1b1b1b;
+        font-weight: 400
+    }
+
+    .journey-selector_header_route[_ngcontent-wvb-c3] {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center
+    }
+
+    .journey-selector_header_route[_ngcontent-wvb-c3]>.route_text[_ngcontent-wvb-c3] {
+        margin-right: .4375rem
+    }
+
+    .route_text[_ngcontent-wvb-c3] {
+        font-size: 1.375rem;
+        color: #1b1b1b
+    }
+
+    .journey-select_dayselector_buttons[_ngcontent-wvb-c3] {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1.875rem 0 1.625rem
+    }
+
+    [_nghost-wvb-c3] .journey-selector-selected[_ngcontent-wvb-c3] .journey-selector_header[_ngcontent-wvb-c3] {
+        margin-top: 0;
+        margin-bottom: 2.375rem
+    }
+
+    [_nghost-wvb-c3] .journey-selector-selected[_ngcontent-wvb-c3] .journey-control {
+        display: none
+    }
+
+    [_nghost-wvb-c3] .journey-selector-selected[_ngcontent-wvb-c3] .journey-selected {
+        display: block
+    }
+
+    [_nghost-wvb-c3] .journey-selector-selected[_ngcontent-wvb-c3] .journey-select_dayselector {
+        display: none
+    }
+
+    [_nghost-wvb-c3] .journey-selector-selected[_ngcontent-wvb-c3] .journey-select_list_item {
+        margin: 0
+    }
+
+    [_nghost-wvb-c3] .journey-no-data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #5a5a5a;
+        padding: 1.25rem;
+        background: #fff;
+        border: 0 solid #e5e5e5
+    }
+
+    @media (min-width:40rem) {
+        .journey-selector-selected[_ngcontent-wvb-c3] {
+            padding: 0
+        }
+    }
+
+    .journey-select_dayselector--pricebar {
+        margin: 2rem 0 2.375rem
+    }
+
+    .journey-selector.has-fare1[_ngcontent-wvb-c3] .journey_price_fare_name {
+        color: #fff;
+        background: #f57b00
+    }
+
+    .journey-selector.has-fare2[_ngcontent-wvb-c3] .journey_price_fare_name {
+        color: #fff;
+        background: #f52900
+    }
+
+    .journey-selector.has-fare3[_ngcontent-wvb-c3] .journey_price_fare_name {
+        color: #fff;
+        background: #e91e62
+    }
+
+    .journey-selector.has-fare5[_ngcontent-wvb-c3] .journey_price_fare_name {
+        color: #5a5a5a;
+        border: .0625rem solid #dedddd
+    }
+
+    .journey-selector.has-fare6[_ngcontent-wvb-c3] .journey_price_fare_name {
+        color: #fff;
+        background: #1b1b1b
+    }
+
+    .journey-selector.has-fare7[_ngcontent-wvb-c3] .journey_price_fare_name {
+        color: #fff;
+        background: red
+    }
+
+    .journey-selector.has-fare8[_ngcontent-wvb-c3] .journey_price_fare_name {
+        color: #fff;
+        background: #b50080
+    }
+
+    .journey-selector.has-fare9[_ngcontent-wvb-c3] .journey_price_fare_name {
+        color: #fff;
+        background: #ff5c00
+    }
+
+    .journey-selector_header[_ngcontent-wvb-c3] {
+        line-height: 1.323
+    }
+
+    .journey-selector_header_label[_ngcontent-wvb-c3] {
+        margin-bottom: .25rem
+    }
+
+    .journey-selector_header_route[_ngcontent-wvb-c3]::before {
+        content: "";
+        display: inline-block;
+        font-family: avianca-icons;
+        font-weight: 400;
+        line-height: 1;
+        color: #1b1b1b;
+        line-height: inherit;
+        font-size: 1.5rem;
+        margin-right: .5rem
+    }
+
+    .route_connector[_ngcontent-wvb-c3], .route_text[_ngcontent-wvb-c3] {
+        font-weight: 700
+    }
+
+    .route_connector[_ngcontent-wvb-c3] {
+        font-size: 1.375rem;
+        margin-right: .4375rem
+    }
+
+    .route_connector[_ngcontent-wvb-c3]::before {
+        content: attr(aria-label)
+    }
+
+    .journey-selector-inbound[_ngcontent-wvb-c3] .journey-selector_header_route[_ngcontent-wvb-c3]::before {
+        transform: scaleX(-1)
+    }
+
+    [_nghost-wvb-c3] .journey-selector-selected[_ngcontent-wvb-c3] .journey-select_list {
+        margin-top: 0
+    }
+
+    [_nghost-wvb-c3] .journey-select_list {
+        display: flex;
+        flex-direction: column;
+        margin-top: .875rem
+    }
+
+    .journey-selector_selected-date[_ngcontent-wvb-c3] {
+        font-size: 1rem;
+        z-index: 1;
+        position: relative;
+        padding-left: 1.5rem;
+        margin-bottom: .5rem;
+        line-height: 1.5
+    }
+
+    .journey-selector_selected-date[_ngcontent-wvb-c3] .day, .journey-selector_selected-date[_ngcontent-wvb-c3] .month, .journey-selector_selected-date[_ngcontent-wvb-c3] .week, .journey-selector_selected-date[_ngcontent-wvb-c3] .year {
+        margin: 0 .125rem
+    }
+
+    .journey-selector_selected-date[_ngcontent-wvb-c3] .week {
+        text-transform: capitalize
+    }
+
+    .journey-selector_selected-date[_ngcontent-wvb-c3] .week::after {
+        content: ','
+    }
+
+    [_nghost-wvb-c3] .journey-no-data {
+        font-size: 1rem;
+        font-weight: 700;
+        text-align: center;
+        box-shadow: 0 .125rem .75rem rgba(27, 27, 27, .15);
+        border-radius: 2.125rem;
+        flex-direction: column;
+        line-height: 1.323;
+        min-height: 7.375rem;
+        box-sizing: border-box
+    }
+
+    [_nghost-wvb-c3] .journey-no-data::before {
+        content: "";
+        font-family: avianca-icons;
+        font-weight: 400;
+        line-height: 1;
+        display: block;
+        font-size: 1.25rem;
+        text-align: center;
+        margin-bottom: .125rem
+    }
+
+    body.page-mmb-change-flight [_nghost-wvb-c3] .journey-selector_header_label[_ngcontent-wvb-c3] {
+        font-weight: 400
+    }
+
+    body.page-mmb-change-flight [_nghost-wvb-c3] .journey-selector-inbound[_ngcontent-wvb-c3] {
+        margin-top: 1.5625rem
+    }
+
+    body.page-irop-move [_nghost-wvb-c3] .journey-selector_header_label[_ngcontent-wvb-c3] {
+        display: none
+    }
+
+    @media (min-width:62rem) {
+        .journey-selector-inbound[_ngcontent-wvb-c3] {
+            margin-top: 6.1875rem
+        }
+
+        .journey-selector-selected[_ngcontent-wvb-c3] .journey-selector_header {
+            margin-bottom: 2.875rem
+        }
+
+        .journey-selector-selected.journey-selector-inbound[_ngcontent-wvb-c3] {
+            margin-top: 3.0625rem
+        }
+
+        .journey-selector_header[_ngcontent-wvb-c3] {
+            margin-bottom: 1.875rem
+        }
+
+        .journey-selector_header_content[_ngcontent-wvb-c3] {
+            display: flex;
+            align-items: center;
+            padding-left: 1.875rem
+        }
+
+        .journey-selector_header_label[_ngcontent-wvb-c3] {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0
+        }
+
+        .journey-selector_header_label[_ngcontent-wvb-c3] .label_text[_ngcontent-wvb-c3] {
+            display: inline-block
+        }
+
+        .journey-selector_header_label[_ngcontent-wvb-c3]::after {
+            content: ":";
+            padding-right: .5rem
+        }
+
+        .journey-selector_header_route[_ngcontent-wvb-c3]::before {
+            font-size: 1.375rem;
+            position: absolute;
+            left: 0
+        }
+
+        .journey-select_dayselector_buttons[_ngcontent-wvb-c3] {
+            margin: 0;
+            justify-content: flex-end;
+            top: 1.25rem
+        }
+
+        .journey-selector_selected-date[_ngcontent-wvb-c3] {
+            padding-left: 2.75rem;
+            display: block;
+            clear: left
+        }
+
+        .route_connector[_ngcontent-wvb-c3], .route_text[_ngcontent-wvb-c3] {
+            font-size: 1.5rem
+        }
+
+        [_nghost-wvb-c3] .journey-select_list {
+            margin-top: 1.75rem
+        }
+
+        [_nghost-wvb-c3] .journey-select_dayselector--pricebar {
+            margin-top: 2.0625rem;
+            margin-bottom: 3.375rem
+        }
+    }
+
+    @media (min-width:78rem) {
+        .journey-selector_selected-date[_ngcontent-wvb-c3] {
+            position: relative;
+            top: .5625rem
+        }
+    }
+
+    :root {
+        --journey-control-layout-breakpoint: 991px
+    }
+
+    .journey[_ngcontent-wvb-c12] {
+        flex-direction: column;
+        background-color: #fff;
+        border: 0 solid #e5e5e5
+    }
+
+    .journey_inner[_ngcontent-wvb-c12] {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between
+    }
+
+    .journey_journey-schedule[_ngcontent-wvb-c12] {
+        flex: 1 1 auto;
+        padding: 2.25rem 1.4375rem .75rem
+    }
+
+    .journey_best-price[_ngcontent-wvb-c12] {
+        font-size: .875rem;
+        background-color: #12ab70;
+        color: #fff;
+        border-radius: .125rem 2.125rem .125rem 1.25rem;
+        box-shadow: none;
+        padding: .25rem 1.25rem;
+        text-transform: none;
+        font-weight: 700;
+        position: absolute;
+        top: 0;
+        left: auto;
+        right: 0
+    }
+
+    .journey_price[_ngcontent-wvb-c12] {
+        flex: 1 0 auto
+    }
+
+    .journey_price_button[_ngcontent-wvb-c12] {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 1.0625rem;
+        box-sizing: border-box;
+        background: #e5e5e5;
+        cursor: pointer
+    }
+
+    .journey_price_button-selected[_ngcontent-wvb-c12] {
+        cursor: default
+    }
+
+    .journey_price_button-selected[_ngcontent-wvb-c12] .from[_ngcontent-wvb-c12] {
+        display: none
+    }
+
+    .journey_price_fare[_ngcontent-wvb-c12] {
+        display: inline-block
+    }
+
+    .journey_price_fare_name[_ngcontent-wvb-c12] {
+        color: #fff
+    }
+
+    .journey_price_fare-select_label[_ngcontent-wvb-c12] {
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        cursor: pointer;
+        align-items: center;
+        color: #1b1b1b
+    }
+
+    .journey_price_fare-select_label[_ngcontent-wvb-c12]::after {
+        content: "";
+        display: inline-block;
+        font-family: avianca-icons;
+        font-weight: 400;
+        line-height: 1;
+        color: #1b1b1b;
+        margin-left: auto;
+        padding-left: 8px;
+        transform: scaleY(1);
+        transition: .18s ease
+    }
+
+    .journey_price_fare-select_label[aria-expanded=false][_ngcontent-wvb-c12]::after {
+        transform: scaleY(1)
+    }
+
+    .journey_price_fare-select_label[aria-expanded=true][_ngcontent-wvb-c12]::after {
+        transform: scaleY(-1)
+    }
+
+    .journey-unavailable[_ngcontent-wvb-c12] {
+        font-size: .875rem;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #4d4d4d
+    }
+
+    .journey_fares_wrap[_ngcontent-wvb-c12] {
+        padding: 0 .875rem;
+        overflow: hidden
+    }
+
+    .journey_fares_list[_ngcontent-wvb-c12] {
+        -webkit-overflow-scrolling: touch;
+        overflow-x: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: auto;
+        margin: 0 auto
+    }
+
+    .journey_fares_list[_ngcontent-wvb-c12]::-webkit-scrollbar {
+        width: 1.0625rem;
+        height: .3125rem;
+        background-color: transparent
+    }
+
+    .journey_fares_list[_ngcontent-wvb-c12]::-webkit-scrollbar-thumb {
+        background-clip: padding-box;
+        border-radius: 100vh;
+        background-color: #d9d9d9;
+        height: .3125rem;
+        border: 6px solid #d9d9d9
+    }
+
+    .journey_fares_list[_ngcontent-wvb-c12]::-webkit-scrollbar-button {
+        width: 0;
+        height: 0;
+        display: none
+    }
+
+    .journey_fares_list[_ngcontent-wvb-c12]::-webkit-scrollbar-corner {
+        background-color: transparent
+    }
+
+    .journey_fares_list_item[_ngcontent-wvb-c12] {
+        width: 100%;
+        margin: 0 0 2.125rem
+    }
+
+    .journey_fares_schedule-resumen[_ngcontent-wvb-c12] {
+        margin: 0 0 .875rem;
+        padding: 0 0 .875rem;
+        border-bottom: 1px solid #ddd
+    }
+
+    .journey_fares_schedule-resumen_stations[_ngcontent-wvb-c12] {
+        font-size: .875rem;
+        display: flex;
+        font-weight: 700
+    }
+
+    .journey-schedule[_ngcontent-wvb-c17] {
+        display: flex;
+        flex-direction: column
+    }
+
+    .journey-schedule-row[_ngcontent-wvb-c17] {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: space-between
+    }
+
+    .journey-schedule-row[_ngcontent-wvb-c17]:first-child {
+        align-items: center;
+        margin-bottom: 0
+    }
+
+    .journey-schedule_duration_time-connections[_ngcontent-wvb-c17],
+    .journey-schedule_station[_ngcontent-wvb-c17] {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center
+    }
+
+    .journey-schedule_station[_ngcontent-wvb-c17] {
+        flex: 1 1 50%;
+        line-height: 1.323
+    }
+
+    .journey-schedule_duration_time-connections[_ngcontent-wvb-c17] {
+        flex: 0 0 auto;
+        flex-direction: column
+    }
+
+    .journey-schedule__duration_icon[_ngcontent-wvb-c17] {
+        position: relative;
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        margin: 0
+    }
+
+    .journey-schedule__duration_icon[_ngcontent-wvb-c17]::after {
+        content: "";
+        display: inline-block;
+        font-family: avianca-icons;
+        font-weight: 400;
+        line-height: 1;
+        color: #1b1b1b
+    }
+
+    .journey-schedule__duration_icon[_ngcontent-wvb-c17]::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+        transform: translateX(-50%)
+    }
+
+    .journey-schedule__duration_icon[_ngcontent-wvb-c17]::after {
+        font-size: 1.875rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 1.875rem;
+        min-width: 30px;
+        background-color: #fff;
+        transform: translate(-50%, -50%)
+    }
+
+    .journey-schedule-has-connection[_ngcontent-wvb-c17] .journey-schedule__duration_icon[_ngcontent-wvb-c17]::after {
+        content: "";
+        color: #1b1b1b
+    }
+
+    .journey-schedule_station_city[_ngcontent-wvb-c17],
+    .journey-schedule_station_code[_ngcontent-wvb-c17] {
+        font-size: 1.125rem;
+        color: #1b1b1b;
+        font-weight: 700
+    }
+
+    .journey-schedule_time[_ngcontent-wvb-c17] {
+        font-size: 2.125rem;
+        position: relative;
+        color: #1b1b1b;
+        font-weight: 700;
+        min-width: 7.875rem;
+        line-height: 1.323
+    }
+
+    .journey-schedule_extra-day[_ngcontent-wvb-c17] {
+        font-size: .875rem;
+        position: absolute;
+        top: -.75rem;
+        right: 0;
+        color: #1b1b1b;
+        white-space: nowrap
+    }
+
+    .journey-schedule_extra-day_value[_ngcontent-wvb-c17]::before {
+        font-size: .875rem;
+        content: "+";
+        color: #1b1b1b;
+        font-weight: 400;
+        margin: 0 0 .25rem
+    }
+
+    .journey-schedule_station-departure[_ngcontent-wvb-c17] {
+        padding-right: 4%
+    }
+
+    .journey-schedule_station-return[_ngcontent-wvb-c17] {
+        justify-content: flex-end;
+        padding-left: 4%
+    }
+
+    .journey-schedule_station-return[_ngcontent-wvb-c17] .journey-schedule_station_city[_ngcontent-wvb-c17] {
+        text-align: right
+    }
+
+    .journey-schedule_carriers[_ngcontent-wvb-c17],
+    .journey-schedule_carriers_items[_ngcontent-wvb-c17] {
+        display: flex;
+        flex-wrap: wrap
+    }
+
+    .journey-schedule_carriers_title[_ngcontent-wvb-c17] {
+        font-size: .75rem/16pxrem;
+        color: #5a5a5a;
+        margin: 0 .4375rem 0 0
+    }
+
+    .journey-schedule_carriers[_ngcontent-wvb-c17] {
+        align-items: center;
+        justify-content: center;
+        margin: .3125rem 0 .25rem
+    }
+
+    .journey-schedule_carriers_item[_ngcontent-wvb-c17] {
+        margin: 0 .3125rem 0 0
+    }
+
+    @media (min-width:40rem) {
+        .journey-schedule_duration_time-connections[_ngcontent-wvb-c17] {
+            flex-direction: row
+        }
+    }
+
+    @media (min-width:62rem) {
+        .journey-schedule__duration_icon[_ngcontent-wvb-c17] {
+            height: 20px
+        }
+
+        .journey-schedule__duration_icon[_ngcontent-wvb-c17]::after {
+            font-size: 1.25rem;
+            width: 2.125rem;
+            min-width: 20px
+        }
+
+        .journey-schedule_container.has-available-carriers[_ngcontent-wvb-c17] {
+            display: flex
+        }
+
+        .journey-schedule_container.has-available-carriers[_ngcontent-wvb-c17] .journey-schedule[_ngcontent-wvb-c17] {
+            flex: 1;
+            padding-right: 1.375rem
+        }
+
+        .journey-schedule_carriers_title[_ngcontent-wvb-c17] {
+            margin: 0
+        }
+
+        .journey-schedule_carriers[_ngcontent-wvb-c17] {
+            flex-direction: column;
+            margin: -.125rem 0 .25rem
+        }
+
+        .journey-schedule_carriers_items[_ngcontent-wvb-c17] {
+            flex-direction: column
+        }
+
+        .journey-schedule_carriers_item[_ngcontent-wvb-c17] {
+            margin: 0 0 .125rem
+        }
+    }
+
+    @media (max-width:29.9375rem) {
+        .journey-schedule_duration_time-connections[_ngcontent-wvb-c17] {
+            font-size: 76%
+        }
+    }
+
+    .journey-schedule[_ngcontent-wvb-c17] {
+        position: relative
+    }
+
+    .journey-schedule_time-departure[_ngcontent-wvb-c17]::after,
+    .journey-schedule_time-return[_ngcontent-wvb-c17]::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        display: inline-block;
+        width: .5rem;
+        height: .5rem;
+        border-radius: 50%;
+        margin-top: .1875rem;
+        background-color: #0190a0;
+        transform: translateY(-50%)
+    }
+
+    .journey-schedule_time-departure[_ngcontent-wvb-c17] {
+        text-align: left
+    }
+
+    .journey-schedule_time-departure[_ngcontent-wvb-c17]::after {
+        right: 0
+    }
+
+    .journey-schedule_time-return[_ngcontent-wvb-c17] {
+        text-align: right
+    }
+
+    .journey-schedule_time-return[_ngcontent-wvb-c17]::before {
+        left: 0
+    }
+
+    .journey-schedule__duration_icon[_ngcontent-wvb-c17]::before {
+        box-sizing: border-box;
+        background-color: #fff;
+        border-bottom: .0625rem dashed #1b1b1b
+    }
+
+    .journey-schedule_duration_time[_ngcontent-wvb-c17] {
+        font-size: .875rem;
+        order: 2;
+        font-weight: 700;
+        color: #5a5a5a;
+        line-height: 1.323
+    }
+
+    .journey-schedule_station_city[_ngcontent-wvb-c17] {
+        display: none
+    }
+
+    .journey-schedule_station_code[_ngcontent-wvb-c17] {
+        line-height: 1.323
+    }
+
+    .journey-schedule_container.has-available-carriers[_ngcontent-wvb-c17] .journey-schedule_carriers[_ngcontent-wvb-c17] {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row
+    }
+
+    .journey-schedule_container.has-available-carriers[_ngcontent-wvb-c17] .journey-schedule_carriers_title[_ngcontent-wvb-c17] {
+        font-size: .75rem
+    }
+
+    @media (min-width:62rem) {
+        .journey-schedule_container.has-available-carriers[_ngcontent-wvb-c17] .journey-schedule[_ngcontent-wvb-c17] {
+            padding-bottom: 1.375rem
+        }
+
+        .journey-schedule_container.has-available-carriers[_ngcontent-wvb-c17] .journey-schedule_carriers[_ngcontent-wvb-c17] {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 4.375rem;
+            margin: .3125rem 0 .25rem .25rem
+        }
+
+        .journey-schedule_container.has-available-carriers[_ngcontent-wvb-c17] .journey-schedule_carriers_items[_ngcontent-wvb-c17] {
+            align-items: center
+        }
+
+        .journey-schedule_container.has-available-carriers[_ngcontent-wvb-c17] .journey-schedule_carriers_title[_ngcontent-wvb-c17] {
+            line-height: 1.8
+        }
+
+        .journey-schedule_container.has-available-carriers[_ngcontent-wvb-c17] .carrier_img {
+            position: relative;
+            height: 1.375rem
+        }
+
+        .journey-schedule_container.has-available-carriers[_ngcontent-wvb-c17] .carrier_img img {
+            vertical-align: baseline;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%)
+        }
+
+        .journey-schedule_station-departure[_ngcontent-wvb-c17] .journey-schedule_station_city[_ngcontent-wvb-c17] {
+            margin-right: .75rem
+        }
+
+        .journey-schedule_station-return[_ngcontent-wvb-c17] .journey-schedule_station_code[_ngcontent-wvb-c17] {
+            margin-left: .75rem
+        }
+
+        .journey-schedule_duration_time-connections[_ngcontent-wvb-c17] {
+            line-height: 1.323;
+            flex-direction: column
+        }
+
+        .journey-schedule__duration_icon[_ngcontent-wvb-c17] {
+            margin-top: .25rem
+        }
+
+        .journey-schedule_connection[_ngcontent-wvb-c17] {
+            margin-top: -3.375rem;
+            margin-bottom: 2.375rem
+        }
+    }
+
+    @media (max-width:61.9375rem) {
+        .journey-schedule_time[_ngcontent-wvb-c17] {
+            font-size: 1.375rem;
+            min-width: 5.9375rem
+        }
+
+        .journey-schedule_time-departure[_ngcontent-wvb-c17]::after,
+        .journey-schedule_time-return[_ngcontent-wvb-c17]::before {
+            top: auto;
+            bottom: 0
+        }
+
+        .journey-schedule_station_city[_ngcontent-wvb-c17] {
+            border: 0;
+            clip: rect(1px, 1px, 1px, 1px);
+            -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
+            height: 1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
+            font-size: .9375rem
+        }
+
+        .journey-schedule_extra-day[_ngcontent-wvb-c17] {
+            font-size: .75rem
+        }
+
+        .journey-schedule__duration_icon[_ngcontent-wvb-c17]::before {
+            top: auto;
+            bottom: .5rem
+        }
+
+        .journey-schedule_duration_time-connections[_ngcontent-wvb-c17] {
+            flex-direction: row;
+            margin-top: -2.3125rem
+        }
+
+        .journey-schedule-has-connection[_ngcontent-wvb-c17] .journey-schedule__duration_icon[_ngcontent-wvb-c17]::after,
+        .journey-schedule__duration_icon[_ngcontent-wvb-c17]::after {
+            display: none
+        }
+
+        .journey-schedule_station[_ngcontent-wvb-c17] {
+            flex-direction: column
+        }
+
+        .journey-schedule_station-departure[_ngcontent-wvb-c17] {
+            align-items: flex-start
+        }
+
+        .journey-schedule_station-departure[_ngcontent-wvb-c17] .journey-schedule_station_city[_ngcontent-wvb-c17] {
+            margin-right: 0
+        }
+
+        .journey-schedule_station-return[_ngcontent-wvb-c17] {
+            align-items: flex-end
+        }
+
+        .journey-schedule_station-return[_ngcontent-wvb-c17] .journey-schedule_station_code[_ngcontent-wvb-c17] {
+            margin-left: 0
+        }
+
+        .journey-schedule_station_code[_ngcontent-wvb-c17] {
+            display: none;
+            margin-top: .25rem
+        }
+    }
+
+    </s>.journey_fares_schedule-resumen_station_code[_ngcontent-wvb-c12] {
+        border: 0;
+        clip: rect(1px, 1px, 1px, 1px);
+        -webkit-clip-path: inset(100%);
+        clip-path: inset(100%);
+        height: 1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px
+    }
+
+    .journey_fares_schedule-resumen_station-connection[_ngcontent-wvb-c12] {
+        margin: 0 .25rem
+    }
+
+    .journey_fares_schedule-resumen_date-time[_ngcontent-wvb-c12] {
+        font-size: .75rem;
+        display: flex;
+        align-items: center
+    }
+
+    .journey_fares_schedule-resumen_date[_ngcontent-wvb-c12] {
+        margin-right: .375rem;
+        white-space: nowrap
+    }
+
+    .journey_fares_schedule-resumen_date[_ngcontent-wvb-c12]::after {
+        content: "-";
+        margin-left: .375rem
+    }
+
+    .journey_fares_schedule-resumen_date[_ngcontent-wvb-c12] .date-format .day, .journey_fares_schedule-resumen_date[_ngcontent-wvb-c12] .date-format .month {
+        padding: 0 .25rem 0 0
+    }
+
+    .journey_fares_schedule-resumen_time[_ngcontent-wvb-c12] {
+        display: flex;
+        white-space: nowrap
+    }
+
+    .journey_fares_schedule-resumen_time-arrival[_ngcontent-wvb-c12] {
+        display: inline-flex
+    }
+
+    .journey_fares_schedule-resumen_time-arrival[_ngcontent-wvb-c12]::before {
+        content: "-";
+        margin-left: .25rem;
+        padding-right: .25rem
+    }
+
+    .journey_fares-compare_fares[_ngcontent-wvb-c12] {
+        z-index: 1070;
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%
+    }
+
+    .fares-compare[_ngcontent-wvb-c12] {
+        z-index: 1050;
+        position: fixed;
+        bottom: -100%;
+        height: auto;
+        max-height: 99%;
+        border-radius: 1rem 1rem 0 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0;
+        background-color: #fff;
+        overflow: hidden;
+        transition: bottom .3s ease-in-out
+    }
+
+    .fares-compare[_ngcontent-wvb-c12]::after {
+        content: '';
+        z-index: -1;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(27, 27, 27, .6);
+        opacity: 0;
+        transition: .2s ease-in;
+        pointer-events: none
+    }
+
+    .fares-compare.fares-compare-opened[_ngcontent-wvb-c12] {
+        bottom: 0
+    }
+
+    .fares-compare.fares-compare-opened[_ngcontent-wvb-c12]::after {
+        opacity: 1
+    }
+
+    .fares-compare_header[_ngcontent-wvb-c12] {
+        z-index: 2;
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        flex: 0 0 70px;
+        padding: 0 3.125rem 0 14px;
+        color: #1b1b1b;
+        text-align: center;
+        justify-content: center;
+        line-height: 1.1;
+        font-weight: 700;
+        background-color: #fff;
+        box-sizing: border-box;
+        border-radius: 1rem 1rem 0 0
+    }
+
+    .fares-compare_title[_ngcontent-wvb-c12] {
+        font-size: 1.5rem
+    }
+
+    .fares-compare_button-close[_ngcontent-wvb-c12] {
+        position: absolute;
+        top: 50%;
+        right: 14px;
+        transform: translateY(-50%);
+        cursor: pointer
+    }
+
+    .fares-compare_button-close[_ngcontent-wvb-c12]::before {
+        content: "";
+        display: inline-block;
+        font-family: avianca-icons;
+        font-weight: 400;
+        line-height: 1
+    }
+
+    .fares-compare_button-close[_ngcontent-wvb-c12]:before {
+        font-size: 1.25rem;
+        color: #1b1b1b;
+        line-height: 1
+    }
+
+    .fares-compare_button-close[_ngcontent-wvb-c12] .button_label[_ngcontent-wvb-c12] {
+        border: 0;
+        clip: rect(1px, 1px, 1px, 1px);
+        -webkit-clip-path: inset(100%);
+        clip-path: inset(100%);
+        height: 1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px
+    }
+
+    .fares-compare_body[_ngcontent-wvb-c12] {
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch;
+        overflow-y: auto;
+        background-color: #fff;
+        height: 100%
+    }
+
+    .fares-compare_body[_ngcontent-wvb-c12]::-webkit-scrollbar {
+        width: 1.0625rem;
+        height: .3125rem;
+        background-color: transparent
+    }
+
+    .fares-compare_body[_ngcontent-wvb-c12]::-webkit-scrollbar-thumb {
+        background-clip: padding-box;
+        border-radius: 100vh;
+        background-color: #d9d9d9;
+        min-height: 2.5rem;
+        border: 6px solid transparent
+    }
+
+    .fares-compare_body[_ngcontent-wvb-c12]::-webkit-scrollbar-button {
+        width: 0;
+        height: 0;
+        display: none
+    }
+
+    .fares-compare_body[_ngcontent-wvb-c12]::-webkit-scrollbar-corner {
+        background-color: transparent
+    }
+
+    .fares-compare-opened[_ngcontent-wvb-c12] {
+        animation: .2s .1s both fullscreenLayoutAutoHeightAnimaIn
+    }
+
+    .journey_fares_button-close[_ngcontent-wvb-c12] {
+        font-size: 1.125rem;
+        color: #1b1b1b;
+        margin: .875rem auto .5rem;
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        cursor: pointer;
+        align-items: center
+    }
+
+    .journey_fares_button-close[_ngcontent-wvb-c12]::after {
+        content: "";
+        display: inline-block;
+        font-family: avianca-icons;
+        font-weight: 400;
+        line-height: 1;
+        color: #1b1b1b;
+        font-size: 1rem;
+        margin-left: auto;
+        padding-left: 8px;
+        transform: scaleY(1);
+        transition: .18s ease
+    }
+
+    .journey_fares_button-close[aria-expanded=false][_ngcontent-wvb-c12]::after {
+        transform: scaleY(1)
+    }
+
+    .journey_fares_button-close[aria-expanded=true][_ngcontent-wvb-c12]::after {
+        transform: scaleY(-1)
+    }
+
+    .journey_fares_marketing-message[_ngcontent-wvb-c12] {
+        text-align: center;
+        margin: 0 0 .625rem
+    }
+
+    .journey_fares_marketing-message_title[_ngcontent-wvb-c12] {
+        font-size: 1.25rem;
+        font-weight: 400
+    }
+
+    .journey_fares_marketing-message_description[_ngcontent-wvb-c12] {
+        font-size: 1rem;
+        margin: .5rem 0 0
+    }
+
+    .journey_fares_marketing-message_description[_ngcontent-wvb-c12] p:first-child {
+        margin-top: 0
+    }
+
+    .journey_fares_marketing-message_description[_ngcontent-wvb-c12] p:last-child {
+        margin-bottom: 0
+    }
+
+    .journey_fares_cabins-buttons[_ngcontent-wvb-c12] {
+        flex: 1 1 100%;
+        margin: .625rem auto 1.25rem
+    }
+
+    .journey_fares_cabins-buttons[_ngcontent-wvb-c12] .switch-button_item_option_label-value .price_currency .currency, .journey_fares_cabins-buttons[_ngcontent-wvb-c12] .switch-button_item_option_label-value .price_currency .decimals, .journey_fares_cabins-buttons[_ngcontent-wvb-c12] .switch-button_item_option_label-value .price_currency .from, .journey_fares_cabins-buttons[_ngcontent-wvb-c12] .switch-button_item_option_label-value .price_currency .price {
+        font-size: 1rem;
+        font-weight: 400
+    }
+
+    .journey_fares_cabins-buttons[_ngcontent-wvb-c12] .switch-button_item--active .switch-button_item_option_label-value .price_currency .currency, .journey_fares_cabins-buttons[_ngcontent-wvb-c12] .switch-button_item--active .switch-button_item_option_label-value .price_currency .decimals, .journey_fares_cabins-buttons[_ngcontent-wvb-c12] .switch-button_item--active .switch-button_item_option_label-value .price_currency .from, .journey_fares_cabins-buttons[_ngcontent-wvb-c12] .switch-button_item--active .switch-button_item_option_label-value .price_currency .price {
+        font-weight: 700
+    }
+
+    .journey_fares_cabins-buttons[_ngcontent-wvb-c12] .switch-button_item:not(.switch-button_item--active) .switch-button_item_option_label-value {
+        cursor: pointer
+    }
+
+    .journey_price-available-units[_ngcontent-wvb-c12] {
+        font-size: 1rem;
+        display: block;
+        font-weight: 700;
+        color: red;
+        margin: 0 0 .3125rem
+    }
+
+    @media (min-width:40rem) {
+        .journey_price[_ngcontent-wvb-c12] {
+            flex: 0 0 auto
+        }
+    }
+
+    @media (min-width:62rem) {
+        .journey_inner[_ngcontent-wvb-c12] {
+            flex-direction: row
+        }
+
+        .journey_journey-schedule[_ngcontent-wvb-c12] {
+            padding: 2.125rem 1.4375rem 1.375rem 2.625rem
+        }
+
+        .journey_price_fare[_ngcontent-wvb-c12] {
+            align-items: center
+        }
+
+        .journey_fares_button-close[_ngcontent-wvb-c12] {
+            position: absolute;
+            right: 10%;
+            top: 2.25rem;
+            margin: 0 auto
+        }
+
+        .journey_fares_wrap[_ngcontent-wvb-c12] {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 .875rem;
+            max-width: 78rem
+        }
+
+        .journey_fares_marketing-message[_ngcontent-wvb-c12] {
+            flex: 1 1 100%;
+            margin: 0 0 1.125rem
+        }
+
+        .journey_fares_list[_ngcontent-wvb-c12] {
+            position: relative;
+            flex-direction: row;
+            max-width: 100%;
+            margin-bottom: 1.875rem
+        }
+
+        .journey_fares_list_item[_ngcontent-wvb-c12] {
+            min-width: 0;
+            margin: 0;
+            box-sizing: border-box
+        }
+
+        .journey_fares-compare_fares[_ngcontent-wvb-c12] {
+            display: none
+        }
+
+        .journey_fares_marketing-message_title[_ngcontent-wvb-c12] {
+            font-size: 1.5rem
+        }
+
+        .journey_price-currency[_ngcontent-wvb-c12] {
+            padding: 0
+        }
+
+        .journey_price-available-units[_ngcontent-wvb-c12] {
+            text-align: right
+        }
+    }
+
+    @media (max-width:61.9375rem) {
+        .journey_fares_marketing-message[_ngcontent-wvb-c12] {
+            display: none
+        }
+    }
+
+    .journey[_ngcontent-wvb-c12] {
+        position: relative;
+        border-radius: 2.125rem;
+        box-shadow: 0 .125rem .75rem rgba(27, 27, 27, .15)
+    }
+
+    .journey_inner[_ngcontent-wvb-c12] {
+        width: 100%
+    }
+
+    .journey-soldout[_ngcontent-wvb-c12] .journey_price[_ngcontent-wvb-c12] {
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+
+    .journey-disabled[_ngcontent-wvb-c12] {
+        position: relative
+    }
+
+    .journey-disabled[_ngcontent-wvb-c12] .journey[_ngcontent-wvb-c12] {
+        opacity: .3
+    }
+
+    .journey-disabled[_ngcontent-wvb-c12]:hover .journey-unavailable[_ngcontent-wvb-c12] {
+        opacity: 1;
+        top: 50%
+    }
+
+    .journey-disabled[_ngcontent-wvb-c12] .connections {
+        pointer-events: none
+    }
+
+    .journey-unavailable[_ngcontent-wvb-c12] {
+        opacity: 0;
+        z-index: 2;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        min-width: 15.625rem;
+        max-width: 38%;
+        padding: .625rem 1.875rem;
+        border-radius: 100vh;
+        transform: translate(-50%, -50%);
+        justify-content: center;
+        background: #fff;
+        box-sizing: border-box;
+        transition: all .1s ease-out;
+        box-shadow: 0 0 .375rem rgba(27, 27, 27, .2)
+    }
+
+    .journey_journey-schedule[_ngcontent-wvb-c12] {
+        flex: 1 1 100%
+    }
+
+    .journey_best-price[_ngcontent-wvb-c12] {
+        line-height: 1.5
+    }
+
+    .journey_best-price[_ngcontent-wvb-c12] .journey_best-price_label[_ngcontent-wvb-c12]::before {
+        content: "";
+        display: inline-block;
+        font-family: avianca-icons;
+        font-weight: 400;
+        line-height: 1;
+        font-size: .875rem;
+        margin-right: .5rem
+    }
+
+    .journey_price_button[_ngcontent-wvb-c12] {
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        background-color: #fafafa;
+        border-radius: 0 0 2.125rem 2.125rem
+    }
+
+    .journey_price-currency[_ngcontent-wvb-c12] {
+        line-height: 1;
+        font-size: 2.25rem
+    }
+
+    .journey_price-currency[_ngcontent-wvb-c12] .price_currency {
+        font-weight: 700
+    }
+
+    .journey_price-currency[_ngcontent-wvb-c12] .price_currency .from {
+        font-size: .875rem;
+        display: block;
+        font-weight: 400;
+        margin-bottom: .375rem;
+        margin-left: 1.875rem;
+        color: #5a5a5a
+    }
+
+    .journey_price-currency[_ngcontent-wvb-c12] .price_currency .currency {
+        font-size: 1rem;
+        margin-right: .3em;
+        font-weight: inherit
+    }
+
+    .journey_price-currency[_ngcontent-wvb-c12] .price_currency .price {
+        font-weight: inherit
+    }
+
+    .journey_price-currency[_ngcontent-wvb-c12] .price_currency .price .decimals {
+        font-weight: inherit
+    }
+
+    .journey_price_fare[_ngcontent-wvb-c12] {
+        font-size: .875rem;
+        font-weight: 700;
+        margin-left: .625rem
+    }
+
+    .journey_price_fare_name[_ngcontent-wvb-c12] {
+        font-size: 1em;
+        font-weight: 700;
+        border-radius: .3125rem;
+        padding: .125rem .8125rem;
+        border: .0625rem solid transparent
+    }
+
+    .journey_price_fare-select_label-text[_ngcontent-wvb-c12] {
+        border: 0;
+        clip: rect(1px, 1px, 1px, 1px);
+        -webkit-clip-path: inset(100%);
+        clip-path: inset(100%);
+        height: 1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px
+    }
+
+    .journey_price_fare-select_label[_ngcontent-wvb-c12]::after {
+        font-size: 1.25rem
+    }
+
+    .journey_fares_wrap[_ngcontent-wvb-c12] {
+        display: block;
+        max-width: 100%
+    }
+
+    .journey_fares_schedule-resumen[_ngcontent-wvb-c12] {
+        display: none
+    }
+
+    .journey_fares_title[_ngcontent-wvb-c12] {
+        font-size: 1.25rem;
+        text-align: center;
+        font-weight: 700;
+        line-height: 1.323
+    }
+
+    .journey_fares_list[_ngcontent-wvb-c12] {
+        margin-bottom: 0;
+        overflow: visible;
+        align-items: center
+    }
+
+    .journey_fares_list_item[_ngcontent-wvb-c12] {
+        max-width: 24.25rem
+    }
+
+    .journey_fares_button-close[_ngcontent-wvb-c12] {
+        right: 10%;
+        padding: .875rem 1.25rem;
+        font-weight: 400;
+        background: #fafafa;
+        border-radius: .625rem
+    }
+
+    .fares-compare_button[_ngcontent-wvb-c12] {
+        justify-content: center
+    }
+
+    .fares-compare_body[_ngcontent-wvb-c12] {
+        padding: .6875rem .875rem 2.875rem
+    }
+
+    .journey-selected[_ngcontent-wvb-c12] .journey[_ngcontent-wvb-c12] {
+        border: .125rem solid #23c847
+    }
+
+    .journey-selected[_ngcontent-wvb-c12] .journey-selector_header[_ngcontent-wvb-c12] {
+        margin-bottom: 2.6875rem
+    }
+
+    .journey-selected[_ngcontent-wvb-c12] .journey_best-price[_ngcontent-wvb-c12] {
+        display: none
+    }
+
+    .journey-selected[_ngcontent-wvb-c12] .journey_price[_ngcontent-wvb-c12] {
+        margin-top: -.0625rem
+    }
+
+    .journey_price_button-selected[_ngcontent-wvb-c12] {
+        background-color: transparent;
+        align-items: center;
+        padding-top: 0;
+        padding-bottom: 0
+    }
+
+    .journey_price_button-selected[_ngcontent-wvb-c12] .journey_price-currency[_ngcontent-wvb-c12] {
+        font-size: 1.75rem
+    }
+
+    @media (max-width:61.9375rem) {
+        .journey_best-price[_ngcontent-wvb-c12] {
+            font-size: .75rem
+        }
+
+        .journey_best-price[_ngcontent-wvb-c12] .journey_best-price_label[_ngcontent-wvb-c12]::before {
+            font-size: .75rem;
+            margin-right: .25rem
+        }
+
+        .journey_price[_ngcontent-wvb-c12] {
+            min-width: auto
+        }
+
+        .journey_price_fare-select_label[_ngcontent-wvb-c12]::after {
+            padding-left: 0
+        }
+
+        .journey_fares_button-close[_ngcontent-wvb-c12] {
+            right: 0;
+            padding-top: .625rem;
+            padding-bottom: .625rem;
+            margin: .875rem auto
+        }
+
+        .journey-selected[_ngcontent-wvb-c12] .journey[_ngcontent-wvb-c12] {
+            margin-top: -3.1875rem;
+            padding-top: 3.125rem;
+            padding-bottom: 1.5625rem
+        }
+
+        .journey-selected[_ngcontent-wvb-c12] .journey_journey-schedule[_ngcontent-wvb-c12] {
+            padding-top: .5rem;
+            padding-bottom: 1rem
+        }
+
+        .journey_fares_title[_ngcontent-wvb-c12] {
+            margin-top: .125rem;
+            margin-bottom: 2.25rem
+        }
+
+        .journey_fares_container[_ngcontent-wvb-c12]:nth-child(2) {
+            padding-top: 0
+        }
+
+        .journey_fares_container[_ngcontent-wvb-c12]:nth-child(2) .journey_fares_title[_ngcontent-wvb-c12] {
+            display: none
+        }
+    }
+
+    @media (min-width:62rem) {
+        .journey_journey-schedule[_ngcontent-wvb-c12] {
+            padding: 0
+        }
+
+        .journey_journey-schedule[_ngcontent-wvb-c12] .journey-schedule_container {
+            padding-right: 2.375rem
+        }
+
+        .journey_journey-schedule[_ngcontent-wvb-c12] .journey-schedule {
+            padding: 2.125rem 1.4375rem 1.375rem 2.625rem
+        }
+
+        .journey_price[_ngcontent-wvb-c12] {
+            flex: 0 0 20rem;
+            padding-left: 0
+        }
+
+        .journey_price_button[_ngcontent-wvb-c12] {
+            padding: 0 .9375rem 0 1.875rem;
+            border-radius: 0 2.125rem 2.125rem 0;
+            align-items: center;
+            justify-content: start
+        }
+
+        .journey_price-currency[_ngcontent-wvb-c12] .price_currency .from {
+            text-align: left;
+            margin-bottom: 0;
+            margin-left: 0
+        }
+
+        .journey-no-data[_ngcontent-wvb-c12] {
+            min-height: 7.375rem
+        }
+
+        .journey_price_fare[_ngcontent-wvb-c12] {
+            margin-left: .125rem
+        }
+
+        .journey_price_fare-select_label[_ngcontent-wvb-c12]::after {
+            position: relative;
+            top: .875rem
+        }
+
+        .journey-selected[_ngcontent-wvb-c12] .journey[_ngcontent-wvb-c12] {
+            margin-top: -2.9375rem
+        }
+
+        .journey-selected[_ngcontent-wvb-c12] .journey_journey-schedule[_ngcontent-wvb-c12] .journey-schedule {
+            padding: 3.8125rem 2.5625rem 1.5625rem 2.625rem
+        }
+
+        .journey-selected[_ngcontent-wvb-c12] .journey_price[_ngcontent-wvb-c12] {
+            flex: 0 0 12.375rem;
+            display: flex;
+            align-items: center;
+            justify-content: start
+        }
+
+        .journey-selected[_ngcontent-wvb-c12] .journey_price_button[_ngcontent-wvb-c12] {
+            padding: 0;
+            flex-direction: column;
+            width: auto;
+            justify-content: center
+        }
+
+        .journey-selected[_ngcontent-wvb-c12] .journey_price-currency[_ngcontent-wvb-c12] {
+            margin-bottom: .625rem
+        }
+
+        .journey_fares-opened[_ngcontent-wvb-c12] .journey_price_button[_ngcontent-wvb-c12] {
+            border-bottom-right-radius: 0
+        }
+
+        .journey_fares-opened[_ngcontent-wvb-c12] .journey_price_fare-select_label[_ngcontent-wvb-c12]::after {
+            transform: scaleY(-1)
+        }
+
+        .journey_fares_wrap[_ngcontent-wvb-c12] {
+            padding: 2.125rem 1.75rem
+        }
+
+        .journey_fares_title[_ngcontent-wvb-c12] {
+            font-size: 1.375rem
+        }
+
+        .journey_fares_list[_ngcontent-wvb-c12] {
+            flex-direction: row;
+            justify-content: center;
+            align-items: normal;
+            flex-wrap: wrap;
+            padding-top: 2.125rem
+        }
+
+        .journey_fares_container--horizontal[_ngcontent-wvb-c12] {
+            padding-top: 3.625rem
+        }
+
+        .journey_fares_container--horizontal[_ngcontent-wvb-c12] .journey_fares_list[_ngcontent-wvb-c12] {
+            display: flex;
+            flex-direction: column;
+            align-items: center
+        }
+
+        .journey_fares_container--horizontal[_ngcontent-wvb-c12] .journey_fares_list_item[_ngcontent-wvb-c12] {
+            width: 100%;
+            max-width: 66.125rem;
+            padding-right: 0;
+            padding-left: 0
+        }
+
+        .journey_fares_list_item[_ngcontent-wvb-c12] {
+            max-width: 22.875rem;
+            width: 33.33%;
+            box-sizing: border-box;
+            margin-bottom: 0;
+            padding-right: 1.25rem;
+            padding-left: 1.25rem;
+            display: flex;
+            align-items: flex-start
+        }
+    }
+
+    .booking-steps {
+        display: none;
+    }
+
+
+    .journey-selector[_ngcontent-wvb-c3] {
+        position: relative;
+        margin-bottom: 0
+    }
+
+    .journey-selector-inbound[_ngcontent-wvb-c3] {
+        margin-top: 2.125rem
+    }
+
+    .journey-selector-selected[_ngcontent-wvb-c3] {
+        border: 0 solid #1b1b1b
+    }
+
+    .journey-selector_header[_ngcontent-wvb-c3] {
+        margin: 0 0 1.75rem
+    }
+
+    .journey-selector_header_label[_ngcontent-wvb-c3] {
+        font-size: 1.25rem;
+        line-height: 1.1;
+        color: #1b1b1b;
+        font-weight: 400
+    }
+
+    .journey-selector_header_route[_ngcontent-wvb-c3] {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center
+    }
+
+    .journey-selector_header_route[_ngcontent-wvb-c3]>.route_text[_ngcontent-wvb-c3] {
+        margin-right: .4375rem
+    }
+
+    .route_text[_ngcontent-wvb-c3] {
+        font-size: 1.375rem;
+        color: #1b1b1b
+    }
+
+    .journey-select_dayselector_buttons[_ngcontent-wvb-c3] {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1.875rem 0 1.625rem
+    }
+
+    [_nghost-wvb-c3] .journey-selector-selected[_ngcontent-wvb-c3] .journey-selector_header[_ngcontent-wvb-c3] {
+        margin-top: 0;
+        margin-bottom: 2.375rem
+    }
+
+    [_nghost-wvb-c3] .journey-selector-selected[_ngcontent-wvb-c3] .journey-control {
+        display: none
+    }
+
+    [_nghost-wvb-c3] .journey-selector-selected[_ngcontent-wvb-c3] .journey-selected {
+        display: block
+    }
+
+    [_nghost-wvb-c3] .journey-selector-selected[_ngcontent-wvb-c3] .journey-select_dayselector {
+        display: none
+    }
+
+    [_nghost-wvb-c3] .journey-selector-selected[_ngcontent-wvb-c3] .journey-select_list_item {
+        margin: 0
+    }
+
+    [_nghost-wvb-c3] .journey-no-data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #5a5a5a;
+        padding: 1.25rem;
+        background: #fff;
+        border: 0 solid #e5e5e5
+    }
+
+    @media (min-width:40rem) {
+        .journey-selector-selected[_ngcontent-wvb-c3] {
+            padding: 0
+        }
+    }
+
+    .journey-select_dayselector--pricebar {
+        margin: 2rem 0 2.375rem
+    }
+
+    .journey-selector.has-fare1[_ngcontent-wvb-c3] .journey_price_fare_name {
+        color: #fff;
+        background: #f57b00
+    }
+
+    .journey-selector.has-fare2[_ngcontent-wvb-c3] .journey_price_fare_name {
+        color: #fff;
+        background: #f52900
+    }
+
+    .journey-selector.has-fare3[_ngcontent-wvb-c3] .journey_price_fare_name {
+        color: #fff;
+        background: #e91e62
+    }
+
+    .journey-selector.has-fare5[_ngcontent-wvb-c3] .journey_price_fare_name {
+        color: #5a5a5a;
+        border: .0625rem solid #dedddd
+    }
+
+    .journey-selector.has-fare6[_ngcontent-wvb-c3] .journey_price_fare_name {
+        color: #fff;
+        background: #1b1b1b
+    }
+
+    .journey-selector.has-fare7[_ngcontent-wvb-c3] .journey_price_fare_name {
+        color: #fff;
+        background: red
+    }
+
+    .journey-selector.has-fare8[_ngcontent-wvb-c3] .journey_price_fare_name {
+        color: #fff;
+        background: #b50080
+    }
+
+    .journey-selector.has-fare9[_ngcontent-wvb-c3] .journey_price_fare_name {
+        color: #fff;
+        background: #ff5c00
+    }
+
+    .journey-selector_header[_ngcontent-wvb-c3] {
+        line-height: 1.323
+    }
+
+    .journey-selector_header_label[_ngcontent-wvb-c3] {
+        margin-bottom: .25rem
+    }
+
+    .journey-selector_header_route[_ngcontent-wvb-c3]::before {
+        content: "";
+        display: inline-block;
+        font-family: avianca-icons;
+        font-weight: 400;
+        line-height: 1;
+        color: #1b1b1b;
+        line-height: inherit;
+        font-size: 1.5rem;
+        margin-right: .5rem
+    }
+
+    .route_connector[_ngcontent-wvb-c3],
+    .route_text[_ngcontent-wvb-c3] {
+        font-weight: 700
+    }
+
+    .route_connector[_ngcontent-wvb-c3] {
+        font-size: 1.375rem;
+        margin-right: .4375rem
+    }
+
+    .route_connector[_ngcontent-wvb-c3]::before {
+        content: attr(aria-label)
+    }
+
+    .journey-selector-inbound[_ngcontent-wvb-c3] .journey-selector_header_route[_ngcontent-wvb-c3]::before {
+        transform: scaleX(-1)
+    }
+
+    [_nghost-wvb-c3] .journey-selector-selected[_ngcontent-wvb-c3] .journey-select_list {
+        margin-top: 0
+    }
+
+    [_nghost-wvb-c3] .journey-select_list {
+        display: flex;
+        flex-direction: column;
+        margin-top: .875rem
+    }
+
+    .journey-selector_selected-date[_ngcontent-wvb-c3] {
+        font-size: 1rem;
+        z-index: 1;
+        position: relative;
+        padding-left: 1.5rem;
+        margin-bottom: .5rem;
+        line-height: 1.5
+    }
+
+    .journey-selector_selected-date[_ngcontent-wvb-c3] .day, .journey-selector_selected-date[_ngcontent-wvb-c3] .month,
+    .journey-selector_selected-date[_ngcontent-wvb-c3] .week,
+    .journey-selector_selected-date[_ngcontent-wvb-c3] .year {
+        margin: 0 .125rem
+    }
+
+    .journey-selector_selected-date[_ngcontent-wvb-c3] .week {
+        text-transform: capitalize
+    }
+
+    .journey-selector_selected-date[_ngcontent-wvb-c3] .week::after {
+        content: ','
+    }
+
+    [_nghost-wvb-c3] .journey-no-data {
+        font-size: 1rem;
+        font-weight: 700;
+        text-align: center;
+        box-shadow: 0 .125rem .75rem rgba(27, 27, 27, .15);
+        border-radius: 2.125rem;
+        flex-direction: column;
+        line-height: 1.323;
+        min-height: 7.375rem;
+        box-sizing: border-box
+    }
+
+    [_nghost-wvb-c3] .journey-no-data::before {
+        content: "";
+        font-family: avianca-icons;
+        font-weight: 400;
+        line-height: 1;
+        display: block;
+        font-size: 1.25rem;
+        text-align: center;
+        margin-bottom: .125rem
+    }
+
+    body.page-mmb-change-flight [_nghost-wvb-c3] .journey-selector_header_label[_ngcontent-wvb-c3] {
+        font-weight: 400
+    }
+
+    body.page-mmb-change-flight [_nghost-wvb-c3] .journey-selector-inbound[_ngcontent-wvb-c3] {
+        margin-top: 1.5625rem
+    }
+
+    body.page-irop-move [_nghost-wvb-c3] .journey-selector_header_label[_ngcontent-wvb-c3] {
+        display: none
+    }
+
+    @media (min-width:62rem) {
+        .journey-selector-inbound[_ngcontent-wvb-c3] {
+            margin-top: 6.1875rem
+        }
+
+        .journey-selector-selected[_ngcontent-wvb-c3] .journey-selector_header {
+            margin-bottom: 2.875rem
+        }
+
+        .journey-selector-selected.journey-selector-inbound[_ngcontent-wvb-c3] {
+            margin-top: 3.0625rem
+        }
+
+        .journey-selector_header[_ngcontent-wvb-c3] {
+            margin-bottom: 1.875rem
+        }
+
+        .journey-selector_header_content[_ngcontent-wvb-c3] {
+            display: flex;
+            align-items: center;
+            padding-left: 1.875rem
+        }
+
+        .journey-selector_header_label[_ngcontent-wvb-c3] {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0
+        }
+
+        .journey-selector_header_label[_ngcontent-wvb-c3] .label_text[_ngcontent-wvb-c3] {
+            display: inline-block
+        }
+
+        .journey-selector_header_label[_ngcontent-wvb-c3]::after {
+            content: ":";
+            padding-right: .5rem
+        }
+
+        .journey-selector_header_route[_ngcontent-wvb-c3]::before {
+            font-size: 1.375rem;
+            position: absolute;
+            left: 0
+        }
+
+        .journey-select_dayselector_buttons[_ngcontent-wvb-c3] {
+            margin: 0;
+            justify-content: flex-end;
+            top: 1.25rem
+        }
+
+        .journey-selector_selected-date[_ngcontent-wvb-c3] {
+            padding-left: 2.75rem;
+            display: block;
+            clear: left
+        }
+
+        .route_connector[_ngcontent-wvb-c3],
+        .route_text[_ngcontent-wvb-c3] {
+            font-size: 1.5rem
+        }
+
+        [_nghost-wvb-c3] .journey-select_list {
+            margin-top: 1.75rem
+        }
+
+        [_nghost-wvb-c3] .journey-select_dayselector--pricebar {
+            margin-top: 2.0625rem;
+            margin-bottom: 3.375rem
+        }
+    }
+
+    @media (min-width:78rem) {
+        .journey-selector_selected-date[_ngcontent-wvb-c3] {
+            position: relative;
+            top: .5625rem
+        }
+    }
+
+    .FB367.progess-bar-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        color: #1B1B1B;
+        text-align: center;
+        font-family: "Red Hat Display", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        gap: 10px;
+        margin-bottom: 6px;
+        margin-right: 10px;
+    }
+
+    .FB367 progress#av-steps[value] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+        width: 124px;
+        border-radius: 10em;
+        background: #D9D9D9;
+        height: 10px;
+    }
+
+    .FB367 progress[value]::-webkit-progress-bar {
+        border-radius: 10em;
+        background: #D9D9D9;
+    }
+
+    .FB367 progress[value]::-webkit-progress-value {
+        border-radius: 10em;
+        background: #23C847;
+    }
+
+    .FB367 progress[value]::-moz-progress-bar {
+        border-radius: 10em;
+        background: #23C847;
+    }
+
+    @media only screen and (max-width: 1159px) {
+        .FB367.progess-bar-container {
+            display: none;
+        }
+    }

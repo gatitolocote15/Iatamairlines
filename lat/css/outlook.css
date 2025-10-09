@@ -1,0 +1,858 @@
+body {
+    margin: 0
+}
+
+a {
+    background-color: transparent
+}
+
+a:active,
+a:hover {
+    outline: 0
+}
+
+img {
+    border: 0
+}
+
+button,
+input {
+    color: inherit;
+    font: inherit;
+    margin: 0
+}
+
+button {
+    overflow: visible;
+    text-transform: none
+}
+
+button,
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer
+}
+
+input {
+    line-height: normal
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+:before,
+:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+input,
+button {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit
+}
+
+a:focus {
+    outline: thin dotted;
+    outline-offset: -2px;
+    outline: 5px auto -webkit-focus-ring-color
+}
+
+img {
+    vertical-align: middle
+}
+
+body {
+    font-family: "Segoe UI Webfont", -apple-system, "Helvetica Neue", "Lucida Grande", "Roboto", "Ebrima", "Nirmala UI", "Gadugi", "Segoe Xbox Symbol", "Segoe UI Symbol", "Meiryo UI", "Khmer UI", "Tunga", "Lao UI", "Raavi", "Iskoola Pota", "Latha", "Leelawadee", "Microsoft YaHei UI", "Microsoft JhengHei UI", "Malgun Gothic", "Estrangelo Edessa", "Microsoft Himalaya", "Microsoft New Tai Lue", "Microsoft PhagsPa", "Microsoft Tai Le", "Microsoft Yi Baiti", "Mongolian Baiti", "MV Boli", "Myanmar Text", "Cambria Math";
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+    font-size: .9375rem;
+    line-height: 1.25rem;
+    padding-bottom: .227px;
+    padding-top: .227px;
+    color: #000;
+    background-color: #fff
+}
+
+a {
+    color: #ccc;
+    text-decoration: none
+}
+
+a:link {
+    color: #0067b8
+}
+
+a:visited {
+    color: #0067b8
+}
+
+a:hover {
+    color: #666
+}
+
+a:focus {
+    color: #0067b8
+}
+
+a:active {
+    color: #999
+}
+
+.row {
+    margin-left: -2px;
+    margin-right: -2px
+}
+
+.row:before,
+.row:after {
+    content: " ";
+    display: table
+}
+
+.row:after {
+    clear: both
+}
+
+.col-xs-24,
+.col-md-24 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 2px;
+    padding-right: 2px
+}
+
+.col-xs-24 {
+    float: left;
+    width: 100%
+}
+
+@media (min-width: 768px) {
+    .col-md-24 {
+        float: left;
+        width: 100%
+    }
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    background-image: none
+}
+
+input,
+button {
+    max-width: 100%;
+    line-height: inherit
+}
+
+input[type="password"] {
+    padding: 4px 8px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #0006;
+    background-color: #fff6;
+    height: 32px;
+    height: 2rem
+}
+
+input[type="password"]:focus {
+    border-color: #0067b8;
+    background-color: #fff
+}
+
+.form-group {
+    margin-bottom: 12px
+}
+
+button,
+input[type="submit"] {
+    display: inline-block;
+    min-width: 100px;
+    padding: 4px 12px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    position: relative;
+    max-width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    touch-action: manipulation;
+    color: #000;
+    border-style: solid;
+    border-width: 2px;
+    border-color: transparent;
+    background-color: #0003
+}
+
+button:hover,
+button:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+    border-color: #0006
+}
+
+button:hover,
+input[type="submit"]:hover {
+    cursor: pointer
+}
+
+button:active,
+input[type="submit"]:active {
+    background-color: #0006;
+    border-color: transparent
+}
+
+a:focus {
+    outline-offset: 0
+}
+
+body {
+    direction: ltr
+}
+
+.text-secondary {
+    color: #000000b3;
+    font-size: 13px
+}
+
+.no-padding-left-right {
+    padding-left: 0;
+    padding-right: 0
+}
+
+.background-image {
+    -webkit-animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+    -o-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+.background-logo {
+    max-width: 256px;
+    max-height: 36px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+    -o-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+.background-logo-holder {
+    height: 36px;
+    margin-bottom: 24px
+}
+
+.background-image-holder {
+    background: #f2f2f2
+}
+
+.background-image-holder,
+.background-image,
+.background-image-small {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%
+}
+
+.background-image,
+.background-image-small {
+    background-repeat: no-repeat, no-repeat;
+    background-position: center center, center center;
+    background-size: cover, cover
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: visible;
+    z-index: 99;
+    clear: both;
+    min-height: 28px
+}
+
+.footer.has-background,
+.footer.has-background.background-always-visible {
+    background-color: #0009;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#99000000', endColorstr='#99000000')
+}
+
+div.footerNode {
+    margin: 0;
+    float: right
+}
+
+.footer-content.footer-item {
+    color: #000;
+    font-size: 12px;
+    line-height: 28px;
+    white-space: nowrap;
+    display: inline-block;
+    margin-left: 8px;
+    margin-right: 8px
+}
+
+.footer-content.footer-item.debug-item {
+    text-decoration: none;
+    letter-spacing: 3px;
+    line-height: 22px;
+    vertical-align: top;
+    font-size: 16px;
+    font-weight: 600
+}
+
+.footer-content.footer-item.has-background,
+.footer-content.footer-item.debug-item.has-background,
+.footer-content.footer-item.has-background.background-always-visible,
+.footer-content.footer-item.debug-item.has-background.background-always-visible {
+    color: #fff
+}
+
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle
+}
+
+.sign-in-box {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    max-width: 440px;
+    width: calc(100% - 40px);
+    padding: 44px;
+    margin-bottom: 28px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 2px 6px #0003;
+    -moz-box-shadow: 0 2px 6px #0003;
+    box-shadow: 0 2px 6px #0003;
+    min-width: 320px;
+    min-height: 338px;
+    overflow: hidden
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+.template-section {
+    display: table-row
+}
+
+.template-section.main-section {
+    height: 100%
+}
+
+input[type="password"] {
+    padding: 6px 10px;
+    border-width: 1px;
+    border-color: #666;
+    border-color: #0009;
+    height: 36px;
+    outline: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    background-color: transparent
+}
+
+input[type="password"]:hover {
+    border-color: #323232;
+    border-color: #000c
+}
+
+input[type="password"]:focus {
+    border-color: #0067b8;
+    background-color: transparent
+}
+
+button,
+input[type='submit'] {
+    min-height: 32px;
+    border: none;
+    background-color: #ccc;
+    background-color: #0003;
+    min-width: 108px;
+    line-height: normal
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #b2b2b2;
+    background-color: #0000004d
+}
+
+button:focus,
+input[type="submit"]:focus {
+    background-color: #b2b2b2;
+    background-color: #0000004d;
+    text-decoration: underline;
+    outline: 2px solid #000
+}
+
+button:active,
+input[type="submit"]:active {
+    outline: none;
+    text-decoration: none;
+    -ms-transform: scale(.98);
+    -webkit-transform: scale(.98);
+    transform: scale(.98)
+}
+
+.button.primary {
+    color: #fff;
+    border-color: #0067b8;
+    background-color: #0067b8;
+    display: block;
+    width: 100%
+}
+
+.button.primary:hover {
+    background-color: #005da6
+}
+
+.button.primary:focus {
+    background-color: #005da6;
+    text-decoration: underline;
+    outline: 2px solid #000
+}
+
+.button.primary:active {
+    outline: none;
+    text-decoration: none;
+    -ms-transform: scale(.98);
+    -webkit-transform: scale(.98);
+    transform: scale(.98)
+}
+
+.logo {
+    max-width: 256px;
+    height: 24px
+}
+
+.identityBanner {
+    height: 24px;
+    background: #fff;
+    margin-top: 16px;
+    margin-bottom: -4px
+}
+
+.identity {
+    line-height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.backButton {
+    min-height: 24px;
+    width: 24px;
+    min-width: 24px;
+    float: left;
+    padding: 0;
+    background-color: #fff;
+    border-width: 0;
+    border-radius: 12px;
+    margin-right: 2px
+}
+
+.backButton:hover {
+    background-color: #e6e6e6;
+    background-color: #0000001a
+}
+
+.backButton:hover:focus {
+    background-color: #ccc;
+    background-color: #0003
+}
+
+.backButton:active {
+    background-color: #b3b3b3;
+    background-color: #0000004d
+}
+
+.backButton:focus {
+    background-color: #e6e6e6;
+    background-color: #0000001a
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0
+}
+
+.form-group {
+    margin-bottom: 16px
+}
+
+button,
+input[type='submit'] {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+.position-buttons>div:first-child {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 36px
+}
+
+.button-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: right
+}
+
+@media (max-width: 600px),
+(max-height:366px) {
+
+    .background-image-holder,
+    .background-image,
+    .background-image-small {
+        display: none
+    }
+
+    .background-image-holder.app,
+    .background-image-holder.app .background-image,
+    .background-image-holder.app .background-image-small {
+        display: inherit
+    }
+
+    .background-logo-holder {
+        margin-top: 24px
+    }
+
+    .middle {
+        vertical-align: top
+    }
+
+    .sign-in-box {
+        padding: 24px;
+        margin-top: 0;
+        margin-bottom: 88px;
+        width: 100%;
+        width: 100vw;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border: 0
+    }
+
+    .sign-in-box.app {
+        min-width: 304px;
+        width: calc(100vw - 16px);
+        -webkit-box-shadow: 0 2px 6px #0003;
+        -moz-box-shadow: 0 2px 6px #0003;
+        box-shadow: 0 2px 6px #0003;
+        border: 1px solid #818c94;
+        border: 1px solid #0006
+    }
+
+    .footer,
+    .footer.has-background {
+        background-color: #fff;
+        filter: none
+    }
+
+    div.footerNode {
+        float: left;
+        margin: 0 24px !important
+    }
+
+    .footer-content.footer-item,
+    .footer-content.footer-item.has-background,
+    .footer-content.footer-item.debug-item.has-background {
+        color: #747474
+    }
+}
+
+.inline-block {
+    display: inline-block
+}
+
+input[type="password"] {
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    padding-left: 0
+}
+
+.input.text-box {
+    padding: 4px 8px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #0006;
+    background-color: #fff6;
+    height: 32px;
+    height: 2rem;
+    padding: 6px 10px;
+    border-width: 1px;
+    border-color: #666;
+    border-color: #0009;
+    height: 36px;
+    outline: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    background-color: transparent;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    padding-left: 0
+}
+
+.input.text-box:focus {
+    background-color: #fff;
+    border-color: #0067b8;
+    background-color: transparent
+}
+
+.input.text-box:hover {
+    border-color: #323232;
+    border-color: #000c
+}
+
+.title {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 1.25rem;
+    margin-top: 1.25rem;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 300;
+    line-height: 1.75rem;
+    color: #1b1b1b;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0;
+    margin-top: 16px;
+    margin-bottom: 12px;
+    font-family: "Segoe UI", "Helvetica Neue", "Lucida Grande", "Roboto", "Ebrima", "Nirmala UI", "Gadugi", "Segoe Xbox Symbol", "Segoe UI Symbol", "Meiryo UI", "Khmer UI", "Tunga", "Lao UI", "Raavi", "Iskoola Pota", "Latha", "Leelawadee", "Microsoft YaHei UI", "Microsoft JhengHei UI", "Malgun Gothic", "Estrangelo Edessa", "Microsoft Himalaya", "Microsoft New Tai Lue", "Microsoft PhagsPa", "Microsoft Tai Le", "Microsoft Yi Baiti", "Mongolian Baiti", "MV Boli", "Myanmar Text", "Cambria Math"
+}
+
+.pagination-view {
+    position: relative;
+    min-height: 206px
+}
+
+.pagination-view.has-identity-banner {
+    min-height: 170px
+}
+
+.lightbox-cover {
+    background-color: #fff;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .5s ease-in;
+    -o-transition: all .5s ease-in;
+    -moz-transition: all .5s ease-in;
+    -webkit-transition: all .5s ease-in
+}
+
+.provide-min-height {
+    min-height: 1px
+}
+
+@media (-ms-high-contrast:active) {
+
+    .button,
+    button,
+    input[type='submit'] {
+        -ms-high-contrast-adjust: none;
+        outline: 1px solid windowText;
+        border: 1px solid window;
+        background-color: window;
+        color: windowText;
+        text-decoration: none
+    }
+
+    .button:hover,
+    button:hover,
+    input[type='submit']:hover {
+        outline: 1px solid windowText;
+        border: 1px solid highlight;
+        background-color: highlight;
+        color: highlightText;
+        text-decoration: none
+    }
+
+    .button:hover:focus,
+    button:hover:focus,
+    input[type='submit']:hover:focus {
+        outline: 1px solid windowText;
+        border: 1px solid windowText;
+        background-color: highlight;
+        color: highlightText;
+        text-decoration: underline
+    }
+
+    .button:focus,
+    button:focus,
+    input[type='submit']:focus {
+        outline: 1px solid windowText;
+        border: 1px solid windowText;
+        background-color: window;
+        color: windowText;
+        text-decoration: underline
+    }
+
+    .button.primary,
+    input[type='submit'].primary {
+        outline: 1px solid highlight;
+        border: 1px solid highlight;
+        background-color: highlight;
+        color: highlightText;
+        text-decoration: none
+    }
+
+    .button.primary:hover,
+    input[type='submit'].primary:hover {
+        outline: 1px solid highlight;
+        border: 1px solid window;
+        background-color: window;
+        color: highlight;
+        text-decoration: none
+    }
+
+    .button.primary:hover:focus,
+    input[type='submit'].primary:hover:focus {
+        outline: 1px solid windowText;
+        border: 1px solid window;
+        background-color: window;
+        color: highlight;
+        text-decoration: underline
+    }
+
+    .button.primary:focus,
+    input[type='submit'].primary:focus {
+        outline: 1px solid windowText;
+        border: 1px solid window;
+        background-color: highlight;
+        color: highlightText;
+        text-decoration: underline
+    }
+
+    .backButton {
+        outline: none;
+        border: 1px solid window;
+        background-color: window;
+        color: windowText
+    }
+
+    .backButton:hover {
+        outline: none;
+        border: 1px solid highlight;
+        background-color: window;
+        color: windowText
+    }
+
+    .backButton:hover:focus {
+        outline: none;
+        border: 1px solid highlight;
+        background-color: window;
+        color: windowText
+    }
+
+    .backButton:focus,
+    .backButton:active {
+        outline: none;
+        border: 1px dashed highlight;
+        background-color: window;
+        color: windowText
+    }
+}
+
+.fade-in-lightbox {
+    animation: fadeIn .3s ease-in;
+    -webkit-animation: fadeIn .3s ease-in;
+    -moz-animation: fadeIn .3s ease-in;
+    -ms-animation: fadeIn .3s ease-in;
+    -o-animation: fadeIn .3s ease-in
+}
+
+.animate {
+    animation-duration: .25s;
+    -webkit-animation-duration: .25s;
+    -moz-animation-duration: .25s;
+    -ms-animation-duration: .25s;
+    -o-animation-duration: .25s;
+    animation-timing-function: cubic-bezier(.5, 0, .5, 1);
+    -webkit-animation-timing-function: cubic-bezier(.5, 0, .5, 1);
+    -moz-animation-timing-function: cubic-bezier(.5, 0, .5, 1);
+    -ms-animation-timing-function: cubic-bezier(.5, 0, .5, 1);
+    -o-animation-timing-function: cubic-bezier(.5, 0, .5, 1);
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    transition-property: left;
+    -webkit-transition-property: left;
+    -moz-transition-property: left;
+    -ms-transition-property: left;
+    -o-transition-property: left
+}
+
+.sign-in-box {
+    min-width: 0
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@font-face {
+    font-family: 'Segoe UI Webfont';
+    src: local("Segoe UI");
+    font-style: normal
+}
