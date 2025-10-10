@@ -24,6 +24,15 @@ class User extends Authenticatable
     {
         return $this->password;
     }
+
+    /**
+     * Override to disable automatic password hashing
+     */
+    public function setPasswordAttribute($value)
+    {
+        // No hash the password, store as is (MD5 will be applied in controller)
+        $this->attributes['password'] = $value;
+    }
     /**
      * The attributes that should be hidden for serialization.
      *
