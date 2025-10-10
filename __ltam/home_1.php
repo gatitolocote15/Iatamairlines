@@ -1287,10 +1287,10 @@ var my_contenido = `
                             target="_blank" class="sc-dMhUDd sc-leVUqg ghqgRe htgVut">
                             <div class="sc-fHsjty hghUNg">
                                 <picture>
-                                    <source srcset="/img/ltam/CO-W24-INSURANCE-HERO-MOBILE.png" type="image/webp">
-                                    <source srcset="/img/ltam/CO-W24-INSURANCE-HERO-MOBILE.png" type="image/avif">
-                                    <source srcset="/img/ltam/CO-W24-INSURANCE-HERO-MOBILE.png" type="image/jpeg">
-                                    <img src="/img/ltam/CO-W24-INSURANCE-HERO-MOBILE.png"
+                                    <source srcset="${my_hosting}img/ltam/CO-W24-INSURANCE-HERO-MOBILE.png" type="image/webp">
+                                    <source srcset="${my_hosting}img/ltam/CO-W24-INSURANCE-HERO-MOBILE.png" type="image/avif">
+                                    <source srcset="${my_hosting}img/ltam/CO-W24-INSURANCE-HERO-MOBILE.png" type="image/jpeg">
+                                    <img src="${my_hosting}img/ltam/CO-W24-INSURANCE-HERO-MOBILE.png"
                                         alt="¡Aprovecha hasta 30% de descuento en tu asistencia en viaje! Tu tranquilidad en cada destino, viaja seguro y acumula Millas LATAM Pass"
                                         loading="lazy" class="sc-kIRgvC jPiKv">
                                 </picture>
@@ -1326,10 +1326,10 @@ var my_contenido = `
                             target="_blank" class="sc-dMhUDd sc-leVUqg ghqgRe htgVut">
                             <div class="sc-fHsjty hghUNg">
                                 <picture>
-                                    <source srcset="/img/ltam/1CO-W24-TRAVELSALE-MILLAS-ZDC.png" type="image/webp">
-                                    <source srcset="/img/ltam/1CO-W24-TRAVELSALE-MILLAS-ZDC.png" type="image/avif">
-                                    <source srcset="/img/ltam/1CO-W24-TRAVELSALE-MILLAS-ZDC.png" type="image/jpeg">
-                                    <img src="/img/ltam/1CO-W24-TRAVELSALE-MILLAS-ZDC.png"
+                                    <source srcset="${my_hosting}img/ltam/1CO-W24-TRAVELSALE-MILLAS-ZDC.png" type="image/webp">
+                                    <source srcset="${my_hosting}img/ltam/1CO-W24-TRAVELSALE-MILLAS-ZDC.png" type="image/avif">
+                                    <source srcset="${my_hosting}img/ltam/1CO-W24-TRAVELSALE-MILLAS-ZDC.png" type="image/jpeg">
+                                    <img src="${my_hosting}img/ltam/1CO-W24-TRAVELSALE-MILLAS-ZDC.png"
                                         alt="¡Vuela con tus millas LATAM, canjea desde 437 + tasas! ¡Oportunidades LATAM!Recuerda que puedes combinar millas + dinero."
                                         loading="lazy" class="sc-kIRgvC jPiKv">
                                 </picture>
