@@ -1,0 +1,1156 @@
+@charset "UTF-8";
+h1 {width:100%}
+/* *{background-color: rgba(255,0,0,.2)}
+* *{background-color: rgba(0,255,0,.2)}
+* * *{background-color: rgba(0,0,255,.2)}
+* * * *{background-color: rgba(255,0,255,.2)}
+* * * * *{background-color: rgba(0,255,255,.2)}
+* * * * * *{background-color: rgba(255,255,0,.2)}
+* * * * * * *{background-color: rgba(255,0,0,.2)}
+* * * * * * * *{background-color: rgba(0,255,0,.2)}
+* * * * * * * * *{background-color: rgba(0,0,255,.2)} */
+
+
+
+.logo-home, header {position:relative}
+.cont-busqueda-movil, .logo-home-movil {display:none}
+.slider-fijo div h3, .txt-slider-fijo {
+    text-shadow:1px 1px 3px rgba(0, 51, 102, .3);
+    -moz-text-shadow:1px 1px 3px rgba(0, 51, 102, .3);
+    -webkit-text-shadow:1px 1px 3px rgba(0, 51, 102, .3);
+    -ms-text-shadow:1px 1px 3px rgba(0, 51, 102, .3);
+    -o-text-shadow:1px 1px 3px rgba(0, 51, 102, .3)
+}
+.cont-abrecuenta{float: left; text-align: center;}
+.btn-abretucuenta-home {width: 100%; float: left;}
+.btn-abretucuenta-home a{border-radius: 50px; background-color: #f07b05; color:#fff; text-decoration: none; padding: 10px 30px; text-align: center; margin: 10px 0 0 0; display: inline-block; width: 100% !important;}
+.cont-bancavirtual{text-align: center; float: left; margin: 0 auto; width: 100%;}
+.cont-bancavirtual h5{text-align: center; color:#283E6E; font-size: 20px;}
+.btn-bancavirtual-home {width: 100%;  max-width: 320px; margin: 0 auto;}
+.btn-bancavirtual-home a{border-radius: 50px; background-color: #ffb400; color:#283E6E; text-decoration: none; padding: 10px 30px; text-align: center; margin: 10px 0 0 0; display: inline-block; width: 100% !important;}
+.prefooter a, .prefooter ul li, .slider-fijo a {text-decoration:none}
+.btn-empresas a:hover, .btn-empresas-act a:hover, .btn-personas a:hover {opacity:.8}
+.footer-home ul, .lista ul, .lista ul li, .pagos ul, .prefooter ul {list-style:none}
+
+
+
+@font-face {
+    font-family:'Roboto';
+    src:url(/wps/wcm/connect/banco-de-bogota/5d85543a-60e8-47e7-9499-97adf6e0de8f/roboto-regular.eot?MOD=AJPERES);
+    src:url(/wps/wcm/connect/banco-de-bogota/5d85543a-60e8-47e7-9499-97adf6e0de8f/roboto-regular.eot?MOD=AJPERES) format('embedded-opentype'), url(/wps/wcm/connect/banco-de-bogota/71964149-aca8-486d-b065-d1369b0180e7/roboto-regular.woff2?MOD=AJPERES) format('woff2'), url(/wps/wcm/connect/banco-de-bogota/f40cebc4-035f-4cd7-a03e-fc0d530234cb/roboto-regular.woff?MOD=AJPERES) format('woff'), url(/wps/wcm/connect/banco-de-bogota/ec5ead85-1218-45ee-99c2-3a4c0854d1b2/roboto-regular.ttf?MOD=AJPERES) format('truetype'), url(/wps/wcm/connect/banco-de-bogota/6e903aaf-4fc9-4779-a425-c05db8cef5a9/roboto-regular.svg?MOD=AJPERES) format('svg')
+}
+@font-face {
+    font-family:'Monserrat';
+    src:url(/wps/wcm/connect/banco-de-bogota/1710c700-0e6b-47e1-930e-057e6b8421ca/Montserrat-Regular.eot);
+    src:url(/wps/wcm/connect/banco-de-bogota/1710c700-0e6b-47e1-930e-057e6b8421ca/Montserrat-Regular.eot) format('embedded-opentype'), url(/wps/wcm/connect/banco-de-bogota/cec87283-222a-4855-9446-5881890c2c26/Montserrat-Regular.woff2?MOD=AJPERES) format('woff2'), url(/wps/wcm/connect/banco-de-bogota/f134c1c3-d890-45ca-9963-46a6ba046b56/Montserrat-Regular.woff?MOD=AJPERES) format('woff'), url(/wps/wcm/connect/banco-de-bogota/d80e5f8e-e09a-4ab1-b487-158ac30190d5/Montserrat-Regular.ttf?MOD=AJPERES) format('truetype'), url(/wps/wcm/connect/banco-de-bogota/035778e4-65f0-47f8-b5de-da230d84e2ef/Montserrat-Regular.svg?MOD=AJPERES) format('svg')
+  }
+  
+
+body {
+    margin:0;
+    padding:0
+}
+h1 {
+    color: #0040A8;
+    font-size:20px;
+    float:left;
+    margin:15px 0;
+}
+.prefooter a, p {
+    /* font-family: Monserrat; */
+}
+p {
+    color: #333333;
+    font-size:.875rem;
+    /* float:left */
+}
+header {
+    top:0;
+    margin:0;
+    background-color: #fff;
+    z-index: 100;
+    width: 75vw;
+}
+.logo-home {
+    background-color:#fff;
+    float:left;
+    /* height:100%; */
+    z-index:15;
+    display: flex;
+    align-items: center;
+    margin: 0 1% 0 2%;
+}
+.logo-vigilado, .slider-fijo {
+    position:absolute;
+    z-index:3
+}
+.logo-home img {
+        width:314px!important;
+        height:46px!important;
+}
+.logo-vigilado {
+    bottom:9%;
+    left:1%;
+    height:171px;
+    width:31px
+}
+.slider-fijo {
+    border-top:1px solid rgba(255, 255, 255, .3);
+    bottom:6%;
+    color:#e2e2e2;
+    height:120px;
+    margin:0 0 0 4%;
+    width:70%;
+    padding:40px 0
+}
+.slider-fijo div {
+    float:left;
+    width:33%
+}
+.slider-fijo img {
+    float:left;
+    width:46px;
+    height:46px;
+    margin-right:15px
+}
+.slider-fijo div h3 {
+    font-size:21px;
+    font-weight:600;
+    margin:0;
+    color:#fff;
+}
+.txt-slider-fijo {
+    width:75%!important;
+    font-size:16px;
+    font-weight:200;
+    margin:0;
+    color:#fff;
+}
+footer {
+    bottom:0!important;
+    position:fixed;
+    z-index:5;
+    width:100%
+}
+.prefooter ul {
+    float:left;
+    margin:0;
+    padding:0;
+    background-color:#fff;
+    border-top:1px solid rgba(0, 0, 0, .4);
+    bottom:0;
+    height:50px;
+    width: 40vw;
+    font-family: 'Monserrat';
+}
+.prefooter ul ul {
+    border:1px solid #b2b2b2;
+    border-bottom:none;
+    border-radius:5px 5px 0 0;
+    width:233px;
+    height:auto;
+    min-height:50px;
+    position:absolute;
+    left:230px;
+    background:#fff;
+    z-index:27;
+    box-shadow:0 0 16px 0 rgba(50, 50, 50, .35);
+    bottom:0;
+}
+.prefooter ul li {
+    float:left;
+    padding: 15px 7px;
+}
+.prefooter ul li li {
+    float:left;
+    padding:10px 0 0 0;
+    border-bottom:#E6E7EA solid 1px;
+    text-align:center;
+    width:100%
+}
+.title-filiales {
+    padding: 10px 0 !important;
+}
+li.title:nth-child(9) {
+    padding: 10px 0;
+}
+li.title:nth-child(3) {
+    padding: 10px 0;
+}
+li.title:nth-child(1) {
+    padding: 10px 0;
+}
+.prefooter a {
+    color: #5C8BCC;
+    font-size: 11px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.logo-prefooter{
+    width: 25%;
+ }
+.logo-prefooter img{
+    width: 80%;
+    margin-bottom: 10px;
+  }
+.title {
+    background-color:#F9F7F4;
+    color:#002C76;
+    font-size:12px
+}
+.title-filiales a {
+    color:#9FA4AE;
+    font-size:14px
+}
+.title-filiales a:hover {
+    background-color:transparent!important
+}
+.footer-home ul {
+    float:left;
+    margin:0;
+    padding:0;
+    background-color:#fff;
+    border-top:1px solid rgba(0, 0, 0, .4);
+    min-height:50px;
+    width:70%;
+    font-family: 'Monserrat';
+}
+.footer-home ul li {
+    float:left;
+    padding: 6px;
+}
+.footer-home a {
+    color: #333333;
+    font-size:11px;
+    font-weight:300;
+    text-decoration:none;
+}
+.btn-personas a, .btn-personas a:hover {
+    background-color:#FDC130 ;
+    /* color:#002c76; */
+    text-decoration:none
+}
+.logo-footer {
+    width:84px;
+    height:30px;
+    float:right!important;
+    padding:8px 0!important;
+    margin-right:50px
+}
+.btn-empresas, .btn-personas-inactivo {
+    display:block;
+    font-weight:700;
+    letter-spacing:1px;
+    margin:0 0 10px
+}
+.grancont-login-personas {
+    background:#fff;
+    position:fixed;
+    z-index:5;
+    height:95%;
+    right:0;
+    width:25vw;
+    top:0;
+    padding:30px;
+    float:left;
+    overflow:auto;
+    font-family: 'Roboto';
+}
+.btn-empresas-act, .btn-personas {
+    background-color:#FDC130;
+    float:left
+}
+.cont-personas {
+    width:100%;
+    height:auto;
+    float:left
+}
+.cont-btn-transaccione {
+    width:100%;
+    height:50px;
+}
+.btn-empresas, .btn-empresas-act, .btn-personas, .btn-personas-inactivo {
+    width: 48%;
+    font-size:12px;
+    text-align:center;
+    /* text-transform:uppercase */
+}
+.btn-personas {
+    border-radius:50px;
+    padding: 8px 8px 7px;
+    margin-right: 9px;
+}
+.btn-personas-inactivo {
+    border: 1px solid #002c76;
+    border-radius: 23px;
+    color:#002c76;
+    padding: 8px 8px 7px;
+    margin-right: 9px;
+    float:left;
+}
+.btn-personas-inactivo a {
+    color:#002c76;
+    text-decoration:none
+}
+.btn-personas-inactivo a:hover {
+    color:#002c76;
+    opacity:.8;
+    text-decoration:none
+}
+.btn-empresas-act a, .btn-empresas-act a:hover {
+    background-color:#FDC130 ;
+    text-decoration:none
+}
+.btn-empresas-act {
+    border-radius:50px;
+    padding: 8px 0;
+}
+.btn-empresas {
+    border:1px solid #002c76;
+    border-radius: 23px;
+    color:#002c76;
+    padding: 8px 8px 7px;
+    float:left;
+    /* margin: 30px 0 0 0; */
+}
+.bg-select-arrow, .select-arrow {
+    height:auto;
+    width:100%;
+    float:left
+}
+.btn-empresas a, .btn-empresas a:hover {
+    color:#002c76;
+    text-decoration:none
+}
+.bg-select-arrow {
+    background:-webkit-linear-gradient(rgba(255, 255, 255, 1), rgba(246, 246, 247, 1));
+    background:-moz-linear-gradient(rgba(255, 255, 255, 1), rgba(246, 246, 247, 1));
+    background:-o-linear-gradient(rgba(255, 255, 255, 1), rgba(246, 246, 247, 1));
+    background:#fff\9;
+    margin:10px 0
+}
+.select-arrow {
+    padding:23px 13px;
+    border:1px solid #b5bac3;
+    border-radius:3px;
+    box-shadow:inset 1px 1px 0 #f2f2f2;
+    background:url(/wps/wcm/connect/banco-de-bogota/5d1b2db2-56bc-4dcd-b248-e0349756b4cc/arrow-down-selectblue.png?MOD=AJPERES) 240px no-repeat #FFF;
+    overflow:hidden;
+    position:relative
+}
+.select-arrow select {
+    font-size:14px;
+    font-size:.875rem;
+    color:#b5bac3;
+    outline:0;
+    width:calc(100% + 20px);
+    border:none;
+    text-overflow:'';
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    -o-appearance:none;
+    appearance:none;
+    background:0 0;
+    position:absolute;
+    top:0;
+    left:0;
+    padding-left:10px;
+    height:50px;
+    float:left
+}
+input:not([type=submit]):not([type=file]), input[type=text, type='password'] {
+    margin:10px 0;
+    padding:15px 13px;
+    border:1px solid #b5bac3;
+    border-radius:3px;
+    font-size:14px;
+    font-size:.875rem;
+    box-shadow:inset 1px 1px 0 #f2f2f2;
+    outline:0;
+    width:100%
+}
+.campo-texto {
+    float:left;
+    width:100%;
+    position:relative
+}
+.campo-texto input {
+    color:#827869
+}
+.cont-ingreso-seguro {
+    text-align:center;
+    float:left;
+    width:100%;
+    border:#390
+}
+.i-arrow-up-pagos:before, .i-arrowbluepagos-right:before {
+    float:right
+}
+.btn-ingreso-seguro {
+    background:url(/wps/wcm/connect/banco-de-bogota/4a36ad49-72a7-4edd-aa54-cd719dccd4f6/icon-locker.png?MOD=AJPERES) 40px 10px no-repeat #002c76;
+    font-family:'Dtl Argo', Helvetica;
+    text-indent:20px;
+    border:0;
+    border-radius:50px;
+    color:#fff;
+    font-size:1apx;
+    font-weight:600;
+    letter-spacing:.9px;
+    outline:0;
+    padding:10px 50px;
+    position:relative;
+    text-shadow:1px 0 1px rgba(0, 0, 0, .4);
+    text-transform:uppercase;
+    margin:10px 0 0
+}
+.lista a, .pagos a {
+    color:#002c76;
+    /* font-family:'Open Sans'; */
+    text-decoration:none
+}
+.btn-ingreso-seguro:hover {
+    opacity:.9
+}
+.i-arrowyellow-right:before {
+    content:url(/wps/wcm/connect/banco-de-bogota/10d10115-a112-40c3-97b8-fcdafc5fd121/flecha-btn-ingreso.png?MOD=AJPERES);
+    margin-left:4px
+}
+.i-arrowblue-right:before, .i-arrowbluepagos-right:before {
+    content:url(/wps/wcm/connect/banco-de-bogota/e2633ddf-140c-4bf2-b796-4d43ad714c0a/arrow-right-blue.png?MOD=AJPERES)
+}
+.i-arrowblue-down:before {
+    content:url(/wps/wcm/connect/banco-de-bogota/e803eec5-b696-4da1-9640-eb3d90ab68dd/arrow-int-down-blue.png?MOD=AJPERES);
+    float: right;
+}
+.i-arroworange-right:before {
+    content:url(/wps/wcm/connect/banco-de-bogota/7b746b2d-d079-4d8a-8940-b779ba936daf/arrow-rigth-orange.png?MOD=AJPERES)
+}
+.i-arrowblue-down:before {
+    content:url(/wps/wcm/connect/banco-de-bogota/f5b0b0fe-7a90-4bd1-9c00-653d32d2b5a1/arrow-down-blue.png?MOD=AJPERES);
+    float: right;
+}
+.i-arrow-down:before {
+    content:url(/wps/wcm/connect/banco-de-bogota/1c67c566-f498-4d4a-9e13-99f52d31ca6b/arrow-down-gray.png?MOD=AJPERES)
+}
+.i-arrow-up-pagos:before, .i-arrow-up:before {
+    content:url(/wps/wcm/connect/banco-de-bogota/1f1fe3f7-39d8-40b4-b376-81560439890b/arrow-up-blue.png?MOD=AJPERES)
+}
+.i-arrow-down-pagos:before {
+    content:url(/wps/wcm/connect/banco-de-bogota/1c67c566-f498-4d4a-9e13-99f52d31ca6b/arrow-down-gray.png?MOD=AJPERES);
+    float:right
+}
+*, :after, :before {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box
+}
+.lista {
+    margin:20px 0;
+    float:left
+}
+.lista ul {
+    margin:0;
+    padding:0
+}
+.lista ul li {
+    margin:10px 9px;
+    padding-bottom:5px
+}
+.lista a {
+    font-size:12px;
+    letter-spacing:-.25px;
+    background:0 0!important
+}
+.lista a:hover {
+    opacity:.8;
+    background:0 0
+}
+.pagos {
+    margin:0px;
+    float:left;
+    width:100%
+}
+.pagos ul {
+    margin:0;
+    padding:0
+}
+.pagos ul li {
+    float:left;
+    padding:15px 10px;
+    text-decoration:none;
+    border-bottom:1px solid #CFCAC4;
+    width:100%
+}
+.pagos a {
+    font-size:13px;
+    font-weight:600;
+    background:0 0!important
+}
+.pagos a:hover {
+    opacity:.8;
+    background:0 0
+}
+#iframe2 {
+    position:relative;
+    width:100%;
+    height:100%;
+    min-height:250px;
+    min-width:282px
+}
+@media (max-width:899px) {
+    header {
+        height:63px;
+        background-color:#FFF;
+        border-bottom:solid 1px #ddd
+    }
+    .footer-home ul li, .prefooter ul li {
+        text-align:center;
+        border-bottom:1px solid #ddd
+    }
+    .logo-home {
+        display:none
+    }
+    .logo-home-movil {
+        display:block;
+        width:80%;
+        position:absolute;
+        top:20px;
+        left:60px;
+        text-align:center
+    }
+    .grancont-login-personas {
+        background:#fff;
+        width:100%;
+        top:0;
+        border-top:none!important;
+        position:static!important
+    }
+    .select-arrow {
+        background-position:543px
+    }
+    .cont-busqueda-movil {
+        width:10%;
+        height:30px;
+        float:left;
+        position:absolute;
+        right:5px;
+        top:22px;
+        text-align:center;
+        display:none!important
+    }
+    .logo-vigilado {
+        bottom:23px!important;
+        left:0!important;
+        z-index:6
+    }
+    .slider-fijo {
+        border-top:1px solid rgba(255, 255, 255, .3);
+        bottom:0;
+        color:red;
+        height:185px;
+        margin:10px 0 0 49px!important;
+        position:absolute;
+        width:85%;
+        z-index:6;
+        padding:5px 0 0!important
+    }
+    .slider-fijo div {
+        float:left;
+        width:100%
+    }
+    .slider-fijo img {
+        float:left;
+        width:35px;
+        height:35px;
+        margin-right:15px
+    }
+    .slider-fijo div h3 {
+        font-size:17px
+    }
+    .txt-slider-fijo {
+        font-size:13px;
+        margin-bottom:12px;
+        color:#fff !important;
+        width:90%!important
+    }
+    footer {
+        bottom:-360px!important;
+        position:static!important;
+        z-index:6;
+        width:100%
+    }
+    .footer-home ul {
+        border-top:none;
+        width:100%
+    }
+    .prefooter ul {
+        width:100%;
+        height:auto
+    }
+    .prefooter ul li {
+        width:100%
+    }
+    .prefooter ul ul {
+        left:203px;
+        bottom:-1086px
+    }
+    .footer-home ul li {
+        width:100%
+    }
+    .logo-footer {
+        height:auto;
+        padding:15px 0!important;
+        margin-right:0
+    }
+}
+@media (max-width:380px) {
+    .slider-fijo {
+        bottom:45px
+    }
+    .txt-slider-fijo {
+        margin-bottom:26px;
+        width:78%!important
+    }
+    .select-arrow {
+        background-position:267px!important
+    }
+    .logo-home-movil {
+        width:70%
+    }
+    .prefooter ul ul {
+        left:63px!important;
+        bottom:-764px!important
+    }
+}
+@media (max-width:480px) {
+    .slider-fijo {
+        bottom:0;
+        margin-left:38px!important
+    }
+    .txt-slider-fijo {
+        margin-bottom:16px;
+        width:78%!important
+    }
+    .select-arrow {
+        background-position:386px
+    }
+    .logo-home-movil {
+        width:75%
+    }
+    .prefooter ul ul {
+        left:123px!important;
+        bottom:-2005px!important
+    }
+    .logo-prefooter img{
+        width: 25%;
+       }
+}
+@media (max-width:380px) {
+    .prefooter ul ul {
+        left:66px!important;
+        bottom:-1170px!important
+    }
+}
+@media (max-width:320px) {
+    .slider-fijo {
+        bottom:-34px;
+        margin-left:38px!important
+    }
+    .txt-slider-fijo {
+        margin-bottom:12px;
+        width:78%!important
+    }
+    .select-arrow {
+        background-position:227px!important
+    }
+    .btn-ingreso-seguro {
+        padding:10px 40px
+    }
+    .logo-home-movil {
+        width:68%!important
+    }
+    .prefooter ul ul {
+        left:62px!important;
+        bottom:-1863px!important
+    }
+}
+@media (min-width:500px) and (max-width:670px) {
+    .prefooter ul ul {
+        bottom:-640px!important;
+        left:185px!important
+    }
+    
+}
+@media (min-width:700px) and (max-width:800px) {
+    .wpthemeMainContent table, .wpthemeMainContent tr, .wpthemeMainContent td, .wpthemeMainContent.layoutRow, .wpthemeMainContent table.layoutRow > tbody > tr > td{width: 100vw !important;}
+    header {
+        height:63px;
+        background-color:#FFF;
+        border-bottom:solid 1px #ddd
+    }
+    .footer-home ul li, .prefooter ul li {
+        text-align:center;
+        border-bottom:1px solid #ddd
+    }
+    .logo-home {
+        display:none
+    }
+    .logo-home-movil {
+        display:block;
+        width:30%;
+        position:absolute;
+        top:20px;
+        left:60px;
+        text-align:center
+    }
+    
+    .grancont-login-personas {
+        background:url(/wps/wcm/connect/banco-de-bogota/515fe114-dd89-4df9-b605-058ef1251ded/grafismo-bb.png?MOD=AJPERES) no-repeat #EEE8E3;
+        width:100%;
+        top:0;
+        border-top:none!important;
+        position:static!important
+    }
+    .select-arrow {
+        background-position:680px
+    }
+    .cont-busqueda-movil {
+        width:10%;
+        height:30px;
+        float:left;
+        position:absolute;
+        right:5px;
+        top:22px;
+        text-align:center;
+        display:none!important
+    }
+    .logo-vigilado {
+        bottom:23px!important;
+        left:0!important;
+        z-index:6
+    }
+    .slider-fijo {
+        border-top:1px solid rgba(255, 255, 255, .3);
+        bottom:19px;
+        color:red;
+        height:155px;
+        margin:10px 0 0 49px!important;
+        position:absolute;
+        width:85%;
+        z-index:6;
+        padding:5px 0 0!important
+    }
+    .slider-fijo div {
+        float:left;
+        width:100%
+    }
+    .slider-fijo img {
+        float:left;
+        width:35px;
+        height:35px;
+        margin-right:15px
+    }
+    .slider-fijo div h3 {
+        font-size:17px
+    }
+    .txt-slider-fijo {
+        font-size:13px;
+        margin-bottom:12px;
+        color:#fff!important;
+        width:90%!important
+    }
+    footer {
+        bottom:-360px!important;
+        position:static!important;
+        z-index:6;
+        width:100%;
+        transition:all .2s
+    }
+    .footer-home ul {
+        border-top:none;
+        width:100%
+    }
+    .prefooter ul {
+        width:100%;
+        height:auto
+    }
+    .prefooter ul li {
+        width:100%
+    }
+    .prefooter ul ul {
+        bottom:-935px;
+        left:267px
+    }
+    .footer-home ul li {
+        width:100%
+    }
+    .logo-footer {
+        height:auto;
+        padding:15px 0!important;
+        margin-right:0
+    }
+}
+@media screen and (min-width:800px) and (max-width:900px) {
+    .wpthemeMainContent table, .wpthemeMainContent tr, .wpthemeMainContent td, .wpthemeMainContent table.layoutRow > tbody > tr > td{width: 100vw !important;}
+    .prefooter ul ul {bottom:-504px;left:283px
+    }
+    .select-arrow {
+        background-position:700px
+    }
+}
+@media screen and (max-width:1024px) {
+    header {
+        z-index:4!important
+    }
+}
+@media screen and (min-width:900px) and (max-width:1150px) {
+    header {
+        background-color:#fff;
+        border-bottom:1px solid #ddd;
+        float:left;
+        height:63px;
+        width:calc(100vw - 344px);
+        z-index:4!important
+    }
+    .logo-home {
+        display:none
+    }
+    .logo-home-movil {
+        display:block;
+        width:80%;
+        position:absolute;
+        top:20px;
+        left:60px;
+        text-align:center
+    }
+    .cont-busqueda-movil {
+        float:left;
+        height:30px;
+        position:absolute;
+        right:5px;
+        text-align:center;
+        top:22px;
+        width:10%;
+        left:90%;
+        display:none!important
+    }
+    .slider-fijo {
+        border-top:1px solid rgba(255, 255, 255, .3);
+        bottom:6%;
+        color:#fff;
+        height:120px;
+        margin:0 0 0 4%;
+        padding:24px 0;
+        position:absolute;
+        width:59%;
+        z-index:3
+    }
+    /*#slides h1, #slides p {
+        text-align:left;
+        z-index:9;
+        position:absolute
+    }*/
+    .slider-fijo img {
+        float:left;
+        height:30px;
+        margin-right:15px;
+        width:30px
+    }
+    .slider-fijo div h3, .txt-slider-fijo {
+        margin:0;
+        color:#fff;
+        text-shadow:1px 1px 3px rgba(0, 0, 0, .7)
+    }
+    .slider-fijo div h3 {
+        font-size:16px;
+        font-weight:600
+    }
+    .txt-slider-fijo {
+        font-size:13px;
+        font-weight:200;
+        width:75%!important
+    }
+    /*#slides h1 {
+        color:#fff;
+        font-size:64px;
+        margin-left:4%;
+        text-shadow:1px 1px 3px rgba(0, 0, 0, .7);
+        top:41%;
+        width:100%
+    }
+    #slides p {
+        color:#fff;
+        font-size:18px;
+        margin-left:4.3%;
+        text-shadow:1px 1px 3px rgba(0, 0, 0, .7);
+        top:67%;
+        width:64%
+    }*/
+    .footer-home ul li {
+        padding:15px 4px!important
+    }
+    .logo-footer {
+        float:left!important;
+        margin:0 -6px;
+        height:45px!important;
+        max-width:54px!important;
+        padding:15px 0 0 5px!important
+    }
+    .logo-footer img {
+        height:50%;
+        width:50%
+    }
+    .footer-home ul, .prefooter ul {
+        background-color:#fff;
+        border-top:1px solid rgba(0, 0, 0, .4);
+        height:50px;
+        list-style:none;
+        margin:0;
+        float:left
+    }
+    .prefooter ul {
+        bottom:0;
+        padding:0;
+        width:30%
+    }
+    .prefooter ul li {
+        float: left;
+        line-height: 11px;
+        padding:15px 6px;
+        text-decoration:none;
+        text-align: center;
+        width: 50%;
+    }
+    .prefooter li a {
+        /* color:#fff; */
+        font-family:"Open Sans";
+        font-size:11px;
+        font-weight:600;
+        text-decoration:none
+    }
+    .footer-home ul {
+        padding:0;
+        width:70%
+    }
+    .footer-home ul li {
+        float:left
+    }
+    .footer-home a {
+        color:#435168;
+        font-size:9px;
+        font-weight:300;
+        text-decoration:none
+    }
+    .prefooter ul ul {
+        -moz-border-bottom-colors:none;
+        -moz-border-left-colors:none;
+        -moz-border-right-colors:none;
+        -moz-border-top-colors:none;
+        background:#fff;
+        border-color:#b2b2b2 #b2b2b2 -moz-use-text-color;
+        border-image:none;
+        border-radius:5px 5px 0 0;
+        border-style:solid solid none;
+        border-width:1px 1px medium;
+        bottom:-1px;
+        box-shadow:0 0 16px 0 rgba(50, 50, 50, .35);
+        height:auto;
+        left:117px;
+        min-height:50px;
+        position:absolute;
+        width:233px;
+        z-index:27
+    }
+}
+@media screen and (min-width:1100px) and (max-width:1440px) {
+    .logo-home {
+        margin: 1.5% 1% 1.5% 2%;
+        display: flex;
+        align-items: center;
+    }
+    .logo-home img {
+        width:314px!important;
+        height:46px!important;
+    }
+    #dl-menu>ul>li {
+        padding-left:0!important;
+        padding-top:27px!important
+    }
+    #dl-menu ul li a {
+        letter-spacing:1px!important;
+        padding:2px 10px!important
+    }
+    #menu-busqueda {
+        top:-7px
+    }
+    /*#slides h1 {
+        top:32%!important;
+        font-size:70px
+    }
+    #slides p {
+        top:65%!important
+    }*/
+    .slider-fijo {width:67%}
+    .txt-slider-fijo {font-size:14px}
+    .prefooter ul li {padding:15px 10px}
+    .prefooter a {font-size:12px}
+    .prefooter ul ul {left:265px}
+    .footer-home ul li {padding:15px 6px}
+    .logo-footer {
+        float:left!important;
+        margin:0;
+        height:40px!important;
+        max-width:70px;
+        padding:15px 0 0 5px!important
+    }
+    .logo-footer img {
+        height:70%;
+        width:70%
+    }
+    .EditLine {position:absolute;z-index:10
+    }
+    a.enlace-empresa-zt {text-decoration:none;color:#002c76}
+}
+@media screen and (min-width: 1440px) and (max-width: 2000px){
+    #dl-menu>ul>li {
+        padding-left: 0!important;
+        padding-top: 18px!important;
+    }
+    .logo-home {
+        background-color: #fff;
+        float: left;
+        height: 100%;
+        z-index: 15;
+        display: flex;
+        align-items: center;
+        margin: 1.5% 1% 1.5% 2%;
+    }
+}
+
+@media screen and (min-width: 2001px) and (max-width: 9000px){
+    #dl-menu ul li {
+        float: left;
+        padding-top: 24px;
+    }
+    .logo-home {
+        background-color: #fff;
+        float: left;
+        height: 100%;
+        z-index: 15;
+        display: flex;
+        align-items: center;
+        margin: 1.5% 1% 1.5% 2%;
+    }
+}
+
+
+
+@media screen and (min-width:769px) and (max-width:2000px) {
+    .footer-home ul {
+        float:left;
+        list-style:none;
+        margin:0;
+        padding:0;
+        background-color:#fff;
+        border-top:1px solid rgba(0, 0, 0, .4);
+        height:50px;
+        width: 60vw;
+        /*! border: solid red; */
+        text-align:center;
+    }
+    .footer-home ul li {
+        float:left;
+        /* padding:10px 0 0!important; */
+        /* line-height:11px; */
+        /* margin-left: 2px; */
+        height: 50px;
+        width: 13.1%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -moz-box-pack: center;
+        box-pack: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        justify-content: center;
+        -ms-flex-pack: center;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        box-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        align-items: center;
+        -ms-flex-align: center;
+        }
+      }
+    .footer-home ul li a {font-size:10px}
+    .icon-special {width:30px!important;}
+
+@media (min-width:2001px) and (max-width:4096px) {
+    .prefooter ul {
+        /* font-size: 15px; */
+        width: 30vw;
+        }
+        .footer-home ul {
+            width:70vw;
+        }
+        .grancont-login-personas {
+                 height: 100%;
+        }
+        .prefooter a {
+            /* font-size: 20px; */
+        }
+@media only screen and (min-width:600px) and (max-width:899px) {
+    table.layoutRow>tbody>tr>td {
+        display:block;
+        width:100%!important
+    }
+    td {
+        display:block
+    }
+    div.footer-home ul {
+        height:50px;
+        width:100%
+    }
+    div.prefooter ul li {
+        text-align:center;
+        width:100%;
+        border-bottom:1px solid #ddd
+    }
+    div.aplicacion {
+        max-width:100%
+    }
+    .wptheme2Col .wpthemePrimaryContainer.wpthemeCol, .wptheme2Col .wpthemeSecondaryContainer.wpthemeCol {
+        width:100%
+    }
+}
+@media screen and (min-width:770px) and (max-width:899px) {
+    .footer-home ul {
+        height:50px;
+        width:100%
+    }
+    .prefooter ul li {
+        text-align:center;
+        width:399px;
+        border-bottom:1px solid #ddd;
+    }
+    .footer-home ul li {
+        float:left;
+        display:block;
+        line-height:11px;
+        margin-left:1%;
+        padding:19px!important;
+        width:100%;
+    }
+    .icon-special {width:100%!important; display: block; margin-left: auto;margin-right: auto;}
+}

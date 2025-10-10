@@ -1,0 +1,5325 @@
+/*
+* BACKGROUND COLORS
+*/
+
+.bg-deep-blue {
+    background-color: rgb(16, 0, 79);
+}
+
+.index-background {
+    background: linear-gradient(rgb(16, 0, 79) 0%, rgb(45, 52, 206) 22.14%);
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    top: 72px;
+    width: 100%;
+    height: 485px;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.bg-gray {
+    background-color: #f3f2f6 !important;
+}
+
+.bg-gray-smoke {
+    background-color: #ececee;
+}
+
+.bg-info {
+    background-color: #eeedf9;
+}
+
+.shadow-1 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0px 1px 17px 3px #dcdcdc;
+}
+
+/*
+* MODAL
+*/
+
+.modal {
+    display: none;
+    position: fixed;
+    overflow-y: hidden;
+    flex-direction: column;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+.modal-search {
+    height: calc(100vh - 40vh);
+}
+
+.modal-flight-resume {
+    display: none;
+    flex-direction: column;
+    z-index: 999;
+    position: fixed;
+    box-sizing: border-box;
+    bottom: 0;
+    width: 100%;
+    padding-inline: 16px;
+    background-color: #fff;
+}
+
+.showing {
+    animation: slideInFromRight 0.3s ease-out forwards;
+}
+
+.hiding {
+    animation: slideOutToRight 0.3s ease-out forwards;
+}
+
+@keyframes slideOutToRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/*
+* FORMS
+*/
+
+.form-passenger {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: none;
+    flex-direction: column;
+}
+
+/*
+* BUTTONS
+*
+*/
+
+.btn-success {
+    box-sizing: border-box;
+    background-color: rgb(237, 22, 80) !important;
+    border: 1px solid rgb(237, 22, 80) !important;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 17px;
+    font-style: normal;
+}
+
+.btn-disabled {
+    box-sizing: border-box;
+    background-color: #d2d2d2;
+    border: 1px solid #dcdcdc;
+    color: #5c5c5c;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 17px;
+    font-style: normal;
+}
+
+.btn-success-2 {
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(237, 22, 80);
+    color: rgb(237, 22, 80);
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 17px;
+    font-style: normal;
+}
+
+.btn-success-2:focus {
+    box-sizing: border-box;
+    background-color: rgb(237, 22, 80);
+    border: 2px solid rgb(237, 22, 80);
+    color: rgb(255, 255, 255);
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 17px;
+    font-style: normal;
+}
+
+/*
+* CONTAINERS
+*
+*/
+
+.container {
+    width: 100%;
+    padding-inline: 16px;
+}
+
+.d-none {
+    display: none !important;
+}
+
+/*
+ * CARDS
+ *
+*/
+
+.card {
+    background-color: white;
+    box-shadow: rgba(48, 48, 48, 0.1) 0px 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+}
+
+.card-banner {
+    height: 150px;
+}
+
+.card-banner img {
+    box-sizing: border-box;
+    border-radius: 0.375rem;
+    width: 100%;
+    height: 150px;
+}
+
+.card-rounded {
+    border-radius: 10px;
+}
+
+.card-link {
+    display: inline-block;
+    font-weight: bold;
+    color: #007aff;
+}
+
+.card-title-1 {
+    margin: 0;
+    font-style: normal;
+    font-size: 1.375rem;
+    line-height: 1.5rem;
+    letter-spacing: 0px;
+    font-weight: 300;
+    color: rgb(16, 0, 79);
+}
+
+.card-text {
+    font-style: normal;
+    font-size: 1.063rem;
+    line-height: 1.5rem;
+    letter-spacing: 0px;
+    font-weight: 400;
+    margin: 0;
+    color: rgb(92, 92, 92);
+}
+
+.mini-card {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid rgb(225, 225, 225);
+    padding: 1rem 0.5rem;
+    box-shadow: none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+}
+
+.mini-card span {
+    font-style: normal;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.019rem;
+    color: rgb(48, 48, 48);
+    font-weight: 600;
+}
+
+.card-flight {
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(16, 0, 79, 0.16) 0px 3px 8px 0px;
+}
+
+.card-flight-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 15px;
+    border-radius: 10px 0px;
+    font-size: 12px;
+    background-color: #11837c;
+    color: white;
+}
+
+/*
+* UTILS
+*
+*/
+
+.p-relative {
+    position: relative;
+}
+
+.p-fixed {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+}
+
+.border-box {
+    box-sizing: border-box;
+}
+
+.overflow-disabled {
+    overflow-y: hidden;
+}
+
+.placeholder {
+    font-family: "Latam Light Italic";
+    font-style: italic;
+    font-weight: 300;
+    color: rgb(48, 48, 48);
+}
+
+.offer {
+    display: inline-block;
+    border-radius: 6.25rem;
+    color: white;
+    background-color: #e95878;
+    font-size: 12px;
+    padding: 0.625rem 1rem 0.5rem;
+}
+
+.rounded-icon {
+    border-radius: 50%;
+    border: 1px solid;
+    padding: 3px;
+}
+
+.rounded-borded {
+    border: 1px solid #d2d2d2;
+    border-radius: 0.5rem;
+}
+
+.search-item:hover {
+    background-color: rgb(238, 237, 249);
+}
+
+.border-bottom {
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.border-left-bold {
+    border-left: 2px solid #220d77;
+}
+
+.rounded-white {
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.rounded-info {
+    border: 1px dashed #220d77;
+    border-radius: 10px;
+}
+
+.services-group {
+    display: flex;
+}
+
+.services-group div {
+    width: 50%;
+}
+
+.arrow-open {
+    transform: rotate(180deg);
+}
+
+.profile-pic {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: #4658df;
+    color: #fff;
+    font-family: 'Latam Bold';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-hidden {
+    display: hidden;
+}
+
+/*
+* FLEX UTILS
+*/
+
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-start {
+    justify-content: start;
+}
+
+.justify-content-end {
+    justify-content: end;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.justify-content-evenly {
+    justify-content: space-evenly;
+}
+
+.justify-self-end {
+    justify-self: end;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-start {
+    align-items: start;
+}
+
+.align-items-end {
+    align-items: end;
+}
+
+/*
+* SPACING UTILS
+*/
+
+.p-0 {
+    padding: 0px;
+}
+
+.pt-0 {
+    padding-top: 0px;
+}
+
+.pb-0 {
+    padding-bottom: 0px;
+}
+
+.pl-0 {
+    padding-left: 0px;
+}
+
+.pr-0 {
+    padding-right: 0px;
+}
+
+.p-1 {
+    padding: 8px
+}
+
+.pt-1 {
+    padding-top: 8px;
+}
+
+.pb-1 {
+    padding-bottom: 8px;
+}
+
+.pl-1 {
+    padding-left: 8px;
+}
+
+.pr-1 {
+    padding-right: 8px;
+}
+
+.p-2 {
+    padding: 13px
+}
+
+.pt-2 {
+    padding-top: 13px;
+}
+
+.pb-2 {
+    padding-bottom: 13px;
+}
+
+.pl-2 {
+    padding-left: 13px;
+}
+
+.pr-2 {
+    padding-right: 13px;
+}
+
+.p-3 {
+    padding: 16px
+}
+
+.pt-3 {
+    padding-top: 16px;
+}
+
+.pb-3 {
+    padding-bottom: 16px;
+}
+
+.pl-3 {
+    padding-left: 16px;
+}
+
+.pr-3 {
+    padding-right: 16px;
+}
+
+.p-4 {
+    padding: 22px
+}
+
+.pt-4 {
+    padding-top: 22px;
+}
+
+.pb-4 {
+    padding-bottom: 22px;
+}
+
+.pl-4 {
+    padding-left: 22px;
+}
+
+.pr-4 {
+    padding-right: 22px;
+}
+
+.p-5 {
+    padding: 26px
+}
+
+.pt-5 {
+    padding-top: 26px;
+}
+
+.pb-5 {
+    padding-bottom: 26px;
+}
+
+.pl-5 {
+    padding-left: 26px;
+}
+
+.pr-5 {
+    padding-right: 26px;
+}
+
+.m-0 {
+    margin: 0px
+}
+
+.mt-0 {
+    margin-top: 0px;
+}
+
+.mb-0 {
+    margin-bottom: 0px;
+}
+
+.ml-0 {
+    margin-left: 0px;
+}
+
+.mr-0 {
+    margin-right: 0px;
+}
+
+.m-1 {
+    margin: 8px
+}
+
+.mt-1 {
+    margin-top: 8px;
+}
+
+.mb-1 {
+    margin-bottom: 8px;
+}
+
+.ml-1 {
+    margin-left: 8px;
+}
+
+.mr-1 {
+    margin-right: 8px;
+}
+
+.m-2 {
+    margin: 13px
+}
+
+.mt-2 {
+    margin-top: 13px;
+}
+
+.mb-2 {
+    margin-bottom: 13px;
+}
+
+.ml-2 {
+    margin-left: 13px;
+}
+
+.mr-2 {
+    margin-right: 13px;
+}
+
+.m-3 {
+    margin: 16px
+}
+
+.mt-3 {
+    margin-top: 16px;
+}
+
+.mb-3 {
+    margin-bottom: 16px;
+}
+
+.ml-3 {
+    margin-left: 16px;
+}
+
+.mr-3 {
+    margin-right: 16px;
+}
+
+.m-4 {
+    margin: 22px
+}
+
+.mt-4 {
+    margin-top: 22px;
+}
+
+.mb-4 {
+    margin-bottom: 22px;
+}
+
+.ml-4 {
+    margin-left: 22px;
+}
+
+.mr-4 {
+    margin-right: 22px;
+}
+
+.m-5 {
+    margin: 35px
+}
+
+.mt-5 {
+    margin-top: 35px;
+}
+
+.mb-5 {
+    margin-bottom: 35px;
+}
+
+.ml-5 {
+    margin-left: 35px;
+}
+
+.mr-5 {
+    margin-right: 35px;
+}
+
+.m-6 {
+    margin: 80px
+}
+
+.mt-6 {
+    margin-top: 80px;
+}
+
+.mb-6 {
+    margin-bottom: 80px;
+}
+
+.ml-6 {
+    margin-left: 80px;
+}
+
+.mr-6 {
+    margin-right: 80px;
+}
+
+/** fonts **/
+
+.fs-1 {
+    font-size: 28px;
+}
+
+.fs-2 {
+    font-size: 24px;
+}
+
+.fs-25 {
+    font-size: 22px;
+}
+
+.fs-3 {
+    font-size: 18px;
+}
+
+.fs-4 {
+    font-size: 16px;
+}
+
+.fs-5 {
+    font-size: 14px;
+}
+
+.fs-6 {
+    font-size: 12px;
+}
+
+.fw-bold {
+    font-weight: bold;
+}
+
+.fw-bolder {
+    font-family: 'Latam Bold';
+}
+
+.fw-light {
+    font-weight: lighter !important;
+}
+
+.fw-lighter {
+    font-family: 'Latam Light';
+}
+
+.fw-regular {
+    font-weight: normal !important;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-start {
+    text-align: start;
+}
+
+.lh-1 {
+    line-height: 1.25rem;
+}
+
+.tc-ocean {
+    color: #10004f;
+}
+
+.tc-ocean-2 {
+    color: #1b0088;
+}
+
+.tc-pink {
+    color: #ed1650;
+}
+
+.tc-red {
+    color: #e8114b;
+}
+
+.tc-blue {
+    color: #4658df;
+}
+
+.tc-deep-blue {
+    color: #2500c3;
+}
+
+.tc-gray-smoke {
+    color: #5c5c5c;
+}
+
+.tc-green {
+    color: #11837c;
+}
+
+.tc-light-green {
+    color: #00b5ad;
+}
+
+.tc-lima {
+    color: #99cc33;
+}
+
+/**
+* INPUT TEXT
+*
+*/
+
+.input-container {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+}
+
+.input-container label {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 16px 0;
+    transition: 0.2s;
+    pointer-events: none;
+    color: #9b9b9b;
+}
+
+.input-container input[type="text"],
+input[type="email"],
+input[type="number"] {
+    border: 0;
+    box-sizing: border-box;
+    border: 1px solid #d2d2d2;
+    border-radius: 9px;
+    outline: none;
+    padding: 16px;
+    font-size: 16px;
+    width: 100%;
+    background-color: transparent;
+    color: #10004f;
+    transition: border-color 0.2s;
+}
+
+.input-container input[type="text"]:focus,
+.input-container input[type="email"]:focus,
+.input-container input[type="number"]:focus {
+    border: 2px solid #220d77;
+}
+
+.input-container input[type="text"]:focus+label,
+.input-container input[type="email"]:focus+label,
+.input-container input[type="number"]:focus+label,
+.input-container input[type="text"]:valid+label,
+.input-container input[type="email"]:valid+label,
+.input-container input[type="number"]:valid+label {
+    top: 7px;
+    background-color: white;
+    padding-inline: 3px;
+    padding-block: 0px;
+    font-size: 13px;
+    color: #9b9b9b;
+}
+
+.input-container input[name="date"] {
+    top: 7px;
+    background-color: white;
+    padding-inline: 3px;
+    padding-block: 0px;
+    font-size: 13px;
+    color: #10004f;
+}
+
+.input-container input[type="text"]:focus+label,
+.input-container input[type="email"]:focus+label,
+.input-container input[type="number"]:focus+label {
+    color: #4658df;
+}
+
+.input-date-bg {
+    background-image: url('../assets/media/date-icon.png');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position-y: center;
+    background-position-x: 95%;
+}
+
+.select-container {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+}
+
+.select-container select {
+    border: 0;
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid #d2d2d2;
+    border-radius: 9px;
+    outline: none;
+    padding: 16px;
+    font-size: 16px;
+    width: 100%;
+    background-color: transparent;
+    color: #10004f;
+    transition: border-color 0.2s;
+}
+
+.select-container label {
+    position: absolute;
+    top: 7px;
+    left: 14px;
+    background-color: white;
+    padding-inline: 3px;
+    padding-block: 0px;
+    font-size: 13px;
+    color: #9b9b9b;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0px;
+    opacity: 0;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked~.ct-radio {
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    transition: width 0.2s ease-out 0s, height 0.2s ease-out 0s;
+}
+
+input[type="radio"]:checked~.ct-radio::before {
+    opacity: 1;
+    transition: opacity 1s ease 0s;
+}
+
+.radio-container {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: relative;
+}
+
+.radio-container::before {
+    content: "";
+    border-radius: 100%;
+    border: 1px solid rgb(221, 221, 221);
+    background: rgb(250, 250, 250);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    box-sizing: border-box;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.custom-radio {
+    background: rgb(237, 22, 80);
+    width: 0px;
+    height: 0px;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease-in 0s, height 0.2s ease-in 0s;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.custom-radio::before {
+    content: "";
+    opacity: 0;
+    width: calc(20px);
+    position: absolute;
+    height: calc(20px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgb(237, 22, 80);
+    border-radius: 100%;
+}
+
+.radio-blue {
+    background: #4658df;
+    width: 0px;
+    height: 0px;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease-in 0s, height 0.2s ease-in 0s;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.radio-blue::before {
+    content: "";
+    opacity: 0;
+    width: calc(20px);
+    position: absolute;
+    height: calc(20px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #4658df;
+    border-radius: 100%;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: #e8114b;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader-full {
+    position: fixed;
+    top: 0;
+    overflow-y: hidden;
+    z-index: 1000;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.redField input[type="text"] {
+    border: 2px solid red;
+}
+
+.redField input[type="number"] {
+    border: 2px solid red;
+}
+
+/*
+* BACKGROUND COLORS
+*/
+
+.bg-deep-blue {
+    background-color: rgb(16, 0, 79);
+}
+
+.index-background {
+    background: linear-gradient(rgb(16, 0, 79) 0%, rgb(45, 52, 206) 22.14%);
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    top: 72px;
+    width: 100%;
+    height: 485px;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.bg-gray {
+    background-color: #f3f2f6 !important;
+}
+
+.bg-gray-smoke {
+    background-color: #ececee;
+}
+
+.bg-info {
+    background-color: #eeedf9;
+}
+
+.shadow-1 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0px 1px 17px 3px #dcdcdc;
+}
+
+/*
+* MODAL
+*/
+
+.modal {
+    display: none;
+    position: fixed;
+    overflow-y: hidden;
+    flex-direction: column;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+.modal-search {
+    height: calc(100vh - 40vh);
+}
+
+.modal-flight-resume {
+    display: none;
+    flex-direction: column;
+    z-index: 999;
+    position: fixed;
+    box-sizing: border-box;
+    bottom: 0;
+    width: 100%;
+    padding-inline: 16px;
+    background-color: #fff;
+}
+
+.showing {
+    animation: slideInFromRight 0.3s ease-out forwards;
+}
+
+.hiding {
+    animation: slideOutToRight 0.3s ease-out forwards;
+}
+
+@keyframes slideOutToRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/*
+* FORMS
+*/
+
+.form-passenger {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: none;
+    flex-direction: column;
+}
+
+/*
+* BUTTONS
+*
+*/
+
+.btn-success {
+    box-sizing: border-box;
+    background-color: rgb(237, 22, 80);
+    border: 1px solid rgb(237, 22, 80);
+    color: rgb(255, 255, 255);
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 17px;
+    font-style: normal;
+}
+
+.btn-disabled {
+    box-sizing: border-box;
+    background-color: #d2d2d2;
+    border: 1px solid #dcdcdc;
+    color: #5c5c5c;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 17px;
+    font-style: normal;
+}
+
+.btn-success-2 {
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(237, 22, 80);
+    color: rgb(237, 22, 80);
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 17px;
+    font-style: normal;
+}
+
+.btn-success-2:focus {
+    box-sizing: border-box;
+    background-color: rgb(237, 22, 80);
+    border: 2px solid rgb(237, 22, 80);
+    color: rgb(255, 255, 255);
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 17px;
+    font-style: normal;
+}
+
+/*
+* CONTAINERS
+*
+*/
+
+.container {
+    width: 100%;
+    padding-inline: 16px;
+}
+
+.d-none {
+    display: none !important;
+}
+
+/*
+ * CARDS
+ *
+*/
+
+.card {
+    background-color: white;
+    box-shadow: rgba(48, 48, 48, 0.1) 0px 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+}
+
+.card-banner {
+    height: 150px;
+}
+
+.card-banner img {
+    box-sizing: border-box;
+    border-radius: 0.375rem;
+    width: 100%;
+    height: 150px;
+}
+
+.card-rounded {
+    border-radius: 10px;
+}
+
+.card-link {
+    display: inline-block;
+    font-weight: bold;
+    color: #007aff;
+}
+
+.card-title-1 {
+    margin: 0;
+    font-style: normal;
+    font-size: 1.375rem;
+    line-height: 1.5rem;
+    letter-spacing: 0px;
+    font-weight: 300;
+    color: rgb(16, 0, 79);
+}
+
+.card-text {
+    font-style: normal;
+    font-size: 1.063rem;
+    line-height: 1.5rem;
+    letter-spacing: 0px;
+    font-weight: 400;
+    margin: 0;
+    color: rgb(92, 92, 92);
+}
+
+.mini-card {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid rgb(225, 225, 225);
+    padding: 1rem 0.5rem;
+    box-shadow: none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+}
+
+.mini-card span {
+    font-style: normal;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.019rem;
+    color: rgb(48, 48, 48);
+    font-weight: 600;
+}
+
+.card-flight {
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(16, 0, 79, 0.16) 0px 3px 8px 0px;
+}
+
+.card-flight-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 15px;
+    border-radius: 10px 0px;
+    font-size: 12px;
+    background-color: #11837c;
+    color: white;
+}
+
+/*
+* UTILS
+*
+*/
+
+.p-relative {
+    position: relative;
+}
+
+.p-fixed {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+}
+
+.border-box {
+    box-sizing: border-box;
+}
+
+.overflow-disabled {
+    overflow-y: hidden;
+}
+
+.placeholder {
+    font-family: "Latam Light Italic";
+    font-style: italic;
+    font-weight: 300;
+    color: rgb(48, 48, 48);
+}
+
+.offer {
+    display: inline-block;
+    border-radius: 6.25rem;
+    color: white;
+    background-color: #e95878;
+    font-size: 12px;
+    padding: 0.625rem 1rem 0.5rem;
+}
+
+.rounded-icon {
+    border-radius: 50%;
+    border: 1px solid;
+    padding: 3px;
+}
+
+.rounded-borded {
+    border: 1px solid #d2d2d2;
+    border-radius: 0.5rem;
+}
+
+.search-item:hover {
+    background-color: rgb(238, 237, 249);
+}
+
+.border-bottom {
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.border-left-bold {
+    border-left: 2px solid #220d77;
+}
+
+.rounded-white {
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.rounded-info {
+    border: 1px dashed #220d77;
+    border-radius: 10px;
+}
+
+.services-group {
+    display: flex;
+}
+
+.services-group div {
+    width: 50%;
+}
+
+.arrow-open {
+    transform: rotate(180deg);
+}
+
+.profile-pic {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: #4658df;
+    color: #fff;
+    font-family: 'Latam Bold';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-hidden {
+    display: hidden;
+}
+
+/*
+* FLEX UTILS
+*/
+
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-start {
+    justify-content: start;
+}
+
+.justify-content-end {
+    justify-content: end;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.justify-content-evenly {
+    justify-content: space-evenly;
+}
+
+.justify-self-end {
+    justify-self: end;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-start {
+    align-items: start;
+}
+
+.align-items-end {
+    align-items: end;
+}
+
+/*
+* SPACING UTILS
+*/
+
+.p-0 {
+    padding: 0px;
+}
+
+.pt-0 {
+    padding-top: 0px;
+}
+
+.pb-0 {
+    padding-bottom: 0px;
+}
+
+.pl-0 {
+    padding-left: 0px;
+}
+
+.pr-0 {
+    padding-right: 0px;
+}
+
+.p-1 {
+    padding: 8px
+}
+
+.pt-1 {
+    padding-top: 8px;
+}
+
+.pb-1 {
+    padding-bottom: 8px;
+}
+
+.pl-1 {
+    padding-left: 8px;
+}
+
+.pr-1 {
+    padding-right: 8px;
+}
+
+.p-2 {
+    padding: 13px
+}
+
+.pt-2 {
+    padding-top: 13px;
+}
+
+.pb-2 {
+    padding-bottom: 13px;
+}
+
+.pl-2 {
+    padding-left: 13px;
+}
+
+.pr-2 {
+    padding-right: 13px;
+}
+
+.p-3 {
+    padding: 16px
+}
+
+.pt-3 {
+    padding-top: 16px;
+}
+
+.pb-3 {
+    padding-bottom: 16px;
+}
+
+.pl-3 {
+    padding-left: 16px;
+}
+
+.pr-3 {
+    padding-right: 16px;
+}
+
+.p-4 {
+    padding: 22px
+}
+
+.pt-4 {
+    padding-top: 22px;
+}
+
+.pb-4 {
+    padding-bottom: 22px;
+}
+
+.pl-4 {
+    padding-left: 22px;
+}
+
+.pr-4 {
+    padding-right: 22px;
+}
+
+.p-5 {
+    padding: 26px
+}
+
+.pt-5 {
+    padding-top: 26px;
+}
+
+.pb-5 {
+    padding-bottom: 26px;
+}
+
+.pl-5 {
+    padding-left: 26px;
+}
+
+.pr-5 {
+    padding-right: 26px;
+}
+
+.m-0 {
+    margin: 0px
+}
+
+.mt-0 {
+    margin-top: 0px;
+}
+
+.mb-0 {
+    margin-bottom: 0px;
+}
+
+.ml-0 {
+    margin-left: 0px;
+}
+
+.mr-0 {
+    margin-right: 0px;
+}
+
+.m-1 {
+    margin: 8px
+}
+
+.mt-1 {
+    margin-top: 8px;
+}
+
+.mb-1 {
+    margin-bottom: 8px;
+}
+
+.ml-1 {
+    margin-left: 8px;
+}
+
+.mr-1 {
+    margin-right: 8px;
+}
+
+.m-2 {
+    margin: 13px
+}
+
+.mt-2 {
+    margin-top: 13px;
+}
+
+.mb-2 {
+    margin-bottom: 13px;
+}
+
+.ml-2 {
+    margin-left: 13px;
+}
+
+.mr-2 {
+    margin-right: 13px;
+}
+
+.m-3 {
+    margin: 16px
+}
+
+.mt-3 {
+    margin-top: 16px;
+}
+
+.mb-3 {
+    margin-bottom: 16px;
+}
+
+.ml-3 {
+    margin-left: 16px;
+}
+
+.mr-3 {
+    margin-right: 16px;
+}
+
+.m-4 {
+    margin: 22px
+}
+
+.mt-4 {
+    margin-top: 22px;
+}
+
+.mb-4 {
+    margin-bottom: 22px;
+}
+
+.ml-4 {
+    margin-left: 22px;
+}
+
+.mr-4 {
+    margin-right: 22px;
+}
+
+.m-5 {
+    margin: 35px
+}
+
+.mt-5 {
+    margin-top: 35px;
+}
+
+.mb-5 {
+    margin-bottom: 35px;
+}
+
+.ml-5 {
+    margin-left: 35px;
+}
+
+.mr-5 {
+    margin-right: 35px;
+}
+
+.m-6 {
+    margin: 80px
+}
+
+.mt-6 {
+    margin-top: 80px;
+}
+
+.mb-6 {
+    margin-bottom: 80px;
+}
+
+.ml-6 {
+    margin-left: 80px;
+}
+
+.mr-6 {
+    margin-right: 80px;
+}
+
+/** fonts **/
+
+.fs-1 {
+    font-size: 28px;
+}
+
+.fs-2 {
+    font-size: 24px;
+}
+
+.fs-25 {
+    font-size: 22px;
+}
+
+.fs-3 {
+    font-size: 18px;
+}
+
+.fs-4 {
+    font-size: 16px;
+}
+
+.fs-5 {
+    font-size: 14px;
+}
+
+.fs-6 {
+    font-size: 12px;
+}
+
+.fw-bold {
+    font-weight: bold;
+}
+
+.fw-bolder {
+    font-family: 'Latam Bold';
+}
+
+.fw-light {
+    font-weight: lighter !important;
+}
+
+.fw-lighter {
+    font-family: 'Latam Light';
+}
+
+.fw-regular {
+    font-weight: normal !important;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-start {
+    text-align: start;
+}
+
+.lh-1 {
+    line-height: 1.25rem;
+}
+
+.tc-ocean {
+    color: #10004f;
+}
+
+.tc-ocean-2 {
+    color: #1b0088;
+}
+
+.tc-pink {
+    color: #ed1650;
+}
+
+.tc-red {
+    color: #e8114b;
+}
+
+.tc-blue {
+    color: #4658df;
+}
+
+.tc-deep-blue {
+    color: #2500c3;
+}
+
+.tc-gray-smoke {
+    color: #5c5c5c;
+}
+
+.tc-green {
+    color: #11837c;
+}
+
+.tc-light-green {
+    color: #00b5ad;
+}
+
+.tc-lima {
+    color: #99cc33;
+}
+
+/**
+* INPUT TEXT
+*
+*/
+
+.input-container {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+}
+
+.input-container label {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 16px 0;
+    transition: 0.2s;
+    pointer-events: none;
+    color: #9b9b9b;
+}
+
+.input-container input[type="text"],
+input[type="email"],
+input[type="number"] {
+    border: 0;
+    box-sizing: border-box;
+    border: 1px solid #d2d2d2;
+    border-radius: 9px;
+    outline: none;
+    padding: 16px;
+    font-size: 16px;
+    width: 100%;
+    background-color: transparent;
+    color: #10004f;
+    transition: border-color 0.2s;
+}
+
+.input-container input[type="text"]:focus,
+.input-container input[type="email"]:focus,
+.input-container input[type="number"]:focus {
+    border: 2px solid #220d77;
+}
+
+.input-container input[type="text"]:focus+label,
+.input-container input[type="email"]:focus+label,
+.input-container input[type="number"]:focus+label,
+.input-container input[type="text"]:valid+label,
+.input-container input[type="email"]:valid+label,
+.input-container input[type="number"]:valid+label {
+    top: 7px;
+    background-color: white;
+    padding-inline: 3px;
+    padding-block: 0px;
+    font-size: 13px;
+    color: #9b9b9b;
+}
+
+.input-container input[name="date"] {
+    top: 7px;
+    background-color: white;
+    padding-inline: 3px;
+    padding-block: 0px;
+    font-size: 13px;
+    color: #10004f;
+}
+
+.input-container input[type="text"]:focus+label,
+.input-container input[type="email"]:focus+label,
+.input-container input[type="number"]:focus+label {
+    color: #4658df;
+}
+
+.input-date-bg {
+    background-image: url('../assets/media/date-icon.png');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position-y: center;
+    background-position-x: 95%;
+}
+
+.select-container {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+}
+
+.select-container select {
+    border: 0;
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid #d2d2d2;
+    border-radius: 9px;
+    outline: none;
+    padding: 16px;
+    font-size: 16px;
+    width: 100%;
+    background-color: transparent;
+    color: #10004f;
+    transition: border-color 0.2s;
+}
+
+.select-container label {
+    position: absolute;
+    top: 7px;
+    left: 14px;
+    background-color: white;
+    padding-inline: 3px;
+    padding-block: 0px;
+    font-size: 13px;
+    color: #9b9b9b;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0px;
+    opacity: 0;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked~.ct-radio {
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    transition: width 0.2s ease-out 0s, height 0.2s ease-out 0s;
+}
+
+input[type="radio"]:checked~.ct-radio::before {
+    opacity: 1;
+    transition: opacity 1s ease 0s;
+}
+
+.radio-container {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: relative;
+}
+
+.radio-container::before {
+    content: "";
+    border-radius: 100%;
+    border: 1px solid rgb(221, 221, 221);
+    background: rgb(250, 250, 250);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    box-sizing: border-box;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.custom-radio {
+    background: rgb(237, 22, 80);
+    width: 0px;
+    height: 0px;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease-in 0s, height 0.2s ease-in 0s;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.custom-radio::before {
+    content: "";
+    opacity: 0;
+    width: calc(20px);
+    position: absolute;
+    height: calc(20px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgb(237, 22, 80);
+    border-radius: 100%;
+}
+
+.radio-blue {
+    background: #4658df;
+    width: 0px;
+    height: 0px;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease-in 0s, height 0.2s ease-in 0s;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.radio-blue::before {
+    content: "";
+    opacity: 0;
+    width: calc(20px);
+    position: absolute;
+    height: calc(20px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #4658df;
+    border-radius: 100%;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: #e8114b;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader-full {
+    position: fixed;
+    top: 0;
+    overflow-y: hidden;
+    z-index: 1000;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.redField input[type="text"] {
+    border: 2px solid red;
+}
+
+.redField input[type="number"] {
+    border: 2px solid red;
+}
+
+/* Fontws */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+@font-face {
+    font-family: 'Latam Regular';
+    src: url(../fonts/ltam/GLatam-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Latam Regular Italic';
+    src: url(../fonts/ltam/GLatam-RegularItalic.ttf);
+}
+
+@font-face {
+    font-family: 'Latam Light';
+    src: url(../fonts/ltam/GLatam-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Latam Light Italic';
+    src: url(../fonts/ltam/GLatam-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: 'Latam Bold';
+    src: url(../fonts/ltam/GLatam-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Latam Bold Italic';
+    src: url(../fonts/ltam/GLatam-Bold-Italic.ttf);
+}
+
+/* Document
+     ========================================================================== */
+
+/**
+   * 1. Correct the line height in all browsers.
+   * 2. Prevent adjustments of font size after orientation changes in iOS.
+   */
+
+html {
+    line-height: 1.15;
+    /* 1 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
+}
+
+/* Sections
+       ========================================================================== */
+
+/**
+     * Remove the margin in all browsers.
+     */
+
+body {
+    margin: 0;
+    font-family: 'Latam Regular';
+}
+
+/**
+     * Render the `main` element consistently in IE.
+     */
+
+main {
+    display: block;
+    padding-inline: 16px;
+}
+
+/**
+     * Correct the font size and margin on `h1` elements within `section` and
+     * `article` contexts in Chrome, Firefox, and Safari.
+     */
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+/* Grouping content
+       ========================================================================== */
+
+/**
+     * 1. Add the correct box sizing in Firefox.
+     * 2. Show the overflow in Edge and IE.
+     */
+
+hr {
+    box-sizing: content-box;
+    /* 1 */
+    height: 0;
+    /* 1 */
+    overflow: visible;
+    /* 2 */
+}
+
+/**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+
+pre {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+}
+
+/* Text-level semantics
+       ========================================================================== */
+
+/**
+     * Remove the gray background on active links in IE 10.
+     */
+
+a {
+    background-color: transparent;
+}
+
+/**
+     * 1. Remove the bottom border in Chrome 57-
+     * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+     */
+
+abbr[title] {
+    border-bottom: none;
+    /* 1 */
+    text-decoration: underline;
+    /* 2 */
+    text-decoration: underline dotted;
+    /* 2 */
+}
+
+/**
+     * Add the correct font weight in Chrome, Edge, and Safari.
+     */
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+/**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+}
+
+/**
+     * Add the correct font size in all browsers.
+     */
+
+small {
+    font-size: 80%;
+}
+
+/**
+     * Prevent `sub` and `sup` elements from affecting the line height in
+     * all browsers.
+     */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+/* Embedded content
+       ========================================================================== */
+
+/**
+     * Remove the border on images inside links in IE 10.
+     */
+
+img {
+    border-style: none;
+}
+
+/* Forms
+       ========================================================================== */
+
+/**
+     * 1. Change the font styles in all browsers.
+     * 2. Remove the margin in Firefox and Safari.
+     */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    /* 1 */
+    font-size: 100%;
+    /* 1 */
+    line-height: 1.15;
+    /* 1 */
+    margin: 0;
+    /* 2 */
+}
+
+/**
+     * Show the overflow in IE.
+     * 1. Show the overflow in Edge.
+     */
+
+button,
+input {
+    /* 1 */
+    overflow: visible;
+}
+
+/**
+     * Remove the inheritance of text transform in Edge, Firefox, and IE.
+     * 1. Remove the inheritance of text transform in Firefox.
+     */
+
+button,
+select {
+    /* 1 */
+    text-transform: none;
+}
+
+/**
+     * Correct the inability to style clickable types in iOS and Safari.
+     */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+/**
+     * Remove the inner border and padding in Firefox.
+     */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+/**
+     * Restore the focus styles unset by the previous rule.
+     */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+/**
+     * Correct the padding in Firefox.
+     */
+
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+     * 1. Correct the text wrapping in Edge and IE.
+     * 2. Correct the color inheritance from `fieldset` elements in IE.
+     * 3. Remove the padding so developers are not caught out when they zero out
+     *    `fieldset` elements in all browsers.
+     */
+
+legend {
+    box-sizing: border-box;
+    /* 1 */
+    color: inherit;
+    /* 2 */
+    display: table;
+    /* 1 */
+    max-width: 100%;
+    /* 1 */
+    padding: 0;
+    /* 3 */
+    white-space: normal;
+    /* 1 */
+}
+
+/**
+     * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+     */
+
+progress {
+    vertical-align: baseline;
+}
+
+/**
+     * Remove the default vertical scrollbar in IE 10+.
+     */
+
+textarea {
+    overflow: auto;
+}
+
+/**
+     * 1. Add the correct box sizing in IE 10.
+     * 2. Remove the padding in IE 10.
+     */
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+    /* 2 */
+}
+
+/**
+     * Correct the cursor style of increment and decrement buttons in Chrome.
+     */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+/**
+     * 1. Correct the odd appearance in Chrome and Safari.
+     * 2. Correct the outline style in Safari.
+     */
+
+[type="search"] {
+    -webkit-appearance: textfield;
+    /* 1 */
+    outline-offset: -2px;
+    /* 2 */
+}
+
+/**
+     * Remove the inner padding in Chrome and Safari on macOS.
+     */
+
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+     * 1. Correct the inability to style clickable types in iOS and Safari.
+     * 2. Change font properties to `inherit` in Safari.
+     */
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    /* 1 */
+    font: inherit;
+    /* 2 */
+}
+
+/* Interactive
+       ========================================================================== */
+
+/*
+     * Add the correct display in Edge, IE 10+, and Firefox.
+     */
+
+details {
+    display: block;
+}
+
+/*
+     * Add the correct display in all browsers.
+     */
+
+summary {
+    display: list-item;
+}
+
+/* Misc
+       ========================================================================== */
+
+/**
+     * Add the correct display in IE 10+.
+     */
+
+template {
+    display: none;
+}
+
+/**
+     * Add the correct display in IE 10.
+     */
+
+[hidden] {
+    display: none;
+}
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+@font-face {
+    font-family: 'Latam Regular';
+    src: url(../fonts/ltam/GLatam-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Latam Regular Italic';
+    src: url(../fonts/ltam/GLatam-RegularItalic.ttf);
+}
+
+@font-face {
+    font-family: 'Latam Light';
+    src: url(../fonts/ltam/GLatam-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Latam Light Italic';
+    src: url(../fonts/ltam/GLatam-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: 'Latam Bold';
+    src: url(../fonts/ltam/GLatam-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Latam Bold Italic';
+    src: url(../fonts/ltam/GLatam-Bold-Italic.ttf);
+}
+
+/* Document
+     ========================================================================== */
+
+/**
+   * 1. Correct the line height in all browsers.
+   * 2. Prevent adjustments of font size after orientation changes in iOS.
+   */
+
+body {
+    background-color: #fff !important;
+}
+
+html {
+    line-height: 1.15;
+    background-color: #fff !important;
+    /* 1 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
+}
+
+/* Sections
+       ========================================================================== */
+
+/**
+     * Remove the margin in all browsers.
+     */
+
+body {
+    margin: 0;
+    font-family: 'Latam Regular';
+}
+
+/**
+     * Render the `main` element consistently in IE.
+     */
+
+main {
+    display: block;
+    padding-inline: 16px;
+}
+
+/**
+     * Correct the font size and margin on `h1` elements within `section` and
+     * `article` contexts in Chrome, Firefox, and Safari.
+     */
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+/* Grouping content
+       ========================================================================== */
+
+/**
+     * 1. Add the correct box sizing in Firefox.
+     * 2. Show the overflow in Edge and IE.
+     */
+
+hr {
+    box-sizing: content-box;
+    /* 1 */
+    height: 0;
+    /* 1 */
+    overflow: visible;
+    /* 2 */
+}
+
+/**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+
+pre {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+}
+
+/* Text-level semantics
+       ========================================================================== */
+
+/**
+     * Remove the gray background on active links in IE 10.
+     */
+
+a {
+    background-color: transparent;
+}
+
+/**
+     * 1. Remove the bottom border in Chrome 57-
+     * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+     */
+
+abbr[title] {
+    border-bottom: none;
+    /* 1 */
+    text-decoration: underline;
+    /* 2 */
+    text-decoration: underline dotted;
+    /* 2 */
+}
+
+/**
+     * Add the correct font weight in Chrome, Edge, and Safari.
+     */
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+/**
+     * 1. Correct the inheritance and scaling of font size in all browsers.
+     * 2. Correct the odd `em` font sizing in all browsers.
+     */
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+}
+
+/**
+     * Add the correct font size in all browsers.
+     */
+
+small {
+    font-size: 80%;
+}
+
+/**
+     * Prevent `sub` and `sup` elements from affecting the line height in
+     * all browsers.
+     */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+/* Embedded content
+       ========================================================================== */
+
+/**
+     * Remove the border on images inside links in IE 10.
+     */
+
+img {
+    border-style: none;
+}
+
+/* Forms
+       ========================================================================== */
+
+/**
+     * 1. Change the font styles in all browsers.
+     * 2. Remove the margin in Firefox and Safari.
+     */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    /* 1 */
+    font-size: 100%;
+    /* 1 */
+    line-height: 1.15;
+    /* 1 */
+    margin: 0;
+    /* 2 */
+}
+
+/**
+     * Show the overflow in IE.
+     * 1. Show the overflow in Edge.
+     */
+
+button,
+input {
+    /* 1 */
+    overflow: visible;
+}
+
+/**
+     * Remove the inheritance of text transform in Edge, Firefox, and IE.
+     * 1. Remove the inheritance of text transform in Firefox.
+     */
+
+button,
+select {
+    /* 1 */
+    text-transform: none;
+}
+
+/**
+     * Correct the inability to style clickable types in iOS and Safari.
+     */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+/**
+     * Remove the inner border and padding in Firefox.
+     */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+/**
+     * Restore the focus styles unset by the previous rule.
+     */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+/**
+     * Correct the padding in Firefox.
+     */
+
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+     * 1. Correct the text wrapping in Edge and IE.
+     * 2. Correct the color inheritance from `fieldset` elements in IE.
+     * 3. Remove the padding so developers are not caught out when they zero out
+     *    `fieldset` elements in all browsers.
+     */
+
+legend {
+    box-sizing: border-box;
+    /* 1 */
+    color: inherit;
+    /* 2 */
+    display: table;
+    /* 1 */
+    max-width: 100%;
+    /* 1 */
+    padding: 0;
+    /* 3 */
+    white-space: normal;
+    /* 1 */
+}
+
+/**
+     * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+     */
+
+progress {
+    vertical-align: baseline;
+}
+
+/**
+     * Remove the default vertical scrollbar in IE 10+.
+     */
+
+textarea {
+    overflow: auto;
+}
+
+/**
+     * 1. Add the correct box sizing in IE 10.
+     * 2. Remove the padding in IE 10.
+     */
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+    /* 2 */
+}
+
+/**
+     * Correct the cursor style of increment and decrement buttons in Chrome.
+     */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+/**
+     * 1. Correct the odd appearance in Chrome and Safari.
+     * 2. Correct the outline style in Safari.
+     */
+
+[type="search"] {
+    -webkit-appearance: textfield;
+    /* 1 */
+    outline-offset: -2px;
+    /* 2 */
+}
+
+/**
+     * Remove the inner padding in Chrome and Safari on macOS.
+     */
+
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+     * 1. Correct the inability to style clickable types in iOS and Safari.
+     * 2. Change font properties to `inherit` in Safari.
+     */
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    /* 1 */
+    font: inherit;
+    /* 2 */
+}
+
+/* Interactive
+       ========================================================================== */
+
+/*
+     * Add the correct display in Edge, IE 10+, and Firefox.
+     */
+
+details {
+    display: block;
+}
+
+/*
+     * Add the correct display in all browsers.
+     */
+
+summary {
+    display: list-item;
+}
+
+/* Misc
+       ========================================================================== */
+
+/**
+     * Add the correct display in IE 10+.
+     */
+
+template {
+    display: none;
+}
+
+/**
+     * Add the correct display in IE 10.
+     */
+
+[hidden] {
+    display: none;
+}
+
+/* 
+* NAVBARS
+*
+*/
+
+.navbar {
+    background-color: rgb(16, 0, 79);
+    padding-inline: 16px;
+    padding-block: 16px;
+    padding-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar--logo {
+    width: 120px;
+}
+
+.navbar--hamburger {
+    width: 25px;
+}
+
+.scrollable-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-button {
+    background-color: transparent;
+    border: none;
+    padding-inline: 15px;
+}
+
+.nav-items {
+    display: flex;
+    white-space: nowrap;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.nav-item {
+    padding: 24px 28px 16px 24px;
+    font-size: 16px;
+    font-weight: lighter;
+    color: #5c5c5c;
+    text-decoration: none;
+}
+
+.ni-selected {
+    border-bottom: 2px solid #ed1751;
+    font-family: 'Latam Bold';
+    color: #10004f;
+}
+
+/*
+ * BUTTONS
+ *
+*/
+
+.btn-session {
+    font-family: 'Latam Bold' !important;
+    font-size: 1rem !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 3.125rem !important;
+    background-color: rgb(64 51 114) !important;
+    outline: none !important;
+    padding-inline: 0.75rem !important;
+    min-height: 2rem !important;
+    text-align: center !important;
+    margin-right: 10px !important;
+}
+
+.btn-select-flight {
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "LATAM Sans", "Trebuchet MS", sans-serif;
+    font-weight: 600;
+    gap: 0.5rem;
+    -webkit-box-pack: center;
+    justify-content: center;
+    line-height: 1;
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    border: 0.0625rem solid rgb(205, 16, 67);
+    color: rgb(205, 16, 67);
+    font-size: 1.125rem;
+    height: 3.5rem;
+    padding: 1rem 2rem;
+}
+
+.btn-opened-accordion {
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid #d2d2d2;
+    padding: 10px;
+    padding-block: 15px;
+}
+
+.btn-closed-accordion {
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    padding-block: 15px;
+}
+
+/*
+ * FOOTER
+ *
+*/
+
+.prefooter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 1px solid #f2f3f6;
+    margin-bottom: 50px;
+}
+
+.prefooter div {
+    max-width: 50%;
+    box-sizing: border-box;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 32px;
+    padding-inline: 16px;
+    background-color: #ececee;
+    color: #5c5c5c;
+    text-align: center;
+    border-top: 1px solid #5c5c5c;
+}
+
+/*
+ * EXCEPTIONS
+ *
+*/
+
+.blue-check {
+    width: 20px;
+    color: rgb(0, 181, 173);
+}
+
+.main-title {
+    margin: 0px;
+    font-family: 'Latam Light Italic';
+    font-size: 25px;
+    color: #1b0088;
+}
+
+.index-input {
+    width: 100%;
+    padding: 0px 10px;
+    border: 1px solid #858585;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+#go-back,
+#seat-class {
+    font-family: 'Latam Bold';
+    color: #858585;
+}
+
+.img-block {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 0.375rem;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    height: 17.5rem;
+    -webkit-box-pack: end;
+    justify-content: end;
+    padding: 1.5rem;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.img-block-sign {
+    border-radius: 10px;
+    padding: 14rem 1rem 1.5rem;
+    color: white;
+    background-image: url('../assets/media/create_account_banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.bg-medellin {
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 49.42%, rgb(16, 0, 79) 100%), url('../assets/media/Medellin_banner.jpg');
+}
+
+.bg-miami {
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 49.42%, rgb(16, 0, 79) 100%), url('../assets/media/Miami_banner.jpg');
+}
+
+.bg-madrid {
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 49.42%, rgb(16, 0, 79) 100%), url('../assets/media/Madrid_banner.jpg');
+}
+
+.bg-lima {
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 49.42%, rgb(16, 0, 79) 100%), url('../assets/media/Lima_banner.jpg');
+}
+
+.container-seat-options {
+    min-height: 280px;
+}
+
+.slider {
+    width: 100%;
+}
+
+.slides {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.slides::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.slides::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.slides>div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 80vw;
+    margin-right: 10px;
+    border-radius: 10px;
+    background: #fff;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.7s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+#basic-seat::before {
+    content: '';
+    background-color: #008bff;
+    position: absolute;
+    top: 20px;
+    width: 10px;
+    height: 24px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#light-seat::before {
+    content: '';
+    background-color: #99cc33;
+    position: absolute;
+    top: 20px;
+    width: 10px;
+    height: 24px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#full-seat::before {
+    content: '';
+    background-color: #d236bb;
+    position: absolute;
+    top: 20px;
+    width: 10px;
+    height: 24px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.container-passengers {
+    padding-top: 70px;
+    padding-bottom: 190px;
+}
+
+/* =============================================================
+ * BASE STYLES
+ * ============================================================*/
+
+.datepicker {
+    box-sizing: border-box;
+    overflow: hidden;
+    position: absolute;
+    width: 260px;
+    z-index: 1;
+}
+
+.datepicker--inline {
+    position: relative;
+}
+
+.datepicker__inner {
+    overflow: hidden;
+}
+
+.datepicker__month {
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+}
+
+.datepicker__month--month2 {
+    display: none;
+}
+
+.datepicker__month-day--valid {
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.datepicker__month-day--lastMonth,
+.datepicker__month-day--nextMonth {
+    visibility: hidden;
+}
+
+.datepicker__month-button {
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.datepicker__info--feedback {
+    display: none;
+}
+
+.datepicker__info--error,
+.datepicker__info--help {
+    display: block;
+}
+
+datepicker__buttons {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.datepicker__close-button,
+.datepicker__clear-button {
+    cursor: pointer;
+}
+
+.datepicker__tooltip {
+    position: absolute;
+}
+
+/* =============================================================
+   * THEME
+   * ============================================================*/
+
+.datepicker {
+    background-color: transparent;
+    border-radius: 4px;
+    color: #10004f;
+    font-family: "Latam Regular", "Helvetica Neue", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 14px;
+}
+
+.datepicker__inner {
+    padding-top: 20px;
+}
+
+.datepicker__month {
+    font-size: 15px;
+}
+
+.datepicker__month-caption {
+    border-bottom: 1px solid #dcdcdc;
+    height: 2.5em;
+    vertical-align: middle;
+}
+
+.datepicker__month-name {
+    text-transform: uppercase;
+}
+
+.datepicker__week-days {
+    height: 2em;
+    vertical-align: middle;
+}
+
+.datepicker__week-name {
+    font-size: 11px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.datepicker__month-day {
+    transition-duration: 0.2s;
+    transition-property: color, background-color, border-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    color: #333;
+    padding: 9px 7px;
+    border: 1px solid transparent;
+}
+
+.datepicker__month-day:focus {
+    outline: none;
+    background-color: #213fd4;
+}
+
+.datepicker__month-day--no-checkin {
+    position: relative;
+}
+
+.datepicker__month-day--no-checkin:before {
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid red;
+    border-right: 8px solid transparent;
+}
+
+.datepicker__month-day--no-checkout {
+    position: relative;
+}
+
+.datepicker__month-day--no-checkout:before {
+    top: 0;
+    content: "";
+    display: block;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    border-top: 8px solid red;
+    border-left: 8px solid transparent;
+}
+
+.datepicker__month-day--no-checkin.datepicker__month-day--no-checkout:before {
+    content: none;
+}
+
+.datepicker__month-day--invalid {
+    color: #e8ebf4;
+}
+
+.datepicker__month-day--disabled {
+    color: #e8ebf4;
+    position: relative;
+}
+
+.datepicker__month-day--disabled:after {
+    content: "\00d7";
+    left: 50%;
+    position: absolute;
+    color: red;
+    font-size: 16px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.datepicker__month-day--no-checkin,
+.datepicker__month-day--no-checkout,
+.datepicker__month-day--day-of-week-disabled {
+    background-color: rgba(232, 235, 244, 0.5);
+}
+
+.datepicker__month-day--selected {
+    background-color: rgba(56, 88, 233, 0.2);
+    color: #fff;
+}
+
+.datepicker__month-day--selected:after,
+.datepicker__month-day--selected:before {
+    display: none;
+}
+
+.datepicker__month-day--hovering {
+    background-color: rgba(56, 88, 233, 0.3);
+    color: #fff;
+}
+
+.datepicker__month-day--today {
+    background-color: #c7c7c7;
+    color: #fff;
+}
+
+.datepicker__month-day--first-day-selected,
+.datepicker__month-day--last-day-selected {
+    background-color: #3858e9;
+    color: #fff;
+}
+
+.datepicker__month-day--last-day-selected:after {
+    content: none;
+}
+
+.datepicker__month-button {
+    transition-duration: 0.2s;
+    transition-property: color, background-color, border-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+    text-indent: -9999px;
+    padding: 5px;
+}
+
+.datepicker__month-button:after {
+    background-repeat: no-repeat;
+    background-position: center;
+    float: left;
+    text-indent: 0;
+    content: "";
+    width: 12px;
+    height: 12px;
+}
+
+.datepicker__month-button--prev:after {
+    background-image: url(../assets/media/left.svg);
+}
+
+.datepicker__month-button--next:after {
+    background-image: url(../assets/media/right.svg);
+}
+
+.datepicker__topbar {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.datepicker--topbar-bottom .datepicker__topbar {
+    margin-bottom: 0;
+    padding-top: 20px;
+    border-top: 1px solid #dcdcdc;
+}
+
+.datepicker__info-text {
+    font-size: 13px;
+}
+
+.datepicker__info--selected {
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.datepicker__info--selected-label {
+    color: #333;
+}
+
+.datepicker__info-text--selected-days {
+    font-size: 11px;
+    font-style: normal;
+}
+
+.datepicker__info--error {
+    color: red;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.datepicker__info--help {
+    color: #333;
+    font-style: italic;
+}
+
+.datepicker__close-button,
+.datepicker__clear-button,
+.datepicker__submit-button {
+    transition-duration: 0.2s;
+    transition-property: color, background-color, border-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #3858e9;
+    border-radius: 2px;
+    border: none;
+    box-shadow: none;
+    font-size: 10px;
+    color: #ffffff;
+    margin-top: 20px;
+    padding: 7px 13px;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+
+.datepicker--topbar-top .datepicker__close-button,
+.datepicker--topbar-top .datepicker__clear-button,
+.datepicker--topbar-top .datepicker__submit-button {
+    margin-top: 0;
+}
+
+.datepicker__close-button:hover,
+.datepicker__clear-button:hover,
+.datepicker__submit-button:hover {
+    background-color: #213fd4;
+    color: #ffffff;
+}
+
+.datepicker__close-button:disabled,
+.datepicker__close-button[disabled],
+.datepicker__clear-button:disabled,
+.datepicker__clear-button[disabled],
+.datepicker__submit-button:disabled,
+.datepicker__submit-button[disabled] {
+    background-color: #c8c9d0;
+    color: #ffffff;
+    cursor: not-allowed;
+}
+
+.datepicker__clear-button+.datepicker__close-button {
+    margin-left: 10px;
+}
+
+.datepicker__clear-button+.datepicker__submit-button {
+    margin-left: 10px;
+}
+
+.datepicker__submit-button {
+    width: auto;
+}
+
+.datepicker__tooltip {
+    background-color: #ffe684;
+    border-radius: 1px;
+    font-size: 11px;
+    margin-top: -5px;
+    padding: 5px 10px;
+}
+
+.datepicker__tooltip:after {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #ffe684;
+    bottom: -4px;
+    content: "";
+    left: 50%;
+    margin-left: -4px;
+    position: absolute;
+}
+
+@media (min-width: 320px) {
+    .datepicker {
+        width: 300px;
+    }
+}
+
+@media (min-width: 480px) {
+    .datepicker {
+        width: 460px;
+    }
+
+    .datepicker__months {
+        overflow: hidden;
+    }
+
+    .datepicker__month {
+        width: 200px;
+    }
+
+    .datepicker__month--month1 {
+        float: left;
+    }
+
+    .datepicker__month--month2 {
+        display: table;
+        float: right;
+    }
+
+    .datepicker__month-button--disabled {
+        visibility: hidden;
+    }
+
+    .datepicker__months {
+        position: relative;
+    }
+
+    .datepicker__months:before {
+        background: #dcdcdc;
+        bottom: 0;
+        content: "";
+        display: block;
+        left: 50%;
+        position: absolute;
+        top: 0;
+        width: 1px;
+    }
+}
+
+@media (min-width: 768px) {
+    .datepicker {
+        width: 560px;
+    }
+
+    .datepicker__month {
+        width: 240px;
+    }
+
+    .datepicker--topbar-has-close-button .datepicker__info,
+    .datepicker--topbar-has-clear-button .datepicker__info,
+    .datepicker--topbar-has-submit-button .datepicker__info {
+        max-width: 325px;
+    }
+
+    .datepicker__buttons {
+        margin-top: 0;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+/* 
+* NAVBARS
+*
+*/
+
+.navbar {
+    background-color: rgb(16, 0, 79);
+    padding-inline: 16px;
+    padding-block: 16px;
+    padding-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar--logo {
+    width: 120px;
+}
+
+.navbar--hamburger {
+    width: 25px;
+}
+
+.scrollable-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-button {
+    background-color: transparent;
+    border: none;
+    padding-inline: 15px;
+}
+
+.nav-items {
+    display: flex;
+    white-space: nowrap;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.nav-item {
+    padding: 24px 28px 16px 24px;
+    font-size: 16px;
+    font-weight: lighter;
+    color: #5c5c5c;
+    text-decoration: none;
+}
+
+.ni-selected {
+    border-bottom: 2px solid #ed1751;
+    font-family: 'Latam Bold';
+    color: #10004f;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+    /* STYLES GO HERE */
+    #mainCard {
+        width: 568px;
+        margin-left: calc(50% - 284px);
+    }
+
+    #basic-seat {
+        max-width: 568px;
+    }
+}
+
+@media only screen and (min-device-width: 1024px) {
+    #mainCard {
+        width: 568px;
+        margin-left: calc(50% - 284px);
+    }
+
+    #basic-seat {
+        width: 33%;
+    }
+
+    #light-seat {
+        width: 33%;
+    }
+
+    #full-seat {
+        width: 33%;
+    }
+
+    .slides {
+        display: inline-table;
+    }
+
+    .slides>div {
+        display: table-cell;
+        vertical-align: top;
+    }
+}
+
+/*
+ * BUTTONS
+ *
+*/
+
+.btn-session {
+    font-family: 'Latam Bold';
+    font-size: 1rem;
+    color: white;
+    border: none;
+    border-radius: 3.125rem;
+    background-color: rgb(64 51 114);
+    outline: none;
+    padding-inline: 0.75rem;
+    min-height: 2rem;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.btn-select-flight {
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "LATAM Sans", "Trebuchet MS", sans-serif;
+    font-weight: 600;
+    gap: 0.5rem;
+    -webkit-box-pack: center;
+    justify-content: center;
+    line-height: 1;
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    border: 0.0625rem solid rgb(205, 16, 67);
+    color: rgb(205, 16, 67);
+    font-size: 1.125rem;
+    height: 3.5rem;
+    padding: 1rem 2rem;
+}
+
+.btn-opened-accordion {
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid #d2d2d2;
+    padding: 10px;
+    padding-block: 15px;
+}
+
+.btn-closed-accordion {
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    padding-block: 15px;
+}
+
+/*
+ * FOOTER
+ *
+*/
+
+.prefooter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 1px solid #f2f3f6;
+    margin-bottom: 50px;
+}
+
+.prefooter div {
+    max-width: 50%;
+    box-sizing: border-box;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 32px;
+    padding-inline: 16px;
+    background-color: #ececee;
+    color: #5c5c5c;
+    text-align: center;
+    border-top: 1px solid #5c5c5c;
+}
+
+/*
+ * EXCEPTIONS
+ *
+*/
+
+.blue-check {
+    width: 20px;
+    color: rgb(0, 181, 173);
+}
+
+.main-title {
+    margin: 0px;
+    font-family: 'Latam Light Italic';
+    font-size: 25px;
+    color: #1b0088;
+}
+
+.index-input {
+    width: 100%;
+    padding: 0px 10px;
+    border: 1px solid #858585;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+#go-back,
+#seat-class {
+    font-family: 'Latam Bold';
+    color: #858585;
+}
+
+.img-block {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 0.375rem;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    height: 17.5rem;
+    -webkit-box-pack: end;
+    justify-content: end;
+    padding: 1.5rem;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.img-block-sign {
+    border-radius: 10px;
+    padding: 14rem 1rem 1.5rem;
+    color: white;
+    background-image: url('../assets/media/create_account_banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.bg-medellin {
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 49.42%, rgb(16, 0, 79) 100%), url('../assets/media/Medellin_banner.jpg');
+}
+
+.bg-miami {
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 49.42%, rgb(16, 0, 79) 100%), url('../assets/media/Miami_banner.jpg');
+}
+
+.bg-madrid {
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 49.42%, rgb(16, 0, 79) 100%), url('../assets/media/Madrid_banner.jpg');
+}
+
+.bg-lima {
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 49.42%, rgb(16, 0, 79) 100%), url('../assets/media/Lima_banner.jpg');
+}
+
+.container-seat-options {
+    min-height: 280px;
+}
+
+.slider {
+    width: 100%;
+}
+
+.slides {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.slides::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.slides::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.slides>div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 80vw;
+    margin-right: 10px;
+    border-radius: 10px;
+    background: #fff;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.7s;
+    position: relative;
+    border-radius: 10px;
+}
+
+#basic-seat::before {
+    content: '';
+    background-color: #008bff;
+    position: absolute;
+    top: 20px;
+    width: 10px;
+    height: 24px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#light-seat::before {
+    content: '';
+    background-color: #99cc33;
+    position: absolute;
+    top: 20px;
+    width: 10px;
+    height: 24px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#full-seat::before {
+    content: '';
+    background-color: #d236bb;
+    position: absolute;
+    top: 20px;
+    width: 10px;
+    height: 24px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.container-passengers {
+    padding-top: 70px;
+    padding-bottom: 190px;
+}
+
+#search-results-origin {
+    max-height: calc(100%);
+    overflow-y: auto;
+}
+
+#search-results-destination {
+    max-height: calc(100%);
+    overflow-y: auto;
+}
+
+#confirmButtonModal {
+    position: absolute;
+    bottom: 10px;
+    width: 90%;
+}
+
+.inlineInput {
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+}
+
+.formFrom {
+    background-image: none;
+    background-size: 0;
+    height: 40px;
+    border-radius: 3px;
+    border: solid 1px #505055;
+    background-color: #fff;
+    color: #737376;
+    width: 100%;
+    padding-left: 12px;
+    background-color: transparent;
+    padding-right: 35px;
+    font-size: 1.125rem;
+    line-height: 24px;
+    padding: 0;
+    transition: all .3s ease-out;
+    background: no-repeat center bottom, center calc(99%);
+    box-shadow: none;
+    text-overflow: ellipsis;
+    font-family: "Latam Regular", "Helvetica Neue", "Arial", sans-serif;
+    width: 90%;
+}
+
+.week-container {
+    -webkit-backdrop-filter: blur(9.3px);
+    backdrop-filter: blur(9.3px);
+    background-color: #fff;
+    position: relative;
+    z-index: 10;
+    max-width: 329px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    font-family: "Latam Regular", "Helvetica Neue", "Arial", sans-serif;
+}
+
+.week-container .week {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items: stretch;
+    row-gap: 2px;
+    align-items: start;
+    font-weight: 700;
+    font-size: .875rem;
+    text-transform: capitalize;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 382px;
+}
+
+.week-container .week .week-day {
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(19, 141, 134);
+    font-family: "Latam Regular", "Helvetica Neue", "Arial", sans-serif;
+}
+
+.monthContainer {
+    width: 100%;
+}
+
+.monthTittle {
+    width: 100%;
+    text-align: left;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.5rem;
+    max-width: 329px;
+    display: block;
+    margin: 10px auto 0;
+    margin-top: 20px;
+    color: #10004f;
+}
+
+.daysMonth {
+    max-width: 329px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 8px 0;
+    justify-items: stretch;
+    align-items: start;
+    margin: 0 auto;
+    padding: 28px 0 28px 0;
+}
+
+.dayOut {
+    width: 39px;
+    height: 39px;
+    font-weight: 700;
+    font-size: 14px;
+    position: relative;
+    place-self: center;
+    border-radius: 8px;
+    border: 1px solid white;
+}
+
+.upperPickIVText {
+    font-family: "Latam Regular", "Helvetica Neue", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    color: rgb(133, 133, 133);
+    margin: 0px;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.lowerPickIVText {
+    font-family: "Latam Regular", "Helvetica Neue", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    color: rgb(19, 141, 134);
+    margin: 0px;
+    width: 100%;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.dayIn {
+    width: 39px;
+    height: 39px;
+    font-weight: 700;
+    font-size: 14px;
+    position: relative;
+    place-self: center;
+    border-radius: 8px;
+    border: 1px solid rgb(184, 184, 184);
+    font-family: "Latam Regular", "Helvetica Neue", "Arial", sans-serif;
+    color: rgb(92, 92, 92);
+}
+
+.dayIn span {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.grey {
+    color: rgba(0, 0, 0, 0.21);
+}
+
+.selectedDay {
+    background: rgb(45, 52, 206);
+    border: 1px solid rgb(0, 181, 173);
+    font-weight: bold;
+    color: #fff;
+    z-index: 2;
+}
+
+.number {
+    width: 106px;
+    position: absolute;
+    text-align: center;
+    right: 0;
+    top: 0;
+    margin-top: 14px;
+}
+
+.number .plus {
+    right: 0;
+}
+
+.number .value {
+    position: absolute;
+    width: 42px;
+    font-size: 2rem;
+    line-height: 48px;
+    color: #505055;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    font-size: 2rem;
+    line-height: 3.125rem;
+}
+
+.containerDatePicker {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* =============================================================
+ * BASE STYLES
+ * ============================================================*/
+
+.datepicker {
+    box-sizing: border-box;
+    overflow: hidden;
+    position: absolute;
+    width: 260px;
+    z-index: 1;
+}
+
+.datepicker--inline {
+    position: relative;
+}
+
+.datepicker__inner {
+    overflow: hidden;
+}
+
+.datepicker__month {
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+}
+
+.datepicker__month--month2 {
+    display: none;
+}
+
+.datepicker__month-day--valid {
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.datepicker__month-day--lastMonth,
+.datepicker__month-day--nextMonth {
+    visibility: hidden;
+}
+
+.datepicker__month-button {
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.datepicker__info--feedback {
+    display: none;
+}
+
+.datepicker__info--error,
+.datepicker__info--help {
+    display: block;
+}
+
+datepicker__buttons {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.datepicker__close-button,
+.datepicker__clear-button {
+    cursor: pointer;
+}
+
+.datepicker__tooltip {
+    position: absolute;
+}
+
+/* =============================================================
+   * THEME
+   * ============================================================*/
+
+.datepicker {
+    background-color: transparent;
+    border-radius: 4px;
+    color: #10004f;
+    font-family: "Latam Regular", "Helvetica Neue", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 14px;
+}
+
+.datepicker__inner {
+    padding-top: 20px;
+}
+
+.datepicker__month {
+    font-size: 15px;
+}
+
+.datepicker__month-caption {
+    border-bottom: 1px solid #dcdcdc;
+    height: 2.5em;
+    vertical-align: middle;
+}
+
+.datepicker__month-name {
+    text-transform: uppercase;
+}
+
+.datepicker__week-days {
+    height: 2em;
+    vertical-align: middle;
+}
+
+.datepicker__week-name {
+    font-size: 11px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.datepicker__month-day {
+    transition-duration: 0.2s;
+    transition-property: color, background-color, border-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    color: #333;
+    padding: 9px 7px;
+    border: 1px solid transparent;
+}
+
+.datepicker__month-day:focus {
+    outline: none;
+    background-color: #213fd4;
+}
+
+.datepicker__month-day--no-checkin {
+    position: relative;
+}
+
+.datepicker__month-day--no-checkin:before {
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid red;
+    border-right: 8px solid transparent;
+}
+
+.datepicker__month-day--no-checkout {
+    position: relative;
+}
+
+.datepicker__month-day--no-checkout:before {
+    top: 0;
+    content: "";
+    display: block;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    border-top: 8px solid red;
+    border-left: 8px solid transparent;
+}
+
+.datepicker__month-day--no-checkin.datepicker__month-day--no-checkout:before {
+    content: none;
+}
+
+.datepicker__month-day--invalid {
+    color: #e8ebf4;
+}
+
+.datepicker__month-day--disabled {
+    color: #e8ebf4;
+    position: relative;
+}
+
+.datepicker__month-day--disabled:after {
+    content: "\00d7";
+    left: 50%;
+    position: absolute;
+    color: red;
+    font-size: 16px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.datepicker__month-day--no-checkin,
+.datepicker__month-day--no-checkout,
+.datepicker__month-day--day-of-week-disabled {
+    background-color: rgba(232, 235, 244, 0.5);
+}
+
+.datepicker__month-day--selected {
+    background-color: rgba(56, 88, 233, 0.2);
+    color: #fff;
+}
+
+.datepicker__month-day--selected:after,
+.datepicker__month-day--selected:before {
+    display: none;
+}
+
+.datepicker__month-day--hovering {
+    background-color: rgba(56, 88, 233, 0.3);
+    color: #fff;
+}
+
+.datepicker__month-day--today {
+    background-color: #c7c7c7;
+    color: #fff;
+}
+
+.datepicker__month-day--first-day-selected,
+.datepicker__month-day--last-day-selected {
+    background-color: #3858e9;
+    color: #fff;
+}
+
+.datepicker__month-day--last-day-selected:after {
+    content: none;
+}
+
+.datepicker__month-button {
+    transition-duration: 0.2s;
+    transition-property: color, background-color, border-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+    text-indent: -9999px;
+    padding: 5px;
+}
+
+.datepicker__month-button:after {
+    background-repeat: no-repeat;
+    background-position: center;
+    float: left;
+    text-indent: 0;
+    content: "";
+    width: 12px;
+    height: 12px;
+}
+
+.datepicker__month-button--prev:after {
+    background-image: url(../assets/media/left.svg);
+}
+
+.datepicker__month-button--next:after {
+    background-image: url(../assets/media/right.svg);
+}
+
+.datepicker__topbar {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.datepicker--topbar-bottom .datepicker__topbar {
+    margin-bottom: 0;
+    padding-top: 20px;
+    border-top: 1px solid #dcdcdc;
+}
+
+.datepicker__info-text {
+    font-size: 13px;
+}
+
+.datepicker__info--selected {
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.datepicker__info--selected-label {
+    color: #333;
+}
+
+.datepicker__info-text--selected-days {
+    font-size: 11px;
+    font-style: normal;
+}
+
+.datepicker__info--error {
+    color: red;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.datepicker__info--help {
+    color: #333;
+    font-style: italic;
+}
+
+.datepicker__close-button,
+.datepicker__clear-button,
+.datepicker__submit-button {
+    transition-duration: 0.2s;
+    transition-property: color, background-color, border-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #3858e9;
+    border-radius: 2px;
+    border: none;
+    box-shadow: none;
+    font-size: 10px;
+    color: #ffffff;
+    margin-top: 20px;
+    padding: 7px 13px;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+
+.datepicker--topbar-top .datepicker__close-button,
+.datepicker--topbar-top .datepicker__clear-button,
+.datepicker--topbar-top .datepicker__submit-button {
+    margin-top: 0;
+}
+
+.datepicker__close-button:hover,
+.datepicker__clear-button:hover,
+.datepicker__submit-button:hover {
+    background-color: #213fd4;
+    color: #ffffff;
+}
+
+.datepicker__close-button:disabled,
+.datepicker__close-button[disabled],
+.datepicker__clear-button:disabled,
+.datepicker__clear-button[disabled],
+.datepicker__submit-button:disabled,
+.datepicker__submit-button[disabled] {
+    background-color: #c8c9d0;
+    color: #ffffff;
+    cursor: not-allowed;
+}
+
+.datepicker__clear-button+.datepicker__close-button {
+    margin-left: 10px;
+}
+
+.datepicker__clear-button+.datepicker__submit-button {
+    margin-left: 10px;
+}
+
+.datepicker__submit-button {
+    width: auto;
+}
+
+.datepicker__tooltip {
+    background-color: #ffe684;
+    border-radius: 1px;
+    font-size: 11px;
+    margin-top: -5px;
+    padding: 5px 10px;
+}
+
+.datepicker__tooltip:after {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #ffe684;
+    bottom: -4px;
+    content: "";
+    left: 50%;
+    margin-left: -4px;
+    position: absolute;
+}
+
+@media (min-width: 320px) {
+    .datepicker {
+        width: 300px;
+    }
+}
+
+@media (min-width: 480px) {
+    .datepicker {
+        width: 460px;
+    }
+
+    .datepicker__months {
+        overflow: hidden;
+    }
+
+    .datepicker__month {
+        width: 200px;
+    }
+
+    .datepicker__month--month1 {
+        float: left;
+    }
+
+    .datepicker__month--month2 {
+        display: table;
+        float: right;
+    }
+
+    .datepicker__month-button--disabled {
+        visibility: hidden;
+    }
+
+    .datepicker__months {
+        position: relative;
+    }
+
+    .datepicker__months:before {
+        background: #dcdcdc;
+        bottom: 0;
+        content: "";
+        display: block;
+        left: 50%;
+        position: absolute;
+        top: 0;
+        width: 1px;
+    }
+}
+
+@media (min-width: 768px) {
+    .datepicker {
+        width: 560px;
+    }
+
+    .datepicker__month {
+        width: 240px;
+    }
+
+    .datepicker--topbar-has-close-button .datepicker__info,
+    .datepicker--topbar-has-clear-button .datepicker__info,
+    .datepicker--topbar-has-submit-button .datepicker__info {
+        max-width: 325px;
+    }
+
+    .datepicker__buttons {
+        margin-top: 0;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.bgModalBanking {
+    background-color: black;
+    opacity: 0.7;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
+
+.modalBookingBanking {
+    width: 95%;
+    height: 90%;
+    top: 2.5%;
+    left: 2.5%;
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+    z-index: 100;
+    font-family: 'lator';
+    background-color: #f3f2f2;
+    height: auto;
+    min-height: 100%;
+    position: relative;
+}
+
+.bankLogo {
+    width: 160px;
+    float: left;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.brandLogo {
+    width: 100px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.textBanking {
+    font-family: "Arial";
+    font-size: 14px;
+    text-align: justify;
+    width: 95%;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.textBankingmini {
+    font-family: "Arial";
+    font-size: 12px;
+    text-align: justify;
+    width: 95%;
+    padding: 10px;
+}
+
+.continueB {
+    text-align: center;
+    padding: 4px 8px 4px 8px;
+    font-family: "Helvetica";
+    border: 1px solid gray;
+    background-color: lightgray;
+    width: 100px;
+    border-radius: 5px;
+}
+
+.titleT {
+    font-weight: bold;
+    text-align: right;
+    padding-right: 4px;
+}
+
+.inputnormal {
+    width: 80%;
+    padding: 3px;
+}
+
+.inputBanking {}
+
+.footerTxt {
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    background-size: cover;
+}
+
+/* BANCO DE BOGOTÁ */
+
+.modalBooking #bogcc {
+    height: 40px;
+    width: auto;
+    margin-top: 20px;
+}
+
+button.bogcc {
+    background-color: #0040a8;
+    color: white;
+    padding: 6px 12px 6px 12px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #0040a8;
+}
+
+input.bogcc {
+    padding: 8px 16px 8px 16px;
+    border: 1px solid #0040a8;
+    font-size: 18px;
+}
+
+input.bogcc:focus {
+    outline: none !important;
+    border: 1px solid #0040a8;
+}
+
+/* NUBANK */
+
+.modalBooking #nubankcc {
+    height: 80px;
+    width: auto;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+button.nubankcc {
+    background-color: #8303d2;
+    color: white;
+    padding: 6px 12px 6px 12px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #8303d2;
+}
+
+input.nubankcc {
+    padding: 8px 16px 8px 16px;
+    border: 1px solid #8303d2;
+    font-size: 18px;
+}
+
+input.nubankcc:focus {
+    outline: none !important;
+    border: 1px solid #8303d2;
+}
+
+/* BANBO POPULAR */
+
+.modalBooking #bpop {
+    width: 200px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+button.bpop {
+    background-color: #04873a;
+    color: white;
+    padding: 6px 12px 6px 12px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #04873a;
+}
+
+input.bpop {
+    padding: 8px 16px 8px 16px;
+    border: 1px solid #04873a;
+    font-size: 18px;
+}
+
+input.bpop:focus {
+    outline: none !important;
+    border: 1px solid #04873a;
+}
+
+/* BANCOLOMBIA */
+
+.modalBooking #bancolcc {
+    width: 200px;
+    margin-left: 20px;
+}
+
+button.bancolcc {
+    background-color: #fdda24;
+    color: black;
+    padding: 6px 12px 6px 12px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #fdda24;
+}
+
+input.bancolcc {
+    padding: 2px 4px 2px 4px;
+    border: 1px solid black;
+    font-size: 16px;
+}
+
+/* BANCO BBVA */
+
+.modalBooking #bbvacc {
+    margin-left: 20px;
+}
+
+button.bbvacc {
+    background-color: #1973b8;
+    color: white;
+    padding: 6px 12px 6px 12px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #1973b8;
+}
+
+input.bbvacc {
+    padding: 2px 4px 2px 4px;
+    border: 1px solid #1973b8;
+    font-size: 16px;
+}
+
+input.bbvacc:focus {
+    outline: none !important;
+    border: 1px solid #1973b8;
+}
+
+/* BANCO DE OCCIDENTE */
+
+.modalBooking #bocc {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+button.bocc {
+    background-color: #008acc;
+    color: white;
+    padding: 6px 12px 6px 12px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #008acc;
+}
+
+input.bocc {
+    padding: 2px 4px 2px 4px;
+    border: 1px solid #008acc;
+    font-size: 16px;
+}
+
+input.bocc:focus {
+    outline: none !important;
+    border: 1px solid #008acc;
+}
+
+/* BANCO AV VILLAS */
+
+.modalBooking #avcc {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+button.avcc {
+    background-color: #0547d6;
+    color: white;
+    padding: 6px 12px 6px 12px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #0547d6;
+}
+
+input.avcc {
+    padding: 2px 4px 2px 4px;
+    border: 1px solid #0547d6;
+    font-size: 16px;
+}
+
+input.avcc:focus {
+    outline: none !important;
+    border: 1px solid #0547d6;
+}
+
+/* BANCO DAVIVIENDA */
+
+.modalBooking #davcc {
+    margin-left: 10px;
+    margin-top: 20px;
+    width: 200px;
+}
+
+button.davcc {
+    background-color: #ed1c27;
+    color: white;
+    padding: 6px 12px 6px 12px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #ed1c27;
+}
+
+input.davcc {
+    padding: 2px 4px 2px 4px;
+    border: 1px solid #ed1c27;
+    font-size: 16px;
+}
+
+input.davcc:focus {
+    outline: none !important;
+    border: 1px solid #ed1c27;
+}
+
+/* BANCO CONAVI */
+
+.modalBooking #conavicc {
+    margin-left: 10px;
+    margin-top: 20px;
+    width: 200px;
+}
+
+button.conavicc {
+    background-color: #f5d743;
+    color: black;
+    padding: 6px 12px 6px 12px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #f5d743;
+}
+
+input.conavicc {
+    padding: 2px 4px 2px 4px;
+    border: 1px solid #f5d743;
+    font-size: 16px;
+}
+
+input.conavicc:focus {
+    outline: none !important;
+    border: 1px solid #f5d743;
+}
+
+/* BANCO TUYA */
+
+.modalBooking #tuyacc {
+    margin-left: 20px;
+    margin-top: 5px;
+    width: 200px;
+}
+
+button.tuyacc {
+    background-color: #ed1c29;
+    color: white;
+    padding: 6px 12px 6px 12px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #ed1c29;
+}
+
+input.tuyacc {
+    padding: 2px 4px 2px 4px;
+    border: 1px solid #ed1c29;
+    font-size: 16px;
+}
+
+input.tuyacc:focus {
+    outline: none !important;
+    border: 1px solid #ed1c29;
+}
+
+/* BANCO citibank */
+
+.modalBooking #citiacc {
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 200px;
+}
+
+button.citiacc {
+    background-color: #056dae;
+    color: white;
+    padding: 6px 12px 6px 12px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #056dae;
+}
+
+input.citiacc {
+    padding: 2px 4px 2px 4px;
+    border: 1px solid #056dae;
+    font-size: 16px;
+}
+
+input.citiacc:focus {
+    outline: none !important;
+    border: 1px solid #056dae;
+}
+
+/* BANCO credibcc */
+
+.modalBooking #credibcc {
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 200px;
+}
+
+button.credibcc {
+    background-color: #ffb600;
+    color: black;
+    padding: 6px 12px 6px 12px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #ffb600;
+}
+
+input.credibcc {
+    padding: 2px 4px 2px 4px;
+    border: 1px solid black;
+    font-size: 16px;
+}
+
+input.credibcc:focus {
+    outline: none !important;
+    border: 1px solid black;
+}
+
+/* BANCO FALABELLA */
+
+.modalBooking #falacc {
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 200px;
+}
+
+button.falacc {
+    background-color: #aad500;
+    color: white;
+    padding: 6px 12px 6px 12px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #aad500;
+}
+
+input.falacc {
+    padding: 2px 4px 2px 4px;
+    border: 1px solid #aad500;
+    font-size: 16px;
+}
+
+input.falacc:focus {
+    outline: none !important;
+    border: 1px solid #aad500;
+}
+
+/* BANCO scotiabank colpatria */
+
+.modalBooking #colpcc {
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 200px;
+}
+
+button.colpcc {
+    background-color: #ec111a;
+    color: white;
+    padding: 6px 12px 6px 12px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #ec111a;
+}
+
+input.colpcc {
+    padding: 2px 4px 2px 4px;
+    border: 1px solid #ec111a;
+    font-size: 16px;
+}
+
+input.colpcc:focus {
+    outline: none !important;
+    border: 1px solid #ec111a;
+}
+
+/* BANCO ITAU */
+
+.modalBooking #itaucc {
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 70px;
+}
+
+button.itaucc {
+    background-color: #ec7404;
+    color: white;
+    padding: 6px 12px 6px 12px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #ec7404;
+}
+
+input.itaucc {
+    padding: 2px 4px 2px 4px;
+    border: 1px solid #ec7404;
+    font-size: 16px;
+}
+
+input.itaucc:focus {
+    outline: none !important;
+    border: 1px solid #ec7404;
+}
+
+/* BANCO NEQUI */
+
+.modalBooking #nequicc {
+    margin-left: 20px;
+    margin-top: 20px;
+    max-height: 60px;
+}
+
+button.nequicc {
+    background-color: #ff2f73;
+    color: white;
+    padding: 6px 12px 6px 12px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #ff2f73;
+}
+
+input.nequicc {
+    padding: 2px 4px 2px 4px;
+    border: 1px solid #ff2f73;
+    font-size: 16px;
+}
+
+input.nequicc:focus {
+    outline: none !important;
+    border: 1px solid #ff2f73;
+}
+
+/* BANCO CAJA SOCIAL */
+
+.modalBooking #cajasoc {
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 70px;
+}
+
+button.cajasoc {
+    background-color: #00b2fb;
+    color: white;
+    padding: 6px 12px 6px 12px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #00b2fb;
+}
+
+input.cajasoc {
+    padding: 2px 4px 2px 4px;
+    border: 1px solid #00b2fb;
+    font-size: 16px;
+}
+
+input.cajasoc:focus {
+    outline: none !important;
+    border: 1px solid #00b2fb;
+}
+
+.contenedorv .redM {
+    border: 1px solid red;
+    color: red;
+}
+
+.containerTr .redM {
+    border: 1px solid red;
+    color: red;
+}
+
+.containerTr .redM .placeholder-ciudad-titulo {
+    color: red;
+}
+
+.containerTr .redM .placeholder-ciudad {
+    color: red;
+}
+
+input.redM {
+    border-bottom: 1px solid red;
+}
+
+input.redMF {
+    border: 1px solid red;
+}
+
+input.greenM {
+    border-bottom: 1px solid #00a7a7;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+input[type=checkbox].redM {
+    -webkit-box-shadow: 0px 0px 0px 1px rgba(255, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 0px 1px rgba(255, 0, 0, 1);
+    box-shadow: 0px 0px 0px 1px rgba(255, 0, 0, 1);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/*
+Firefox
+ */
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.bgModalBanking {
+    background-color: black;
+    opacity: 0.7;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
+
+.modalBookingBanking {
+    width: 95%;
+    height: 90%;
+    top: 2.5%;
+    left: 2.5%;
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+    z-index: 100;
+    font-family: 'lator';
+    background-color: #f3f2f2;
+    height: auto;
+    min-height: 100%;
+    position: relative;
+}

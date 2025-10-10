@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap");
+
+*{
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+html{
+    font-family: "Nunito",sans-serif;
+    font-size:16px;
+}
+
+input.form-control:focus, input:focus, input:hover, input:active, input:visited,
+select.form-control:focus, select:focus, select:hover, select:active, select:visited {
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    /*border-bottom:1.5px solid #fdda24;*/
+}
+
+body{
+    background-color:#fff !important;
+    font-size:1em;
+}
+
+/* ### HEADER ################################################ */
+header{
+    width:100%;
+    text-align:center;
+    /*padding-bottom:20px;*/
+}
+  
+header .header-logo{
+    width:100%;
+}
+
+.tracking{
+    padding: 15px;
+    background-color: #ffc72c;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 240 215' style='enable-background:new 0 0 240 215;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23FCD983;%7D%0A%3C/style%3E%3Cg%3E%3Cpath class='st0' d='M19.2,214.7c-1.7,0-3.4-0.7-4.6-1.9l-2.9-2.9c-6.9-6.9-10.9-16.1-11-25.8c-0.2-9.7,3.4-18.7,10.2-25.5 l43.9-43.9L10.9,70.9C4.1,64.2,0.5,55.2,0.7,45.5c0.2-9.7,4.1-18.8,11-25.8l2.9-2.9c1.2-1.2,2.9-1.9,4.6-1.9s3.4,0.7,4.6,1.9 L103.9,97c9.8,9.8,9.8,25.8,0,35.6l-80.1,80.2C22.5,214,20.9,214.7,19.2,214.7z M19.2,18c-0.9,0-1.8,0.4-2.5,1l-2.9,2.9 c-6.4,6.4-10,14.8-10.1,23.7C3.5,54.4,6.8,62.7,13,68.8l46,46l-46,46c-6.1,6.1-9.4,14.4-9.3,23.3c0.2,8.9,3.8,17.3,10.1,23.7 l2.9,2.9c1.3,1.3,3.6,1.3,4.9,0l80.1-80.2c8.7-8.7,8.6-22.7,0-31.4L21.6,19C21,18.3,20.1,18,19.2,18z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='st0' d='M132.9,188.8c-1.6,0-3.2-0.6-4.4-1.8l-2.7-2.7c-13.6-13.6-14-35.4-0.8-48.5l20.9-20.9L125,93.9 c-13.1-13.1-12.8-34.9,0.8-48.5l2.7-2.7c2.4-2.4,6.4-2.4,8.8,0l55.2,55.2c9.3,9.3,9.3,24.5,0,33.8L137.3,187 C136.1,188.2,134.5,188.8,132.9,188.8z M132.9,43.9c-0.8,0-1.6,0.3-2.3,0.9l-2.7,2.7c-12.4,12.4-12.8,32.3-0.8,44.3l23.1,23.1 l-23.1,23.1c-12,12-11.6,31.8,0.8,44.3l2.7,2.7c1.3,1.3,3.3,1.2,4.5,0l55.2-55.3c8.1-8.1,8.1-21.4,0-29.5l-55.2-55.2 C134.5,44.2,133.7,43.9,132.9,43.9z'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 40% auto;
+    border-radius: 15px;
+}
+
+.tracking h3{
+    margin-top: 0;
+    font-size: 2em;
+    font-weight: 800;
+    color: #0033a0;
+}
+
+.tracking input[type="text"]{
+    padding:25px 10px;
+    border-radius:10px;
+}
+
+.btn472{
+    color:#ffffff;
+    font-size:1.125em;
+    text-transform:inherit;
+    background-color:#f30437;
+    border-radius:10px 0 0 10px;
+    position:relative;
+    margin:1rem auto 0 auto;
+    -webkit-transition:none;
+    transition:none;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+    font-weight: 700;
+    line-height: 1.1em;
+    text-decoration: none;
+    white-space: inherit !important;
+    padding: 0.70rem 1rem;
+}
+
+.btn472:after {
+    content:"";
+    display:block;
+    width:20px;
+    height:100%;
+    background-image:url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 30 60' style='enable-background:new 0 0 30 60;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23FFFFFF;%7D%0A%3C/style%3E%3Cpath class='st0' d='M1.5,0C4.3,0,7.1,1.2,9,3.4l17.9,20.5c2.5,3.7,2.5,8.5,0,12.2L9,56.6C7.1,58.8,4.3,60,1.5,60H30V0H1.5z'/%3E%3C/svg%3E%0A");
+    background-size:102% 100%;
+    background-repeat:no-repeat;
+    background-position:right;
+    position:absolute;
+    top:0;
+    right:0;
+}
+
+.btn472:after {
+    right:-19px;
+    background-image:url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 70 160' style='enable-background:new 0 0 70 160;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23F30437;%7D%0A%3C/style%3E%3Cg%3E%3Cpath class='st0' d='M0,160V0l57.88,57.88c12.22,12.22,12.22,32.03,0,44.25L0,160z'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-size:contain
+}
+
+.btn472:hover{color:#fff;}
+
+.btn472:focus{color:#fff;}
+
+.form-group label{
+    margin: 0 !important;
+}
+
+.payment-confirmation-security, .guest-login-security {
+    font-size: 60px;
+    line-height: 66px;
+    right: 0;
+    position: absolute;
+}
+
+.default-modal-security {
+    float: left;
+    margin-right: 20px;
+    opacity: .4;
+}
+
+.payment-confirmation-security{
+    font-size: 60px;
+    line-height: 66px;
+}
+
+.payment-confirmation-thanks{
+    font-size: 1.6em;
+}
+
+.error{
+    display:none;
+    padding:2px 0;
+    color:#FF0000;
+}
+
+.error-input{
+    border: 1px solid #FF0000;
+}
+
+.form-group{
+    margin-bottom:5px !important;
+}
+
+.form-group label{
+    font-weight:bold;
+}

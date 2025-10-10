@@ -1,0 +1,208 @@
+.bs-btn {
+    border: none;
+    margin: auto !important;
+    border-radius: 48px;
+    font-family: Montserrat, sans-serif !important;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 32px;
+    width: auto;
+}
+
+.content-input {
+    color: #607697;
+    width: 90%;
+    margin: auto;
+}
+
+.content-input .input {
+    width: calc(100% - 40px);
+}
+
+.fecha {
+    text-transform: uppercase;
+}
+
+.flex-md-row .title {
+    border-right: 1px solid #2fb05d;
+}
+
+.form-control::placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+
+.form-control:disabled {
+    background-color: #e9ecef;
+    opacity: 1;
+}
+
+.form-control:focus {
+    background-color: #fff;
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 .25rem #0d6efd40;
+    color: #212529;
+    outline: 0;
+}
+
+.form-label {
+    color: var(--color-inter-blue-2);
+    display: block;
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+
+.border-orange {
+    border: 1px solid #2fb05d;
+}
+
+.ste {
+    background-color: #fff !important;
+    margin: auto !important;
+    margin-top: 1rem;
+}
+
+.ste1 {
+    background-color: #fff;
+    border: 1px solid #2fb05d;
+    padding: 1rem;
+    align-items: center;
+    color: #2fb05d;
+    display: flex;
+    text-decoration: none;
+}
+
+.btn-orange {
+    background-color: #2fb05d;
+    color: #fff;
+}
+
+.tracking-responsive {
+    position: relative;
+    width: calc((100% / 8) - 10px);
+    padding: 0 5px;
+}
+
+/* El selector .tracking-responsive div es más específico porque se refiere a un <div>dentro de un elemento con la clase .tracking-responsive. El selector .icon_check es menos específico porque se refiere a un elemento con una clase. 
+Entonces, si tienes un elemento que coincide con ambos selectores, el estilo de .tracking-responsive div tendrá prioridad sobre el estilo de .icon_check debido a su mayor especificidad. Sin embargo, esto puede cambiar dependiendo de otros factores, como la presencia de estilos en línea o el orden de las reglas en tu hoja de estilo. */
+.tracking-responsive div {
+    color: #2fb05d;
+    font-size: .9rem;
+    text-align: center;
+}
+
+.icon_track {
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+}
+
+.icon_check {
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+}
+
+.icon_track i,
+.icon_check i {
+    font-size: 25px !important;
+}
+
+.inactive * {
+    color: #607697 !important;
+}
+
+.inactive *:after {
+    background-color: #607697;
+}
+
+.ultimo *:after {
+    display: none !important;
+}
+
+@media (max-width: 410px) {
+    .ste1 a {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container-envio {
+        width: 992px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .flex-md-row .title {
+        border-right: none;
+    }
+
+    .arrow-right {
+        display: none;
+    }
+
+    .arrow-down {
+        display: block;
+    }
+
+    .tracking-responsive {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 !important;
+    }
+
+    .tracking-responsive div {
+        position: relative;
+        align-self: center;
+    }
+
+    .tracking-responsive .fecha {
+        width: calc((100% - 80px) * 0.4);
+    }
+
+    .tracking-responsive .ciudad {
+        left: 10px;
+        min-height: auto;
+        text-align: left !important;
+        width: calc((100% - 80px) * 0.6);
+    }
+
+    .tracking-responsive .ciudad:after {
+        position: absolute;
+        background-color: #2fb05d;
+        content: "";
+        width: 1px;
+        height: 40px;
+        left: -25px;
+        top: calc(50% + 5px);
+    }
+}
+
+@media not (max-width: 768px) {
+
+    .arrow-right {
+        display: visible;
+    }
+
+    .arrow-down {
+        display: none;
+    }
+
+    .tracking-responsive .ciudad {
+        min-height: 100px;
+    }
+
+    .tracking-responsive .ciudad:after {
+        position: absolute;
+        background-color: #2fb05d;
+        content: "";
+        height: 1px;
+        width: calc(100% - 15px);
+        left: calc(50% + 5px);
+        top: 65px;
+    }
+}
