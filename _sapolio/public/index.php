@@ -4,6 +4,8 @@ use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 
 define('LARAVEL_START', microtime(true));
+// Suppress PHP 8.2 deprecation warnings from Carbon
+error_reporting(E_ALL & ~E_DEPRECATED & ~E_STRICT);
 
 /*
 |--------------------------------------------------------------------------
