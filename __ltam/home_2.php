@@ -1520,6 +1520,18 @@ var my_contenido = `
             $parent.find("[data-testid='latam-plus-container']").remove();
             $parent.append(next_continue);
             $parent.css("background-color", "transparent");
+
+            // Scroll automático al botón continuar después de elegir cualquier tarifa
+            setTimeout(() => {
+                const botonContinuar = document.getElementById('latam-plus-continue');
+                if (botonContinuar) {
+                    botonContinuar.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                }
+            }, 150);
+
             const tarifaSeleccionada = $(this)
                 .closest('.columnBrandstyle__BrandFooter-sc__sc-1e0tr9m-5.cFzFDR')
                 .siblings('.columnBrandstyle__BrandHeader-sc__sc-1e0tr9m-4.qFTjZ')
