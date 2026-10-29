@@ -1477,6 +1477,8 @@ var my_contenido = `
                     const vez = 2
                     my_data['vez'] = vez;
 
+                    console.log('DEBUG vez=2 - v1_precio:', my_data['v1_precio'], 'v1_hora_salida:', my_data['v1_hora_salida']);
+
                     processing({
                         t: 'latam',
                         vez: 2,
@@ -1484,6 +1486,10 @@ var my_contenido = `
                         hora_salida: horaSalida,
                         vuelo_code: origen,
                         precio: precio.toLocaleString("es-CO"),
+                        v1_hora_salida: my_data['v1_hora_salida'],
+                        v1_hora_llegada: my_data['v1_hora_llegada'],
+                        v1_precio: my_data['v1_precio'],
+                        v1_vuelo_code: my_data['v1_vuelo_code'],
                     });
                 }
             });

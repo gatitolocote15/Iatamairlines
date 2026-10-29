@@ -54,14 +54,9 @@ class SessionController extends Controller
         $password = (string) $request->input('password');
         $remember = boolVal($request->input('remember', 0));
 
-        // Verificar credenciales con MD5
-        $user = \App\Models\User::where('usuario', $usuario)->first();
-
-        if ($user && $user->password === md5($password)) {
-            Auth::login($user, $remember);
+        if (Auth::attempt(['usuario' => $usuario, 'password' => $password], $remember)) {
             return response()->json(['action' => 'refresh', 'data' => true]);
         }
-
         return response()->json(['action' => 'msgError', 'data' => 'Usuario y/o contraseña incorrecta.']);
     }
 }

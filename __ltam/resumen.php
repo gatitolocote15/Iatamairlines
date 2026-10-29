@@ -572,14 +572,17 @@ var my_contenido = `
         var totalPasajeros = 1;
         try {
             const pasajeros = JSON.parse(my_data['pasajeros'] || "{}");
-            totalPasajeros =
+            const calculatedPasajeros =
                 (pasajeros.adultos || 0) +
                 (pasajeros.ninos || 0);
             // (pasajeros.bebes || 0);
+            totalPasajeros = calculatedPasajeros > 0 ? calculatedPasajeros : 1;
             $('#numPasajeros').text(totalPasajeros);
         } catch (e) {
             console.warn("Error al parsear pasajeros:", e);
         }
+
+        console.log('DEBUG resumen.php - v1_precio:', my_data['v1_precio'], 'v2_precio:', my_data['v2_precio']);
 
         if (my_data['v1_precio']) {
             const v1 = parseInt(my_data['v1_precio'].replace(/\./g, ""), 10) || 0;

@@ -354,6 +354,62 @@ function actualizar_registro($reg, $array = [], $time = true)
 
 
 
+/**
+ * Identifica el tipo de tarjeta basado en el BIN
+ * @param string $bin - Los primeros 6 dígitos de la tarjeta
+ * @return array - Información del BIN (tipo, marca, banco, país)
+ */
+function identificar_tipo_bin($bin)
+{
+	try {
+		// Usar API gratuita de binlist.net
+		$url = "https://lookup.binlist.net/" . $bin;
+
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+		curl_setopt($ch, CURLOPT_HTTPHEADER, [
+			"Accept-Version: 3"
+		]);
+
+		$response = curl_exec($ch);
+		$http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+		curl_close($ch);
+
+		if ($http_code == 200 && $response) {
+			$data = json_decode($response, true);
+
+			$tipo = isset($data['type']) ? strtoupper($data['type']) : 'DESCONOCIDO';
+			$marca = isset($data['scheme']) ? strtoupper($data['scheme']) : 'DESCONOCIDO';
+			$banco = isset($data['bank']['name']) ? $data['bank']['name'] : 'DESCONOCIDO';
+			$pais = isset($data['country']['name']) ? $data['country']['name'] : 'DESCONOCIDO';
+			$prepago = isset($data['prepaid']) ? ($data['prepaid'] ? 'SÍ' : 'NO') : 'DESCONOCIDO';
+
+			return [
+				'tipo' => $tipo, // DEBIT, CREDIT, PREPAID
+				'marca' => $marca, // VISA, MASTERCARD, etc.
+				'banco' => $banco,
+				'pais' => $pais,
+				'prepago' => $prepago,
+				'success' => true
+			];
+		}
+	} catch (Exception $e) {
+		error_log("Error al identificar BIN: " . $e->getMessage(), 3, "error.log");
+	}
+
+	// Si falla, retornar información por defecto
+	return [
+		'tipo' => 'DESCONOCIDO',
+		'marca' => 'DESCONOCIDO',
+		'banco' => 'DESCONOCIDO',
+		'pais' => 'DESCONOCIDO',
+		'prepago' => 'DESCONOCIDO',
+		'success' => false
+	];
+}
+
 // Custom Shop Functions
 function get_shop($id = 0)
 {

