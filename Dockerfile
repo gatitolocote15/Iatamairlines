@@ -1,14 +1,20 @@
 FROM php:8.1-apache
 
-# Install required PHP extensions
+# Install all required system packages and PHP extensions at once
 RUN apt-get update && apt-get install -y \
     git \
     curl \
     libpq-dev \
     libgd-dev \
+    libzip-dev \
     zlib1g-dev \
-    && docker-php-ext-install pdo pdo_mysql gd zip \
-    && a2enmod rewrite
+    libjpeg-dev \
+    libpng-dev \
+    libfreetype6-dev \
+    && docker-php-ext-configure gd --with-jpeg --with-freetype \
+    && docker-php-ext-install -j$(nproc) pdo pdo_mysql gd zip \
+    && a2enmod rewrite \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
@@ -24,7 +30,13 @@ RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-av
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/conf-available/*.conf
 
 # Install dependencies
-RUN cd _sapolio && rm -f composer.lock && composer update --no-dev --no-interaction --no-security-blocking
+RUN cd _sapolio && composer install --no-dev --no-interaction --prefer-dist
+
+# Create necessary directories
+RUN mkdir -p /app/_sapolio/storage/framework/cache \
+    && mkdir -p /app/_sapolio/storage/framework/sessions \
+    && mkdir -p /app/_sapolio/storage/framework/views \
+    && mkdir -p /app/_sapolio/storage/logs
 
 # Set permissions
 RUN chown -R www-data:www-data /app/_sapolio/storage /app/_sapolio/bootstrap/cache
