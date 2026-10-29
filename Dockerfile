@@ -1,48 +1,25 @@
-FROM php:8.1-apache
+FROM php:8.1-cli
 
-# Install all required system packages and PHP extensions at once
 RUN apt-get update && apt-get install -y \
-    git \
-    curl \
-    libpq-dev \
-    libgd-dev \
-    libzip-dev \
-    zlib1g-dev \
-    libjpeg-dev \
-    libpng-dev \
-    libfreetype6-dev \
+    git curl libpq-dev libgd-dev libzip-dev zlib1g-dev \
+    libjpeg-dev libpng-dev libfreetype6-dev \
     && docker-php-ext-configure gd --with-jpeg --with-freetype \
-    && docker-php-ext-install -j$(nproc) pdo pdo_mysql gd zip \
-    && a2dismod mpm_event \
-    && a2enmod mpm_prefork rewrite \
+    && docker-php-ext-install pdo pdo_mysql gd zip \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 WORKDIR /app
-
-# Copy project files
 COPY . .
 
-# Set document root to _sapolio/public
-ENV APACHE_DOCUMENT_ROOT=/app/_sapolio/public
-RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
-RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/conf-available/*.conf
-
-# Install dependencies
 RUN cd _sapolio && composer install --no-dev --no-interaction --prefer-dist
 
-# Create necessary directories
-RUN mkdir -p /app/_sapolio/storage/framework/cache \
-    && mkdir -p /app/_sapolio/storage/framework/sessions \
-    && mkdir -p /app/_sapolio/storage/framework/views \
-    && mkdir -p /app/_sapolio/storage/logs
+RUN mkdir -p _sapolio/storage/framework/cache \
+    _sapolio/storage/framework/sessions \
+    _sapolio/storage/framework/views \
+    _sapolio/storage/logs \
+    && chmod -R 777 _sapolio/storage _sapolio/bootstrap/cache
 
-# Set permissions
-RUN chown -R www-data:www-data /app/_sapolio/storage /app/_sapolio/bootstrap/cache
-RUN chmod -R 755 /app/_sapolio/storage /app/_sapolio/bootstrap/cache
+EXPOSE 8080
 
-EXPOSE 80
-
-CMD ["apache2-foreground"]
+CMD sh -c "cd /app/_sapolio && php artisan serve --host=0.0.0.0 --port=${PORT:-8080}"
