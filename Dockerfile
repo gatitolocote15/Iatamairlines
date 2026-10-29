@@ -22,7 +22,7 @@ RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-av
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/conf-available/*.conf
 
 # Install dependencies
-RUN cd _sapolio && composer install --no-dev
+RUN cd _sapolio && rm -f composer.lock && composer update --no-dev --no-interaction
 
 # Set permissions
 RUN chown -R www-data:www-data /app/_sapolio/storage /app/_sapolio/bootstrap/cache
