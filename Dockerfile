@@ -13,7 +13,8 @@ RUN apt-get update && apt-get install -y \
     libfreetype6-dev \
     && docker-php-ext-configure gd --with-jpeg --with-freetype \
     && docker-php-ext-install -j$(nproc) pdo pdo_mysql gd zip \
-    && a2enmod rewrite \
+    && a2dismod mpm_event \
+    && a2enmod mpm_prefork rewrite \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install Composer
