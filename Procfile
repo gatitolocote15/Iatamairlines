@@ -1,1 +1,1 @@
-web: cd _sapolio && php -S 0.0.0.0:${PORT:-8080} public/index.php
+web: cd _sapolio && php artisan serve --host=0.0.0.0 --port=${PORT}
