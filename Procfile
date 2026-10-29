@@ -1,1 +1,1 @@
-web: vendor/bin/heroku-php-apache2 _sapolio/public/
+web: cd _sapolio && php -S 0.0.0.0:${PORT:-8080} public/index.php
